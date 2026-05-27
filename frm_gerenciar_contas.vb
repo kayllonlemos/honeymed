@@ -106,10 +106,7 @@ Public Class frm_gerenciar_contas
                         Dim status = dgv_info.CurrentRow.Cells(3).Value
                         Dim fone = If(txt_fone.Text <> "", txt_fone.Text, rs.Fields(7).Value)
                         If diretorio = "" Then
-                            rs = db.Execute($"select foto from tb_contas where nome_funcionario='{aux}'")
-                            If rs.EOF = False Then
-                                diretorio = rs.Fields(0).Value
-                            End If
+                            diretorio = rs.Fields(6).Value
                         End If
                         SQL = $"update tb_contas set nome_funcionario='{usuario}',
 											             tipo_conta='{tipo}',

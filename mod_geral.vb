@@ -25,6 +25,31 @@
 		End Try
 	End Sub
 
+	Sub Autocarregar_dadosClientes()
+		With frm_gerenciar_clientes
+			Try
+				If IsNumeric(aux) Then
+					SQL = $"select * from tb_clientes where id_cliente='{aux}'"
+				Else
+					SQL = $"select * from tb_clientes where cpf='{aux}' or email='{aux}'"
+				End If
+				rs = db.Execute(SQL)
+				If rs.EOF = False Then
+					.txt_id.Text = rs.Fields(0).Value
+					.txt_cpf.Text = rs.Fields(1).Value
+					.cmb_sexo.Text = rs.Fields(2).Value
+					.txt_fone.Text = rs.Fields(3).Value
+					.txt_nome.Text = rs.Fields(4).Value
+					.cmb_data_nasc.Text = rs.Fields(5).Value
+					.cmb_tipo_plano.Text = rs.Fields(6).Value
+					.txt_email.Text = rs.Fields(7).Value
+					.img_foto.Load(rs.Fields(8).Value)
+				End If
+			Catch ex As Exception
+				Exit Sub
+			End Try
+		End With
+	End Sub
 	Sub Autocarregar_dados()
 		With frm_gerenciar_contas
 			Try
@@ -60,6 +85,21 @@
 			Exit Sub
 		End Try
 	End Sub
+	Sub Dados_DataGridViewClientes()
+		Try
+			SQL = $"select * from tb_clientes order by id_cliente asc"
+			rs = db.Execute(SQL)
+			With frm_gerenciar_clientes.dgv_info
+				.Rows.Clear()
+				Do While rs.EOF = False
+					.Rows.Add(rs.Fields(0).Value, rs.Fields(1).Value, rs.Fields(4).Value, rs.Fields(6).Value, rs.Fields(7).Value, Nothing, Nothing)
+					rs.MoveNext()
+				Loop
+			End With
+		Catch ex As Exception
+			Exit Sub
+		End Try
+	End Sub
 
 	Sub Alimentar_ComboBox()
 		Try
@@ -73,6 +113,18 @@
 		End Try
 	End Sub
 
+	Sub Alimentar_ComboBoxClientes()
+		Try
+			With DirectCast(frm_gerenciar_clientes.dgv_info.Columns(3), DataGridViewComboBoxColumn)
+				.Items.Clear()
+				.Items.Add("MELZINHO")
+				.Items.Add("HONEYGOLD")
+				.Items.Add("QUEENBEE")
+			End With
+		Catch ex As Exception
+			Exit Sub
+		End Try
+	End Sub
 	Sub Limpar_cadastro()
 		Try
 			With frm_gerenciar_contas
@@ -81,13 +133,31 @@
 				.txt_fone.Text = ""
 				.txt_senha.Text = ""
 				.txt_csenha.Text = ""
+				.cmb_tipo_conta.Text = ""
 				.cmb_tipo_conta.Text = "Abelha Operária"
+				.img_foto.Load(Application.StartupPath & "\Imagens\quem-e-esse-pokemon.png")
 			End With
 		Catch ex As Exception
 			Exit Sub
 		End Try
 	End Sub
 
+	Sub Limpar_cadastroClientes()
+		Try
+			With frm_gerenciar_clientes
+				.txt_cpf.Text = ""
+				.cmb_sexo.Text = ""
+				.txt_fone.Text = ""
+				.txt_nome.Text = ""
+				.cmb_data_nasc.Text = ""
+				.cmb_tipo_plano.Text = ""
+				.txt_email.Text = ""
+				.img_foto.Load(Application.StartupPath & "\Imagens\quem-e-esse-pokemon.png")
+			End With
+		Catch ex As Exception
+			Exit Sub
+		End Try
+	End Sub
 	Sub Carregar_comboBoxClientes()
 		Try
 			With frm_gerenciar_clientes.cmb_sexo.Items

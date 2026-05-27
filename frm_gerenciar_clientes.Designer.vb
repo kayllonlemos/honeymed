@@ -23,6 +23,7 @@ Partial Class frm_gerenciar_clientes
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frm_gerenciar_clientes))
+        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.Panel2 = New System.Windows.Forms.Panel()
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.lbl_email = New System.Windows.Forms.Label()
@@ -30,7 +31,7 @@ Partial Class frm_gerenciar_clientes
         Me.txt_email = New System.Windows.Forms.TextBox()
         Me.lbl_fone = New System.Windows.Forms.Label()
         Me.Panel12 = New System.Windows.Forms.Panel()
-        Me.txt_fone = New System.Windows.Forms.TextBox()
+        Me.txt_fone = New System.Windows.Forms.MaskedTextBox()
         Me.Panel10 = New System.Windows.Forms.Panel()
         Me.img_foto = New System.Windows.Forms.PictureBox()
         Me.Label8 = New System.Windows.Forms.Label()
@@ -39,7 +40,7 @@ Partial Class frm_gerenciar_clientes
         Me.cmb_tipo_plano = New System.Windows.Forms.ComboBox()
         Me.lbl_data_nasc = New System.Windows.Forms.Label()
         Me.Panel7 = New System.Windows.Forms.Panel()
-        Me.txt_data_nasc = New System.Windows.Forms.TextBox()
+        Me.cmb_data_nasc = New System.Windows.Forms.DateTimePicker()
         Me.lbl_nome = New System.Windows.Forms.Label()
         Me.Panel8 = New System.Windows.Forms.Panel()
         Me.txt_nome = New System.Windows.Forms.TextBox()
@@ -49,13 +50,20 @@ Partial Class frm_gerenciar_clientes
         Me.btn_salvar = New System.Windows.Forms.Button()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.lbl_cpf = New System.Windows.Forms.Label()
-        Me.txt_cpf = New System.Windows.Forms.TextBox()
         Me.Panel4 = New System.Windows.Forms.Panel()
+        Me.txt_cpf = New System.Windows.Forms.MaskedTextBox()
         Me.lbl_id = New System.Windows.Forms.Label()
         Me.txt_id = New System.Windows.Forms.TextBox()
         Me.Panel3 = New System.Windows.Forms.Panel()
         Me.Panel9 = New System.Windows.Forms.Panel()
         Me.dgv_info = New System.Windows.Forms.DataGridView()
+        Me.Column1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column3 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column4 = New System.Windows.Forms.DataGridViewComboBoxColumn()
+        Me.Column5 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column6 = New System.Windows.Forms.DataGridViewImageColumn()
+        Me.Column7 = New System.Windows.Forms.DataGridViewImageColumn()
         Me.Panel2.SuspendLayout()
         Me.Panel1.SuspendLayout()
         Me.Panel11.SuspendLayout()
@@ -66,6 +74,7 @@ Partial Class frm_gerenciar_clientes
         Me.Panel7.SuspendLayout()
         Me.Panel8.SuspendLayout()
         Me.Panel5.SuspendLayout()
+        Me.Panel4.SuspendLayout()
         Me.Panel9.SuspendLayout()
         CType(Me.dgv_info, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -102,7 +111,6 @@ Partial Class frm_gerenciar_clientes
         Me.Panel1.Controls.Add(Me.btn_salvar)
         Me.Panel1.Controls.Add(Me.Label4)
         Me.Panel1.Controls.Add(Me.lbl_cpf)
-        Me.Panel1.Controls.Add(Me.txt_cpf)
         Me.Panel1.Controls.Add(Me.Panel4)
         Me.Panel1.Controls.Add(Me.lbl_id)
         Me.Panel1.Controls.Add(Me.txt_id)
@@ -163,7 +171,8 @@ Partial Class frm_gerenciar_clientes
         '
         'txt_fone
         '
-        Me.txt_fone.Location = New System.Drawing.Point(10, 9)
+        Me.txt_fone.Location = New System.Drawing.Point(10, 8)
+        Me.txt_fone.Mask = "+55 (99) 99999-9999"
         Me.txt_fone.Name = "txt_fone"
         Me.txt_fone.Size = New System.Drawing.Size(259, 22)
         Me.txt_fone.TabIndex = 34
@@ -242,18 +251,21 @@ Partial Class frm_gerenciar_clientes
         'Panel7
         '
         Me.Panel7.BackColor = System.Drawing.Color.FromArgb(CType(CType(252, Byte), Integer), CType(CType(194, Byte), Integer), CType(CType(26, Byte), Integer))
-        Me.Panel7.Controls.Add(Me.txt_data_nasc)
+        Me.Panel7.Controls.Add(Me.cmb_data_nasc)
         Me.Panel7.Location = New System.Drawing.Point(354, 182)
         Me.Panel7.Name = "Panel7"
         Me.Panel7.Size = New System.Drawing.Size(279, 39)
         Me.Panel7.TabIndex = 20
         '
-        'txt_data_nasc
+        'cmb_data_nasc
         '
-        Me.txt_data_nasc.Location = New System.Drawing.Point(10, 8)
-        Me.txt_data_nasc.Name = "txt_data_nasc"
-        Me.txt_data_nasc.Size = New System.Drawing.Size(259, 22)
-        Me.txt_data_nasc.TabIndex = 2
+        Me.cmb_data_nasc.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
+        Me.cmb_data_nasc.Location = New System.Drawing.Point(10, 8)
+        Me.cmb_data_nasc.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.cmb_data_nasc.Name = "cmb_data_nasc"
+        Me.cmb_data_nasc.Size = New System.Drawing.Size(259, 22)
+        Me.cmb_data_nasc.TabIndex = 9
+        Me.cmb_data_nasc.Value = New Date(2026, 5, 4, 0, 0, 0, 0)
         '
         'lbl_nome
         '
@@ -343,20 +355,22 @@ Partial Class frm_gerenciar_clientes
         Me.lbl_cpf.TabIndex = 6
         Me.lbl_cpf.Text = "CPF:"
         '
-        'txt_cpf
-        '
-        Me.txt_cpf.Location = New System.Drawing.Point(48, 190)
-        Me.txt_cpf.Name = "txt_cpf"
-        Me.txt_cpf.Size = New System.Drawing.Size(259, 22)
-        Me.txt_cpf.TabIndex = 5
-        '
         'Panel4
         '
         Me.Panel4.BackColor = System.Drawing.Color.FromArgb(CType(CType(252, Byte), Integer), CType(CType(194, Byte), Integer), CType(CType(26, Byte), Integer))
+        Me.Panel4.Controls.Add(Me.txt_cpf)
         Me.Panel4.Location = New System.Drawing.Point(38, 182)
         Me.Panel4.Name = "Panel4"
         Me.Panel4.Size = New System.Drawing.Size(279, 39)
         Me.Panel4.TabIndex = 8
+        '
+        'txt_cpf
+        '
+        Me.txt_cpf.Location = New System.Drawing.Point(10, 8)
+        Me.txt_cpf.Mask = "999.999.999-99"
+        Me.txt_cpf.Name = "txt_cpf"
+        Me.txt_cpf.Size = New System.Drawing.Size(259, 22)
+        Me.txt_cpf.TabIndex = 35
         '
         'lbl_id
         '
@@ -399,13 +413,61 @@ Partial Class frm_gerenciar_clientes
         Me.dgv_info.AllowUserToDeleteRows = False
         Me.dgv_info.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
         Me.dgv_info.BackgroundColor = System.Drawing.Color.White
-        Me.dgv_info.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.dgv_info.ColumnHeadersHeight = 24
+        Me.dgv_info.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Column1, Me.Column2, Me.Column3, Me.Column4, Me.Column5, Me.Column6, Me.Column7})
         Me.dgv_info.Location = New System.Drawing.Point(10, 11)
         Me.dgv_info.Name = "dgv_info"
         Me.dgv_info.RowHeadersWidth = 51
+        DataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control
+        DataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        Me.dgv_info.RowsDefaultCellStyle = DataGridViewCellStyle1
         Me.dgv_info.RowTemplate.Height = 24
         Me.dgv_info.Size = New System.Drawing.Size(747, 180)
         Me.dgv_info.TabIndex = 25
+        '
+        'Column1
+        '
+        Me.Column1.HeaderText = "ID"
+        Me.Column1.MinimumWidth = 6
+        Me.Column1.Name = "Column1"
+        '
+        'Column2
+        '
+        Me.Column2.HeaderText = "CPF"
+        Me.Column2.MinimumWidth = 6
+        Me.Column2.Name = "Column2"
+        '
+        'Column3
+        '
+        Me.Column3.HeaderText = "Nome Cliente"
+        Me.Column3.MinimumWidth = 6
+        Me.Column3.Name = "Column3"
+        '
+        'Column4
+        '
+        Me.Column4.HeaderText = "Tipo Plano"
+        Me.Column4.MinimumWidth = 6
+        Me.Column4.Name = "Column4"
+        Me.Column4.Resizable = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.Column4.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic
+        '
+        'Column5
+        '
+        Me.Column5.HeaderText = "E-mail"
+        Me.Column5.MinimumWidth = 6
+        Me.Column5.Name = "Column5"
+        '
+        'Column6
+        '
+        Me.Column6.HeaderText = "Editar"
+        Me.Column6.MinimumWidth = 6
+        Me.Column6.Name = "Column6"
+        '
+        'Column7
+        '
+        Me.Column7.HeaderText = "Excluir"
+        Me.Column7.MinimumWidth = 6
+        Me.Column7.Name = "Column7"
         '
         'frm_gerenciar_clientes
         '
@@ -431,10 +493,11 @@ Partial Class frm_gerenciar_clientes
         CType(Me.img_foto, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Panel6.ResumeLayout(False)
         Me.Panel7.ResumeLayout(False)
-        Me.Panel7.PerformLayout()
         Me.Panel8.ResumeLayout(False)
         Me.Panel8.PerformLayout()
         Me.Panel5.ResumeLayout(False)
+        Me.Panel4.ResumeLayout(False)
+        Me.Panel4.PerformLayout()
         Me.Panel9.ResumeLayout(False)
         CType(Me.dgv_info, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
@@ -458,7 +521,6 @@ Partial Class frm_gerenciar_clientes
     Friend WithEvents btn_salvar As Button
     Friend WithEvents Label4 As Label
     Friend WithEvents lbl_cpf As Label
-    Friend WithEvents txt_cpf As TextBox
     Friend WithEvents Panel4 As Panel
     Friend WithEvents lbl_id As Label
     Friend WithEvents txt_id As TextBox
@@ -471,7 +533,15 @@ Partial Class frm_gerenciar_clientes
     Friend WithEvents Panel12 As Panel
     Friend WithEvents cmb_sexo As ComboBox
     Friend WithEvents txt_email As TextBox
-    Friend WithEvents txt_fone As TextBox
-    Friend WithEvents txt_data_nasc As TextBox
     Friend WithEvents txt_nome As TextBox
+    Friend WithEvents cmb_data_nasc As DateTimePicker
+    Friend WithEvents txt_fone As MaskedTextBox
+    Friend WithEvents txt_cpf As MaskedTextBox
+    Friend WithEvents Column1 As DataGridViewTextBoxColumn
+    Friend WithEvents Column2 As DataGridViewTextBoxColumn
+    Friend WithEvents Column3 As DataGridViewTextBoxColumn
+    Friend WithEvents Column4 As DataGridViewComboBoxColumn
+    Friend WithEvents Column5 As DataGridViewTextBoxColumn
+    Friend WithEvents Column6 As DataGridViewImageColumn
+    Friend WithEvents Column7 As DataGridViewImageColumn
 End Class

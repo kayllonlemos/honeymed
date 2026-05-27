@@ -32,7 +32,7 @@ Namespace My
         
         <Global.System.Diagnostics.DebuggerStepThroughAttribute()>  _
         Protected Overrides Sub OnCreateMainForm()
-            Me.MainForm = Global.HoneyMed.frm_login
+            Me.MainForm = Global.HoneyMed.frm_gerenciar_clientes
         End Sub
         
         <Global.System.Diagnostics.DebuggerStepThroughAttribute()>  _
