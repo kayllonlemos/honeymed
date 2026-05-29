@@ -176,4 +176,59 @@
 			Exit Sub
 		End Try
 	End Sub
+
+	Sub TipoPrestadoresAuto()
+		With frm_gerenciar_prestadores.cmb_tipo_prestador.Items
+			.Add("HOSPITAL")
+			.Add("CLÍNICA")
+			.Add("LABORATÓRIO")
+			.Add("MÉDICO")
+		End With
+		frm_gerenciar_prestadores.cmb_tipo_prestador.SelectedIndex = 0
+	End Sub
+
+	Sub PrestadoresAutoPreenchimento()
+		With frm_gerenciar_prestadores
+			Try
+				SQL = $"select * from tb_prestadores where nome='{aux}'"
+				rs = db.Execute(SQL)
+				If rs.EOF = False Then
+					Dim idPrestador As Integer = rs.Fields(0).Value
+
+					.txt_prestador.Text = rs.Fields(1).Value
+					.cmb_tipo_prestador.Text = rs.Fields(3).Value
+					.txt_endereco.Text = rs.Fields(4).Value
+					.txt_fone.Text = rs.Fields(5).Value
+					.txt_email.Text = rs.Fields(2).Value
+
+					SQL = $"select especialidade from tb_especialidades where id_prestador={idPrestador}"
+					Dim rsEsp = db.Execute(SQL)
+
+					Dim linhas As New List(Of String)
+					Do While rsEsp.EOF = False
+						linhas.Add(rsEsp.Fields(0).Value.ToString())
+						rsEsp.MoveNext()
+					Loop
+
+					.txt_especialidades.Text = String.Join(Environment.NewLine, linhas)
+				End If
+			Catch ex As Exception
+				Exit Sub
+			End Try
+		End With
+	End Sub
+	Sub Limpar_cadastroPrestadores()
+		Try
+			With frm_gerenciar_prestadores
+				.txt_prestador.Text = ""
+				.txt_email.Text = ""
+				.cmb_tipo_prestador.Text = ""
+				.txt_especialidades.Text = ""
+				.txt_endereco.Text = ""
+				.txt_fone.Text = ""
+			End With
+		Catch ex As Exception
+			Exit Sub
+		End Try
+	End Sub
 End Module

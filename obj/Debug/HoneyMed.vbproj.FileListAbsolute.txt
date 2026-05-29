@@ -59,3 +59,4 @@ C:\Users\Kayllon\Documents\GitHub\honeymed\obj\Debug\HoneyMed.vbproj.CoreCompile
 C:\Users\Kayllon\Documents\GitHub\honeymed\obj\Debug\HoneyMed.exe
 C:\Users\Kayllon\Documents\GitHub\honeymed\obj\Debug\HoneyMed.xml
 C:\Users\Kayllon\Documents\GitHub\honeymed\obj\Debug\HoneyMed.pdb
+C:\Users\Kayllon\Documents\GitHub\honeymed\obj\Debug\HoneyMed.frm_gerenciar_prestadores.resources
