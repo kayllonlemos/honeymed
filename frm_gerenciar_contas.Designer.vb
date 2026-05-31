@@ -23,7 +23,7 @@ Partial Class frm_gerenciar_contas
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frm_gerenciar_contas))
-        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle4 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.Panel2 = New System.Windows.Forms.Panel()
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.Panel10 = New System.Windows.Forms.Panel()
@@ -71,10 +71,11 @@ Partial Class frm_gerenciar_contas
         Me.Panel2.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.Panel2.BackColor = System.Drawing.Color.Black
         Me.Panel2.Controls.Add(Me.Panel1)
-        Me.Panel2.Location = New System.Drawing.Point(246, 49)
+        Me.Panel2.Location = New System.Drawing.Point(-1, -1)
+        Me.Panel2.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.Panel2.Name = "Panel2"
         Me.Panel2.RightToLeft = System.Windows.Forms.RightToLeft.No
-        Me.Panel2.Size = New System.Drawing.Size(857, 622)
+        Me.Panel2.Size = New System.Drawing.Size(643, 480)
         Me.Panel2.TabIndex = 3
         '
         'Panel1
@@ -103,19 +104,21 @@ Partial Class frm_gerenciar_contas
         Me.Panel1.Controls.Add(Me.txt_usuario)
         Me.Panel1.Controls.Add(Me.Panel3)
         Me.Panel1.Controls.Add(Me.Panel9)
-        Me.Panel1.Location = New System.Drawing.Point(7, 7)
+        Me.Panel1.Location = New System.Drawing.Point(5, 9)
+        Me.Panel1.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.Panel1.Name = "Panel1"
         Me.Panel1.RightToLeft = System.Windows.Forms.RightToLeft.No
-        Me.Panel1.Size = New System.Drawing.Size(842, 607)
+        Me.Panel1.Size = New System.Drawing.Size(632, 464)
         Me.Panel1.TabIndex = 1
         '
         'Panel10
         '
         Me.Panel10.BackColor = System.Drawing.Color.Black
         Me.Panel10.Controls.Add(Me.img_foto)
-        Me.Panel10.Location = New System.Drawing.Point(650, 103)
+        Me.Panel10.Location = New System.Drawing.Point(488, 74)
+        Me.Panel10.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.Panel10.Name = "Panel10"
-        Me.Panel10.Size = New System.Drawing.Size(169, 176)
+        Me.Panel10.Size = New System.Drawing.Size(127, 143)
         Me.Panel10.TabIndex = 27
         '
         'img_foto
@@ -124,9 +127,10 @@ Partial Class frm_gerenciar_contas
         Me.img_foto.BackColor = System.Drawing.Color.White
         Me.img_foto.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.img_foto.Image = CType(resources.GetObject("img_foto.Image"), System.Drawing.Image)
-        Me.img_foto.Location = New System.Drawing.Point(10, 10)
+        Me.img_foto.Location = New System.Drawing.Point(8, 8)
+        Me.img_foto.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.img_foto.Name = "img_foto"
-        Me.img_foto.Size = New System.Drawing.Size(149, 156)
+        Me.img_foto.Size = New System.Drawing.Size(112, 127)
         Me.img_foto.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
         Me.img_foto.TabIndex = 3
         Me.img_foto.TabStop = False
@@ -134,10 +138,11 @@ Partial Class frm_gerenciar_contas
         'lbl_frm_contas
         '
         Me.lbl_frm_contas.BackColor = System.Drawing.Color.Transparent
-        Me.lbl_frm_contas.Font = New System.Drawing.Font("Comic Sans MS", 19.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lbl_frm_contas.Location = New System.Drawing.Point(175, 19)
+        Me.lbl_frm_contas.Font = New System.Drawing.Font("JejuMyeongjo", 20.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lbl_frm_contas.Location = New System.Drawing.Point(131, 18)
+        Me.lbl_frm_contas.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.lbl_frm_contas.Name = "lbl_frm_contas"
-        Me.lbl_frm_contas.Size = New System.Drawing.Size(500, 55)
+        Me.lbl_frm_contas.Size = New System.Drawing.Size(375, 45)
         Me.lbl_frm_contas.TabIndex = 24
         Me.lbl_frm_contas.Text = "Gerenciar Abelhudos/Contas:"
         '
@@ -145,62 +150,69 @@ Partial Class frm_gerenciar_contas
         '
         Me.lbl_csenha.AutoSize = True
         Me.lbl_csenha.BackColor = System.Drawing.Color.Transparent
-        Me.lbl_csenha.Font = New System.Drawing.Font("Comic Sans MS", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lbl_csenha.Location = New System.Drawing.Point(349, 273)
+        Me.lbl_csenha.Font = New System.Drawing.Font("Bpmf Huninn", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(136, Byte))
+        Me.lbl_csenha.Location = New System.Drawing.Point(262, 206)
+        Me.lbl_csenha.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.lbl_csenha.Name = "lbl_csenha"
-        Me.lbl_csenha.Size = New System.Drawing.Size(175, 28)
+        Me.lbl_csenha.Size = New System.Drawing.Size(143, 21)
         Me.lbl_csenha.TabIndex = 22
         Me.lbl_csenha.Text = "Confirmar Senha:"
         '
         'txt_csenha
         '
-        Me.txt_csenha.Location = New System.Drawing.Point(364, 312)
+        Me.txt_csenha.Location = New System.Drawing.Point(273, 237)
+        Me.txt_csenha.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.txt_csenha.Name = "txt_csenha"
-        Me.txt_csenha.Size = New System.Drawing.Size(259, 22)
+        Me.txt_csenha.Size = New System.Drawing.Size(195, 20)
         Me.txt_csenha.TabIndex = 21
         '
         'Panel6
         '
         Me.Panel6.BackColor = System.Drawing.Color.FromArgb(CType(CType(252, Byte), Integer), CType(CType(194, Byte), Integer), CType(CType(26, Byte), Integer))
-        Me.Panel6.Location = New System.Drawing.Point(354, 304)
+        Me.Panel6.Location = New System.Drawing.Point(266, 230)
+        Me.Panel6.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.Panel6.Name = "Panel6"
-        Me.Panel6.Size = New System.Drawing.Size(279, 39)
+        Me.Panel6.Size = New System.Drawing.Size(209, 32)
         Me.Panel6.TabIndex = 23
         '
         'lbl_fone
         '
         Me.lbl_fone.AutoSize = True
         Me.lbl_fone.BackColor = System.Drawing.Color.Transparent
-        Me.lbl_fone.Font = New System.Drawing.Font("Comic Sans MS", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lbl_fone.Location = New System.Drawing.Point(349, 178)
+        Me.lbl_fone.Font = New System.Drawing.Font("Bpmf Huninn", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(136, Byte))
+        Me.lbl_fone.Location = New System.Drawing.Point(262, 135)
+        Me.lbl_fone.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.lbl_fone.Name = "lbl_fone"
-        Me.lbl_fone.Size = New System.Drawing.Size(101, 28)
+        Me.lbl_fone.Size = New System.Drawing.Size(81, 21)
         Me.lbl_fone.TabIndex = 19
         Me.lbl_fone.Text = "Telefone:"
         '
         'txt_fone
         '
-        Me.txt_fone.Location = New System.Drawing.Point(364, 217)
+        Me.txt_fone.Location = New System.Drawing.Point(273, 165)
+        Me.txt_fone.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.txt_fone.Name = "txt_fone"
-        Me.txt_fone.Size = New System.Drawing.Size(259, 22)
+        Me.txt_fone.Size = New System.Drawing.Size(195, 20)
         Me.txt_fone.TabIndex = 18
         '
         'Panel7
         '
         Me.Panel7.BackColor = System.Drawing.Color.FromArgb(CType(CType(252, Byte), Integer), CType(CType(194, Byte), Integer), CType(CType(26, Byte), Integer))
-        Me.Panel7.Location = New System.Drawing.Point(354, 209)
+        Me.Panel7.Location = New System.Drawing.Point(266, 159)
+        Me.Panel7.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.Panel7.Name = "Panel7"
-        Me.Panel7.Size = New System.Drawing.Size(279, 39)
+        Me.Panel7.Size = New System.Drawing.Size(209, 32)
         Me.Panel7.TabIndex = 20
         '
         'lbl_tipo_conta
         '
         Me.lbl_tipo_conta.AutoSize = True
         Me.lbl_tipo_conta.BackColor = System.Drawing.Color.Transparent
-        Me.lbl_tipo_conta.Font = New System.Drawing.Font("Comic Sans MS", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lbl_tipo_conta.Location = New System.Drawing.Point(349, 81)
+        Me.lbl_tipo_conta.Font = New System.Drawing.Font("Bpmf Huninn", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(136, Byte))
+        Me.lbl_tipo_conta.Location = New System.Drawing.Point(262, 67)
+        Me.lbl_tipo_conta.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.lbl_tipo_conta.Name = "lbl_tipo_conta"
-        Me.lbl_tipo_conta.Size = New System.Drawing.Size(159, 28)
+        Me.lbl_tipo_conta.Size = New System.Drawing.Size(131, 21)
         Me.lbl_tipo_conta.TabIndex = 16
         Me.lbl_tipo_conta.Text = "Tipo de Abelha:"
         '
@@ -208,43 +220,48 @@ Partial Class frm_gerenciar_contas
         '
         Me.Panel8.BackColor = System.Drawing.Color.FromArgb(CType(CType(252, Byte), Integer), CType(CType(194, Byte), Integer), CType(CType(26, Byte), Integer))
         Me.Panel8.Controls.Add(Me.cmb_tipo_conta)
-        Me.Panel8.Location = New System.Drawing.Point(354, 112)
+        Me.Panel8.Location = New System.Drawing.Point(266, 91)
+        Me.Panel8.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.Panel8.Name = "Panel8"
-        Me.Panel8.Size = New System.Drawing.Size(279, 39)
+        Me.Panel8.Size = New System.Drawing.Size(209, 32)
         Me.Panel8.TabIndex = 17
         '
         'cmb_tipo_conta
         '
         Me.cmb_tipo_conta.FormattingEnabled = True
-        Me.cmb_tipo_conta.Location = New System.Drawing.Point(10, 8)
+        Me.cmb_tipo_conta.Location = New System.Drawing.Point(8, 6)
+        Me.cmb_tipo_conta.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.cmb_tipo_conta.Name = "cmb_tipo_conta"
-        Me.cmb_tipo_conta.Size = New System.Drawing.Size(259, 24)
+        Me.cmb_tipo_conta.Size = New System.Drawing.Size(195, 21)
         Me.cmb_tipo_conta.TabIndex = 0
         '
         'lbl_senha
         '
         Me.lbl_senha.AutoSize = True
         Me.lbl_senha.BackColor = System.Drawing.Color.Transparent
-        Me.lbl_senha.Font = New System.Drawing.Font("Comic Sans MS", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lbl_senha.Location = New System.Drawing.Point(33, 266)
+        Me.lbl_senha.Font = New System.Drawing.Font("Bpmf Huninn", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(136, Byte))
+        Me.lbl_senha.Location = New System.Drawing.Point(25, 206)
+        Me.lbl_senha.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.lbl_senha.Name = "lbl_senha"
-        Me.lbl_senha.Size = New System.Drawing.Size(75, 28)
+        Me.lbl_senha.Size = New System.Drawing.Size(62, 21)
         Me.lbl_senha.TabIndex = 13
         Me.lbl_senha.Text = "Senha:"
         '
         'txt_senha
         '
-        Me.txt_senha.Location = New System.Drawing.Point(48, 312)
+        Me.txt_senha.Location = New System.Drawing.Point(36, 237)
+        Me.txt_senha.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.txt_senha.Name = "txt_senha"
-        Me.txt_senha.Size = New System.Drawing.Size(259, 22)
+        Me.txt_senha.Size = New System.Drawing.Size(195, 20)
         Me.txt_senha.TabIndex = 12
         '
         'Panel5
         '
         Me.Panel5.BackColor = System.Drawing.Color.FromArgb(CType(CType(252, Byte), Integer), CType(CType(194, Byte), Integer), CType(CType(26, Byte), Integer))
-        Me.Panel5.Location = New System.Drawing.Point(38, 304)
+        Me.Panel5.Location = New System.Drawing.Point(28, 230)
+        Me.Panel5.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.Panel5.Name = "Panel5"
-        Me.Panel5.Size = New System.Drawing.Size(279, 39)
+        Me.Panel5.Size = New System.Drawing.Size(209, 32)
         Me.Panel5.TabIndex = 14
         '
         'btn_salvar
@@ -252,9 +269,10 @@ Partial Class frm_gerenciar_contas
         Me.btn_salvar.BackColor = System.Drawing.Color.FromArgb(CType(CType(252, Byte), Integer), CType(CType(194, Byte), Integer), CType(CType(26, Byte), Integer))
         Me.btn_salvar.Font = New System.Drawing.Font("Comic Sans MS", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btn_salvar.ForeColor = System.Drawing.Color.White
-        Me.btn_salvar.Location = New System.Drawing.Point(661, 300)
+        Me.btn_salvar.Location = New System.Drawing.Point(496, 227)
+        Me.btn_salvar.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.btn_salvar.Name = "btn_salvar"
-        Me.btn_salvar.Size = New System.Drawing.Size(148, 43)
+        Me.btn_salvar.Size = New System.Drawing.Size(111, 35)
         Me.btn_salvar.TabIndex = 11
         Me.btn_salvar.Text = "SALVAR"
         Me.btn_salvar.UseVisualStyleBackColor = False
@@ -262,9 +280,10 @@ Partial Class frm_gerenciar_contas
         'Label4
         '
         Me.Label4.Font = New System.Drawing.Font("Comic Sans MS", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label4.Location = New System.Drawing.Point(308, -100)
+        Me.Label4.Location = New System.Drawing.Point(231, -81)
+        Me.Label4.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(216, 47)
+        Me.Label4.Size = New System.Drawing.Size(162, 38)
         Me.Label4.TabIndex = 10
         Me.Label4.Text = "Bem vindo(a)..."
         Me.Label4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
@@ -273,61 +292,68 @@ Partial Class frm_gerenciar_contas
         '
         Me.lbl_email.AutoSize = True
         Me.lbl_email.BackColor = System.Drawing.Color.Transparent
-        Me.lbl_email.Font = New System.Drawing.Font("Comic Sans MS", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lbl_email.Location = New System.Drawing.Point(33, 171)
+        Me.lbl_email.Font = New System.Drawing.Font("Bpmf Huninn", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(136, Byte))
+        Me.lbl_email.Location = New System.Drawing.Point(25, 135)
+        Me.lbl_email.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.lbl_email.Name = "lbl_email"
-        Me.lbl_email.Size = New System.Drawing.Size(74, 28)
+        Me.lbl_email.Size = New System.Drawing.Size(61, 21)
         Me.lbl_email.TabIndex = 6
         Me.lbl_email.Text = "E-mail:"
         '
         'txt_email
         '
-        Me.txt_email.Location = New System.Drawing.Point(48, 217)
+        Me.txt_email.Location = New System.Drawing.Point(36, 165)
+        Me.txt_email.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.txt_email.Name = "txt_email"
-        Me.txt_email.Size = New System.Drawing.Size(259, 22)
+        Me.txt_email.Size = New System.Drawing.Size(195, 20)
         Me.txt_email.TabIndex = 5
         '
         'Panel4
         '
         Me.Panel4.BackColor = System.Drawing.Color.FromArgb(CType(CType(252, Byte), Integer), CType(CType(194, Byte), Integer), CType(CType(26, Byte), Integer))
-        Me.Panel4.Location = New System.Drawing.Point(38, 209)
+        Me.Panel4.Location = New System.Drawing.Point(28, 159)
+        Me.Panel4.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.Panel4.Name = "Panel4"
-        Me.Panel4.Size = New System.Drawing.Size(279, 39)
+        Me.Panel4.Size = New System.Drawing.Size(209, 32)
         Me.Panel4.TabIndex = 8
         '
         'lbl_usuario
         '
         Me.lbl_usuario.AutoSize = True
         Me.lbl_usuario.BackColor = System.Drawing.Color.Transparent
-        Me.lbl_usuario.Font = New System.Drawing.Font("Comic Sans MS", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lbl_usuario.Location = New System.Drawing.Point(33, 81)
+        Me.lbl_usuario.Font = New System.Drawing.Font("Bpmf Huninn", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(136, Byte))
+        Me.lbl_usuario.Location = New System.Drawing.Point(25, 67)
+        Me.lbl_usuario.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.lbl_usuario.Name = "lbl_usuario"
-        Me.lbl_usuario.Size = New System.Drawing.Size(231, 28)
+        Me.lbl_usuario.Size = New System.Drawing.Size(194, 21)
         Me.lbl_usuario.TabIndex = 2
         Me.lbl_usuario.Text = "Usuário do Funcionário:"
         '
         'txt_usuario
         '
-        Me.txt_usuario.Location = New System.Drawing.Point(48, 120)
+        Me.txt_usuario.Location = New System.Drawing.Point(36, 98)
+        Me.txt_usuario.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.txt_usuario.Name = "txt_usuario"
-        Me.txt_usuario.Size = New System.Drawing.Size(259, 22)
+        Me.txt_usuario.Size = New System.Drawing.Size(195, 20)
         Me.txt_usuario.TabIndex = 1
         '
         'Panel3
         '
         Me.Panel3.BackColor = System.Drawing.Color.FromArgb(CType(CType(252, Byte), Integer), CType(CType(194, Byte), Integer), CType(CType(26, Byte), Integer))
-        Me.Panel3.Location = New System.Drawing.Point(38, 112)
+        Me.Panel3.Location = New System.Drawing.Point(28, 91)
+        Me.Panel3.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.Panel3.Name = "Panel3"
-        Me.Panel3.Size = New System.Drawing.Size(279, 39)
+        Me.Panel3.Size = New System.Drawing.Size(209, 32)
         Me.Panel3.TabIndex = 4
         '
         'Panel9
         '
         Me.Panel9.BackColor = System.Drawing.Color.FromArgb(CType(CType(252, Byte), Integer), CType(CType(194, Byte), Integer), CType(CType(26, Byte), Integer))
         Me.Panel9.Controls.Add(Me.dgv_info)
-        Me.Panel9.Location = New System.Drawing.Point(38, 374)
+        Me.Panel9.Location = New System.Drawing.Point(28, 286)
+        Me.Panel9.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.Panel9.Name = "Panel9"
-        Me.Panel9.Size = New System.Drawing.Size(767, 202)
+        Me.Panel9.Size = New System.Drawing.Size(575, 164)
         Me.Panel9.TabIndex = 26
         '
         'dgv_info
@@ -336,21 +362,22 @@ Partial Class frm_gerenciar_contas
         Me.dgv_info.AllowUserToDeleteRows = False
         Me.dgv_info.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
         Me.dgv_info.BackgroundColor = System.Drawing.Color.White
-        DataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(CType(CType(252, Byte), Integer), CType(CType(194, Byte), Integer), CType(CType(26, Byte), Integer))
-        DataGridViewCellStyle1.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText
-        DataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(217, Byte), Integer), CType(CType(168, Byte), Integer), CType(CType(26, Byte), Integer))
-        DataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.dgv_info.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle1
+        DataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(CType(CType(252, Byte), Integer), CType(CType(194, Byte), Integer), CType(CType(26, Byte), Integer))
+        DataGridViewCellStyle4.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(217, Byte), Integer), CType(CType(168, Byte), Integer), CType(CType(26, Byte), Integer))
+        DataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.dgv_info.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle4
         Me.dgv_info.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.dgv_info.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Column1, Me.Column2, Me.Column3, Me.Column4, Me.Column5, Me.Column6})
-        Me.dgv_info.Location = New System.Drawing.Point(10, 11)
+        Me.dgv_info.Location = New System.Drawing.Point(8, 9)
+        Me.dgv_info.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.dgv_info.Name = "dgv_info"
         Me.dgv_info.RowHeadersWidth = 51
         Me.dgv_info.RowTemplate.Height = 24
-        Me.dgv_info.Size = New System.Drawing.Size(747, 180)
+        Me.dgv_info.Size = New System.Drawing.Size(560, 146)
         Me.dgv_info.TabIndex = 25
         '
         'Column1
@@ -391,14 +418,15 @@ Partial Class frm_gerenciar_contas
         '
         'frm_gerenciar_contas
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackgroundImage = CType(resources.GetObject("$this.BackgroundImage"), System.Drawing.Image)
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.ClientSize = New System.Drawing.Size(1348, 721)
+        Me.ClientSize = New System.Drawing.Size(641, 477)
         Me.Controls.Add(Me.Panel2)
         Me.DoubleBuffered = True
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
+        Me.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.Name = "frm_gerenciar_contas"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Gerenciar Contas"

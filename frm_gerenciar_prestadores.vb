@@ -88,4 +88,92 @@ Public Class frm_gerenciar_prestadores
         aux = txt_prestador.Text
         PrestadoresAutoPreenchimento()
     End Sub
+
+    Private Sub Panel2_Paint(sender As Object, e As PaintEventArgs) Handles Panel2.Paint
+
+    End Sub
+
+    Private Sub Panel1_Paint(sender As Object, e As PaintEventArgs) Handles Panel1.Paint
+
+    End Sub
+
+    Private Sub lbl_fone_Click(sender As Object, e As EventArgs) Handles lbl_fone.Click
+
+    End Sub
+
+    Private Sub Panel12_Paint(sender As Object, e As PaintEventArgs) Handles Panel12.Paint
+
+    End Sub
+
+    Private Sub txt_fone_MaskInputRejected(sender As Object, e As MaskInputRejectedEventArgs) Handles txt_fone.MaskInputRejected
+
+    End Sub
+
+    Private Sub Label8_Click(sender As Object, e As EventArgs) Handles Label8.Click
+
+    End Sub
+
+    Private Sub lbl_especialidades_Click(sender As Object, e As EventArgs) Handles lbl_especialidades.Click
+
+    End Sub
+
+    Private Sub Panel7_Paint(sender As Object, e As PaintEventArgs) Handles Panel7.Paint
+
+    End Sub
+
+    Private Sub txt_especialidades_TextChanged(sender As Object, e As EventArgs) Handles txt_especialidades.TextChanged
+
+    End Sub
+
+    Private Sub lbl_email_Click(sender As Object, e As EventArgs) Handles lbl_email.Click
+
+    End Sub
+
+    Private Sub Panel8_Paint(sender As Object, e As PaintEventArgs) Handles Panel8.Paint
+
+    End Sub
+
+    Private Sub txt_email_TextChanged(sender As Object, e As EventArgs) Handles txt_email.TextChanged
+
+    End Sub
+
+    Private Sub lbl_endereco_Click(sender As Object, e As EventArgs) Handles lbl_endereco.Click
+
+    End Sub
+
+    Private Sub Panel5_Paint(sender As Object, e As PaintEventArgs) Handles Panel5.Paint
+
+    End Sub
+
+    Private Sub txt_endereco_TextChanged(sender As Object, e As EventArgs) Handles txt_endereco.TextChanged
+
+    End Sub
+
+    Private Sub Label4_Click(sender As Object, e As EventArgs) Handles Label4.Click
+
+    End Sub
+
+    Private Sub lbl_tipo_prestador_Click(sender As Object, e As EventArgs) Handles lbl_tipo_prestador.Click
+
+    End Sub
+
+    Private Sub Panel4_Paint(sender As Object, e As PaintEventArgs) Handles Panel4.Paint
+
+    End Sub
+
+    Private Sub cmb_tipo_prestador_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cmb_tipo_prestador.SelectedIndexChanged
+
+    End Sub
+
+    Private Sub lbl_prestador_Click(sender As Object, e As EventArgs) Handles lbl_prestador.Click
+
+    End Sub
+
+    Private Sub txt_prestador_TextChanged(sender As Object, e As EventArgs) Handles txt_prestador.TextChanged
+
+    End Sub
+
+    Private Sub Panel3_Paint(sender As Object, e As PaintEventArgs) Handles Panel3.Paint
+
+    End Sub
 End Class
