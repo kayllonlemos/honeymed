@@ -1,5 +1,5 @@
 ﻿Module mod_geral
-	Public diretorio, SQL, resp, aux As String
+	Public diretorio, SQL, resp, aux, aux2 As String
 	Public db As New ADODB.Connection
 	Public rs As New ADODB.Recordset
 
@@ -231,4 +231,109 @@
 			Exit Sub
 		End Try
 	End Sub
+
+	Sub Carregar_prestadoresConsulta()
+		Try
+			With frm_consultar_prestadores.cmb_prestador.Items
+				SQL = $"select nome from tb_prestadores order by nome asc"
+				rs = db.Execute(SQL)
+				Do While rs.EOF = False
+					.Add(rs.Fields(0).Value.ToString())
+					rs.MoveNext()
+				Loop
+			End With
+		Catch ex As Exception
+			Exit Sub
+		End Try
+	End Sub
+
+	Sub Carregar_especialidadesConsulta()
+		Try
+			With frm_consultar_prestadores.cmb_especialidade.Items
+				SQL = $"select especialidade from tb_especialidades order by especialidade asc"
+				rs = db.Execute(SQL)
+				Do While rs.EOF = False
+					.Add(rs.Fields(0).Value.ToString())
+					rs.MoveNext()
+				Loop
+			End With
+		Catch ex As Exception
+			Exit Sub
+		End Try
+	End Sub
+
+	Sub Dados_DataGridViewConsultaPrestadores()
+		Try
+			SQL = $"select * from tb_prestadores order by nome asc"
+			rs = db.Execute(SQL)
+			With frm_consultar_prestadores.dgv_info
+				.Rows.Clear()
+				Do While rs.EOF = False
+					.Rows.Add(rs.Fields(0).Value, rs.Fields(1).Value, rs.Fields(2).Value, rs.Fields(3).Value, rs.Fields(4).Value, rs.Fields(5).Value)
+					rs.MoveNext()
+				Loop
+			End With
+		Catch ex As Exception
+			Exit Sub
+		End Try
+	End Sub
+
+	Sub Filtrar_DataGridView_Consulta()
+		Try
+			SQL = $"select distinct p.id, p.nome, p.email, p.tipo_prestador, p.endereco, p.fone
+                from tb_prestadores p
+                inner join tb_especialidades e on e.id_prestador = p.id
+                where p.nome='{aux}' and e.especialidade='{aux2}'"
+			rs = db.Execute(SQL)
+			With frm_consultar_prestadores.dgv_info
+				.Rows.Clear()
+				Do While rs.EOF = False
+					.Rows.Add(rs.Fields(0).Value, rs.Fields(1).Value, rs.Fields(2).Value,
+						  rs.Fields(3).Value, rs.Fields(4).Value, rs.Fields(5).Value)
+					rs.MoveNext()
+				Loop
+			End With
+		Catch ex As Exception
+			Exit Sub
+		End Try
+	End Sub
+
+	Sub Filtrar_DataGridView_ConsultaPrestador()
+		Try
+			SQL = $"select * from tb_prestadores where nome='{aux}'"
+			rs = db.Execute(SQL)
+			With frm_consultar_prestadores.dgv_info
+				.Rows.Clear()
+				Do While rs.EOF = False
+					.Rows.Add(rs.Fields(0).Value, rs.Fields(1).Value, rs.Fields(2).Value,
+						  rs.Fields(3).Value, rs.Fields(4).Value, rs.Fields(5).Value)
+					rs.MoveNext()
+				Loop
+			End With
+		Catch ex As Exception
+			Exit Sub
+		End Try
+	End Sub
+
+	Sub Filtrar_DataGridView_ConsultaEspecialidade()
+		Try
+			rs = db.Execute($"select id_prestador from tb_especialidades where especialidade='{aux2}'")
+			If rs.EOF Then Exit Sub
+			Dim idPrestador As Integer = rs.Fields(0).Value
+
+			SQL = $"select * from tb_prestadores where id={idPrestador}"
+			rs = db.Execute(SQL)
+			With frm_consultar_prestadores.dgv_info
+				.Rows.Clear()
+				Do While rs.EOF = False
+					.Rows.Add(rs.Fields(0).Value, rs.Fields(1).Value, rs.Fields(2).Value,
+						  rs.Fields(3).Value, rs.Fields(4).Value, rs.Fields(5).Value)
+					rs.MoveNext()
+				Loop
+			End With
+		Catch ex As Exception
+			Exit Sub
+		End Try
+	End Sub
+
 End Module

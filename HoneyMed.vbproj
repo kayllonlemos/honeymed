@@ -76,6 +76,10 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="frm_consultar_prestadores.Designer.vb">
+      <DependentUpon>frm_consultar_prestadores.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frm_consultar_prestadores.vb" />
     <Compile Include="frm_gerenciar_clientes.Designer.vb">
       <DependentUpon>frm_gerenciar_clientes.vb</DependentUpon>
     </Compile>
@@ -126,6 +130,9 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="frm_consultar_prestadores.resx">
+      <DependentUpon>frm_consultar_prestadores.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frm_gerenciar_clientes.resx">
       <DependentUpon>frm_gerenciar_clientes.vb</DependentUpon>
     </EmbeddedResource>
