@@ -1,5 +1,6 @@
 {
   "Version": 1,
+<<<<<<< Updated upstream
   "WorkspaceRootPath": "C:\\Users\\Kayllon\\Documents\\GitHub\\honeymed\\",
   "Documents": [
     {
@@ -25,6 +26,10 @@
       "AbsoluteMoniker": "D:0:0:{CB79E884-6359-4A81-A654-A2D5B22DB6DD}|HoneyMed.vbproj|c:\\users\\kayllon\\documents\\github\\honeymed\\||{B270807C-D8C6-49EB-8EBE-8E8D566637A1}|8998e48e-b89a-4034-b66e-353d8c1fdc2e"
     }
   ],
+=======
+  "WorkspaceRootPath": "C:\\Users\\T-GAMER\\Documents\\GitHub\\honeymed\\",
+  "Documents": [],
+>>>>>>> Stashed changes
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
@@ -32,6 +37,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
+<<<<<<< Updated upstream
           "SelectedChildIndex": 4,
           "Children": [
             {
@@ -98,6 +104,13 @@
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
               "WhenOpened": "2026-05-28T19:40:58.634Z",
               "EditorCaption": " [Design]"
+=======
+          "SelectedChildIndex": -1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{75188d03-9892-4ae2-abf1-207126247ce5}"
+>>>>>>> Stashed changes
             }
           ]
         }
