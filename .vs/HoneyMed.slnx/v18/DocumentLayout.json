@@ -3,16 +3,22 @@
   "WorkspaceRootPath": "C:\\Users\\T-GAMER\\Documents\\GitHub\\honeymed\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{CB79E884-6359-4A81-A654-A2D5B22DB6DD}|HoneyMed.vbproj|c:\\users\\t-gamer\\documents\\github\\honeymed\\frm_gerenciar_clientes.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form",
-      "RelativeMoniker": "D:0:0:{CB79E884-6359-4A81-A654-A2D5B22DB6DD}|HoneyMed.vbproj|solutionrelative:frm_gerenciar_clientes.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form"
+      "AbsoluteMoniker": "D:0:0:{CB79E884-6359-4A81-A654-A2D5B22DB6DD}|HoneyMed.vbproj|c:\\users\\t-gamer\\documents\\github\\honeymed\\frm_gerenciar_prestadores.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form",
+      "RelativeMoniker": "D:0:0:{CB79E884-6359-4A81-A654-A2D5B22DB6DD}|HoneyMed.vbproj|solutionrelative:frm_gerenciar_prestadores.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form"
     },
     {
       "AbsoluteMoniker": "D:0:0:{CB79E884-6359-4A81-A654-A2D5B22DB6DD}|HoneyMed.vbproj|C:\\Users\\T-GAMER\\Documents\\GitHub\\honeymed\\frm_gerenciar_contas.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form",
       "RelativeMoniker": "D:0:0:{CB79E884-6359-4A81-A654-A2D5B22DB6DD}|HoneyMed.vbproj|solutionrelative:frm_gerenciar_contas.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{CB79E884-6359-4A81-A654-A2D5B22DB6DD}|HoneyMed.vbproj|C:\\Users\\T-GAMER\\Documents\\GitHub\\honeymed\\frm_gerenciar_prestadores.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form",
-      "RelativeMoniker": "D:0:0:{CB79E884-6359-4A81-A654-A2D5B22DB6DD}|HoneyMed.vbproj|solutionrelative:frm_gerenciar_prestadores.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form"
+      "AbsoluteMoniker": "D:0:0:{CB79E884-6359-4A81-A654-A2D5B22DB6DD}|HoneyMed.vbproj|c:\\users\\t-gamer\\documents\\github\\honeymed\\frm_gerenciar_clientes.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form",
+      "RelativeMoniker": "D:0:0:{CB79E884-6359-4A81-A654-A2D5B22DB6DD}|HoneyMed.vbproj|solutionrelative:frm_gerenciar_clientes.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{00000000-0000-0000-0000-000000000000}|\u003CSolution\u003E|HoneyMed||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CB79E884-6359-4A81-A654-A2D5B22DB6DD}|HoneyMed.vbproj|c:\\users\\t-gamer\\documents\\github\\honeymed\\||{B270807C-D8C6-49EB-8EBE-8E8D566637A1}|8998e48e-b89a-4034-b66e-353d8c1fdc2e"
     }
   ],
   "DocumentGroupContainers": [
@@ -31,6 +37,30 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "frm_gerenciar_prestadores.vb [Design]",
+              "DocumentMoniker": "C:\\Users\\T-GAMER\\Documents\\GitHub\\honeymed\\frm_gerenciar_prestadores.vb",
+              "RelativeDocumentMoniker": "frm_gerenciar_prestadores.vb",
+              "ToolTip": "C:\\Users\\T-GAMER\\Documents\\GitHub\\honeymed\\frm_gerenciar_prestadores.vb [Design]",
+              "RelativeToolTip": "frm_gerenciar_prestadores.vb [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2026-05-31T14:37:41.285Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "HoneyMed",
+              "DocumentMoniker": "C:\\Users\\T-GAMER\\Documents\\GitHub\\honeymed\\HoneyMed.vbproj",
+              "RelativeDocumentMoniker": "HoneyMed.vbproj",
+              "ToolTip": "C:\\Users\\T-GAMER\\Documents\\GitHub\\honeymed\\HoneyMed.vbproj*",
+              "RelativeToolTip": "HoneyMed.vbproj*",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2026-05-31T14:36:49.121Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
               "Title": "frm_gerenciar_clientes.vb [Design]",
               "DocumentMoniker": "C:\\Users\\T-GAMER\\Documents\\GitHub\\honeymed\\frm_gerenciar_clientes.vb",
               "RelativeDocumentMoniker": "frm_gerenciar_clientes.vb",
@@ -48,19 +78,9 @@
               "RelativeDocumentMoniker": "frm_gerenciar_contas.vb",
               "ToolTip": "C:\\Users\\T-GAMER\\Documents\\GitHub\\honeymed\\frm_gerenciar_contas.vb [Design]",
               "RelativeToolTip": "frm_gerenciar_contas.vb [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003525|",
-              "WhenOpened": "2026-05-31T14:28:58.514Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "frm_gerenciar_prestadores.vb [Design]",
-              "DocumentMoniker": "C:\\Users\\T-GAMER\\Documents\\GitHub\\honeymed\\frm_gerenciar_prestadores.vb",
-              "RelativeDocumentMoniker": "frm_gerenciar_prestadores.vb",
-              "ToolTip": "C:\\Users\\T-GAMER\\Documents\\GitHub\\honeymed\\frm_gerenciar_prestadores.vb [Design]",
-              "RelativeToolTip": "frm_gerenciar_prestadores.vb [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003525|",
-              "WhenOpened": "2026-05-31T14:28:58.515Z"
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2026-05-31T14:28:58.514Z",
+              "EditorCaption": " [Design]"
             }
           ]
         }
