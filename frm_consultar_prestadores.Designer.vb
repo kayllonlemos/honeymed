@@ -54,12 +54,16 @@ Partial Class frm_consultar_prestadores
         Me.Panel2.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.Panel2.BackColor = System.Drawing.Color.Black
         Me.Panel2.Controls.Add(Me.Panel1)
-        Me.Panel2.Location = New System.Drawing.Point(-1, -2)
+        Me.Panel2.Location = New System.Drawing.Point(-1, -4)
         Me.Panel2.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.Panel2.Name = "Panel2"
         Me.Panel2.RightToLeft = System.Windows.Forms.RightToLeft.No
         Me.Panel2.Size = New System.Drawing.Size(857, 591)
-        Me.Panel2.TabIndex = 4
+<<<<<<< Updated upstream
+        Me.Panel2.TabIndex = 6
+=======
+        Me.Panel2.TabIndex = 5
+>>>>>>> Stashed changes
         '
         'Panel1
         '
@@ -239,7 +243,7 @@ Partial Class frm_consultar_prestadores
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "frm_consultar_prestadores"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
-        Me.Text = "Consultar Prestadores"
+        Me.Text = "Consultar Prestadores:"
         Me.Panel2.ResumeLayout(False)
         Me.Panel1.ResumeLayout(False)
         Me.Panel9.ResumeLayout(False)
@@ -251,61 +255,20 @@ Partial Class frm_consultar_prestadores
 
     Friend WithEvents Panel2 As Panel
     Friend WithEvents Panel1 As Panel
-    Friend WithEvents lbl_frm_contas As Label
-    Friend WithEvents Label4 As Label
-
-    Private Sub ComboBox1_SelectedIndexChanged(sender As Object, e As EventArgs)
-
-    End Sub
-
-    Friend WithEvents Panel3 As Panel
-    Friend WithEvents cmb_prestador As ComboBox
-    Friend WithEvents lbl_prestador As Label
-    Friend WithEvents ToolStrip1 As ToolStrip
-    Friend WithEvents cmb_especialidade As ComboBox
-    Friend WithEvents lbl_especialidade As Label
-
-    Private Sub lbl_prestador_Click(sender As Object, e As EventArgs) Handles lbl_prestador.Click
-
-    End Sub
     Friend WithEvents Panel9 As Panel
     Friend WithEvents dgv_info As DataGridView
-
-    Private Sub frm_consultar_prestadores_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        Conectar_banco()
-        Carregar_prestadoresConsulta()
-        Carregar_especialidadesConsulta()
-        Dados_DataGridViewConsultaPrestadores()
-    End Sub
-
-    Private Sub cmb_prestador_LostFocus(sender As Object, e As EventArgs) Handles cmb_prestador.LostFocus
-        aux = cmb_prestador.Text
-        If cmb_prestador.Text = "" And cmb_especialidade.Text = "" Then
-            Dados_DataGridViewConsultaPrestadores()
-        ElseIf cmb_especialidade.Text = "" Then
-            Filtrar_DataGridView_ConsultaPrestador()
-        Else
-            Filtrar_DataGridView_Consulta()
-        End If
-    End Sub
-
-    Private Sub cmb_especialidade_LostFocus(sender As Object, e As EventArgs) Handles cmb_especialidade.LostFocus
-        aux2 = cmb_especialidade.Text
-        If cmb_especialidade.Text = "" And cmb_prestador.Text = "" Then
-            Dados_DataGridViewConsultaPrestadores()
-        ElseIf cmb_prestador.Text = "" Then
-            Filtrar_DataGridView_ConsultaEspecialidade()
-        Else
-            Filtrar_DataGridView_Consulta()
-        End If
-    End Sub
-
     Friend WithEvents Column1 As DataGridViewTextBoxColumn
     Friend WithEvents Column2 As DataGridViewTextBoxColumn
     Friend WithEvents Column3 As DataGridViewTextBoxColumn
     Friend WithEvents Column4 As DataGridViewTextBoxColumn
     Friend WithEvents Column5 As DataGridViewTextBoxColumn
     Friend WithEvents Column6 As DataGridViewTextBoxColumn
-
-
+    Friend WithEvents lbl_frm_contas As Label
+    Friend WithEvents Label4 As Label
+    Friend WithEvents Panel3 As Panel
+    Friend WithEvents cmb_especialidade As ComboBox
+    Friend WithEvents lbl_especialidade As Label
+    Friend WithEvents cmb_prestador As ComboBox
+    Friend WithEvents lbl_prestador As Label
+    Friend WithEvents ToolStrip1 As ToolStrip
 End Class
