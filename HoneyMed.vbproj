@@ -76,6 +76,15 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+<<<<<<< Updated upstream
+=======
+    <Compile Include="frm_consultar_prestadores.Designer.vb">
+      <DependentUpon>frm_consultar_prestadores.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frm_consultar_prestadores.vb">
+      <SubType>Form</SubType>
+    </Compile>
+>>>>>>> Stashed changes
     <Compile Include="frm_gerenciar_clientes.Designer.vb">
       <DependentUpon>frm_gerenciar_clientes.vb</DependentUpon>
     </Compile>
