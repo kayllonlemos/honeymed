@@ -232,10 +232,15 @@
 		End Try
 	End Sub
 
-	Sub Carregar_prestadoresConsulta()
+	Sub Carregar_especialidadesAgendamento()
 		Try
-			With frm_consultar_prestadores.cmb_prestador.Items
-				SQL = $"select nome from tb_prestadores order by nome asc"
+			With frm_gerenciar_agendamentos.cmb_especialidade.Items
+				.Clear()
+				rs = db.Execute($"select id from tb_prestadores where nome='{aux}'")
+				If rs.EOF Then Exit Sub
+				Dim idPrestador As Integer = rs.Fields(0).Value
+
+				SQL = $"select especialidade from tb_especialidades where id_prestador={idPrestador}"
 				rs = db.Execute(SQL)
 				Do While rs.EOF = False
 					.Add(rs.Fields(0).Value.ToString())
@@ -247,10 +252,11 @@
 		End Try
 	End Sub
 
-	Sub Carregar_especialidadesConsulta()
+	Sub Carregar_prestadoresAgendamento()
 		Try
-			With frm_consultar_prestadores.cmb_especialidade.Items
-				SQL = $"select especialidade from tb_especialidades order by especialidade asc"
+			With frm_gerenciar_agendamentos.cmb_prestador.Items
+				.Clear()
+				SQL = $"select nome from tb_prestadores"
 				rs = db.Execute(SQL)
 				Do While rs.EOF = False
 					.Add(rs.Fields(0).Value.ToString())
@@ -262,12 +268,57 @@
 		End Try
 	End Sub
 
-	Sub Dados_DataGridViewConsultaPrestadores()
+	Sub datasDisponiveis()
 		Try
-			SQL = $"select * from tb_prestadores order by nome asc"
-			rs = db.Execute(SQL)
-			With frm_consultar_prestadores.dgv_info
+			With frm_gerenciar_agendamentos.cmb_data.Items
+				.Clear()
+				For i As Integer = 0 To 30
+					Dim data As String = DateTime.Now.AddDays(i).ToShortDateString()
+					SQL = $"select count(*) from tb_agendamentos where data_agendamento='{data}'"
+					rs = db.Execute(SQL)
+					If rs.Fields(0).Value < 4 Then
+						.Add(data)
+					End If
+				Next
+				If .Count > 0 Then frm_gerenciar_agendamentos.cmb_data.SelectedIndex = 0
+			End With
+		Catch ex As Exception
+			Exit Sub
+		End Try
+	End Sub
+
+	Sub horariosDisponiveis()
+		Try
+			With frm_gerenciar_agendamentos.cmb_horario.Items
+				.Clear()
+				Dim horarios As String() = {"08:00", "09:00", "10:00", "11:00"}
+				Dim dataSelecionada As String = frm_gerenciar_agendamentos.cmb_data.Text
+
+				rs = db.Execute($"select id from tb_prestadores where nome='{frm_gerenciar_agendamentos.cmb_prestador.Text}'")
+				If rs.EOF Then Exit Sub
+				Dim idPrestador As Integer = rs.Fields(0).Value
+
+				For Each h As String In horarios
+					SQL = $"select count(*) from tb_agendamentos where data_agendamento='{dataSelecionada}' and horario='{h}' and id_prestador={idPrestador}"
+					rs = db.Execute(SQL)
+					If rs.Fields(0).Value = 0 Then
+						.Add(h)
+					End If
+				Next
+
+				If .Count > 0 Then frm_gerenciar_agendamentos.cmb_horario.SelectedIndex = 0
+			End With
+		Catch ex As Exception
+			Exit Sub
+		End Try
+	End Sub
+
+	Sub DataGridViewAgendamentos()
+		Try
+			With frm_gerenciar_agendamentos.dgv_info
 				.Rows.Clear()
+				SQL = $"select * from tb_agendamentos"
+				rs = db.Execute(UCase(SQL))
 				Do While rs.EOF = False
 					.Rows.Add(rs.Fields(0).Value, rs.Fields(1).Value, rs.Fields(2).Value, rs.Fields(3).Value, rs.Fields(4).Value, rs.Fields(5).Value)
 					rs.MoveNext()
@@ -278,62 +329,123 @@
 		End Try
 	End Sub
 
-	Sub Filtrar_DataGridView_Consulta()
+	Sub Limpar_agendamento()
 		Try
-			SQL = $"select distinct p.id, p.nome, p.email, p.tipo_prestador, p.endereco, p.fone
-                from tb_prestadores p
-                inner join tb_especialidades e on e.id_prestador = p.id
-                where p.nome='{aux}' and e.especialidade='{aux2}'"
-			rs = db.Execute(SQL)
-			With frm_consultar_prestadores.dgv_info
-				.Rows.Clear()
-				Do While rs.EOF = False
-					.Rows.Add(rs.Fields(0).Value, rs.Fields(1).Value, rs.Fields(2).Value,
-						  rs.Fields(3).Value, rs.Fields(4).Value, rs.Fields(5).Value)
-					rs.MoveNext()
-				Loop
+			With frm_gerenciar_agendamentos
+				.txt_id_cliente.Text = ""
+				.cmb_prestador.Text = ""
+				.cmb_especialidade.Text = ""
+				.cmb_data.Text = ""
+				.cmb_horario.Text = ""
+				horariosDisponiveis()
 			End With
 		Catch ex As Exception
 			Exit Sub
 		End Try
 	End Sub
 
-	Sub Filtrar_DataGridView_ConsultaPrestador()
-		Try
-			SQL = $"select * from tb_prestadores where nome='{aux}'"
-			rs = db.Execute(SQL)
-			With frm_consultar_prestadores.dgv_info
-				.Rows.Clear()
-				Do While rs.EOF = False
-					.Rows.Add(rs.Fields(0).Value, rs.Fields(1).Value, rs.Fields(2).Value,
-						  rs.Fields(3).Value, rs.Fields(4).Value, rs.Fields(5).Value)
-					rs.MoveNext()
-				Loop
-			End With
-		Catch ex As Exception
-			Exit Sub
-		End Try
-	End Sub
+	'Sub Carregar_prestadoresConsulta()
+	'Try
+	'With frm_consultar_prestadores.cmb_prestador.Items
+	'			SQL = $"select nome from tb_prestadores order by nome asc"
+	'			rs = db.Execute(SQL)
+	'Do While rs.EOF = False
+	'.Add(rs.Fields(0).Value.ToString())
+	'				rs.MoveNext()
+	'Loop
+	'End With
+	'Catch ex As Exception
+	'Exit Sub
+	'End Try
+	'End Sub
 
-	Sub Filtrar_DataGridView_ConsultaEspecialidade()
-		Try
-			rs = db.Execute($"select id_prestador from tb_especialidades where especialidade='{aux2}'")
-			If rs.EOF Then Exit Sub
-			Dim idPrestador As Integer = rs.Fields(0).Value
+	'Sub Carregar_especialidadesConsulta()
+	'Try
+	'With frm_consultar_prestadores.cmb_especialidade.Items
+	'			SQL = $"select especialidade from tb_especialidades order by especialidade asc"
+	'			rs = db.Execute(SQL)
+	'Do While rs.EOF = False
+	'.Add(rs.Fields(0).Value.ToString())
+	'				rs.MoveNext()
+	'Loop
+	'End With
+	'Catch ex As Exception
+	'Exit Sub
+	'End Try
+	'End Sub
 
-			SQL = $"select * from tb_prestadores where id={idPrestador}"
-			rs = db.Execute(SQL)
-			With frm_consultar_prestadores.dgv_info
-				.Rows.Clear()
-				Do While rs.EOF = False
-					.Rows.Add(rs.Fields(0).Value, rs.Fields(1).Value, rs.Fields(2).Value,
-						  rs.Fields(3).Value, rs.Fields(4).Value, rs.Fields(5).Value)
-					rs.MoveNext()
-				Loop
-			End With
-		Catch ex As Exception
-			Exit Sub
-		End Try
-	End Sub
+	'Sub Dados_DataGridViewConsultaPrestadores()
+	'Try
+	'		SQL = $"select * from tb_prestadores order by nome asc"
+	'		rs = db.Execute(SQL)
+	'With frm_consultar_prestadores.dgv_info
+	'.Rows.Clear()
+	'Do While rs.EOF = False
+	'.Rows.Add(rs.Fields(0).Value, rs.Fields(1).Value, rs.Fields(2).Value, rs.Fields(3).Value, rs.Fields(4).Value, rs.Fields(5).Value)
+	'				rs.MoveNext()
+	'Loop
+	'End With
+	'Catch ex As Exception
+	'Exit Sub
+	'End Try
+	'End Sub
+
+	'Sub Filtrar_DataGridView_Consulta()
+	'Try
+	'SQL = $"select distinct p.id, p.nome, p.email, p.tipo_prestador, p.endereco, p.fone
+	'from tb_prestadores p
+	'inner join tb_especialidades e On e.id_prestador = p.id
+	'where p.nome='{aux}' and e.especialidade='{aux2}'"
+	'rs = db.Execute(SQL)
+	'With frm_consultar_prestadores.dgv_info
+	'.Rows.Clear()
+	'Do While rs.EOF = False
+	'.Rows.Add(rs.Fields(0).Value, rs.Fields(1).Value, rs.Fields(2).Value,
+	'					  rs.Fields(3).Value, rs.Fields(4).Value, rs.Fields(5).Value)
+	'				rs.MoveNext()
+	'Loop
+	'End With
+	'Catch ex As Exception
+	'Exit Sub
+	'End Try
+	'End Sub
+
+	'Sub Filtrar_DataGridView_ConsultaPrestador()
+	'Try
+	'SQL = $"select * from tb_prestadores where nome='{aux}'"
+	'rs = db.Execute(SQL)
+	'With frm_consultar_prestadores.dgv_info
+	'.Rows.Clear()
+	'Do While rs.EOF = False
+	'.Rows.Add(rs.Fields(0).Value, rs.Fields(1).Value, rs.Fields(2).Value,
+	'rs.Fields(3).Value, rs.Fields(4).Value, rs.Fields(5).Value)
+	'rs.MoveNext()
+	'Loop
+	'End With'
+	'Catch ex As Exception
+	'Exit Sub
+	'End Try
+	'End Sub
+
+	'Sub Filtrar_DataGridView_ConsultaEspecialidade()
+	'Try
+	'rs = db.Execute($"select id_prestador from tb_especialidades where especialidade='{aux2}'")
+	'If rs.EOF Then Exit Sub
+	'Dim idPrestador As Integer = rs.Fields(0).Value
+
+	'SQL = $"select * from tb_prestadores where id={idPrestador}"
+	'rs = db.Execute(SQL)
+	'With frm_consultar_prestadores.dgv_info
+	'.Rows.Clear()
+	'Do While rs.EOF = False
+	'.Rows.Add(rs.Fields(0).Value, rs.Fields(1).Value, rs.Fields(2).Value,
+	'rs.Fields(3).Value, rs.Fields(4).Value, rs.Fields(5).Value)
+	'rs.MoveNext()
+	'Loop
+	'End With
+	'Catch ex As Exception
+	'Exit Sub
+	'End Try
+	'End Sub
 
 End Module
