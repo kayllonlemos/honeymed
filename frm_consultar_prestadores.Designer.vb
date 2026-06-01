@@ -59,7 +59,11 @@ Partial Class frm_consultar_prestadores
         Me.Panel2.Name = "Panel2"
         Me.Panel2.RightToLeft = System.Windows.Forms.RightToLeft.No
         Me.Panel2.Size = New System.Drawing.Size(857, 591)
+<<<<<<< Updated upstream
         Me.Panel2.TabIndex = 6
+=======
+        Me.Panel2.TabIndex = 5
+>>>>>>> Stashed changes
         '
         'Panel1
         '

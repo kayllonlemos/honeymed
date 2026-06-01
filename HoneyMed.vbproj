@@ -84,6 +84,9 @@
     <Compile Include="frm_consultar_prestadores.vb">
       <SubType>Form</SubType>
     </Compile>
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
     <Compile Include="frm_gerenciar_clientes.Designer.vb">
       <DependentUpon>frm_gerenciar_clientes.vb</DependentUpon>
