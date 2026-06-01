@@ -32,7 +32,11 @@ Namespace My
         
         <Global.System.Diagnostics.DebuggerStepThroughAttribute()>  _
         Protected Overrides Sub OnCreateMainForm()
+<<<<<<< Updated upstream
             Me.MainForm = Global.HoneyMed.frm_gerenciar_prestadores
+=======
+            Me.MainForm = Global.HoneyMed.frm_gerenciar_agendamentos
+>>>>>>> Stashed changes
         End Sub
         
         <Global.System.Diagnostics.DebuggerStepThroughAttribute()>  _

@@ -77,6 +77,7 @@
   </ItemGroup>
   <ItemGroup>
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 =======
     <Compile Include="frm_consultar_prestadores.Designer.vb">
       <DependentUpon>frm_consultar_prestadores.vb</DependentUpon>
@@ -87,6 +88,14 @@
 <<<<<<< Updated upstream
 >>>>>>> Stashed changes
 =======
+>>>>>>> Stashed changes
+=======
+    <Compile Include="frm_gerenciar_agendamentos.Designer.vb">
+      <DependentUpon>frm_gerenciar_agendamentos.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frm_gerenciar_agendamentos.vb">
+      <SubType>Form</SubType>
+    </Compile>
 >>>>>>> Stashed changes
     <Compile Include="frm_gerenciar_clientes.Designer.vb">
       <DependentUpon>frm_gerenciar_clientes.vb</DependentUpon>
@@ -138,6 +147,12 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+<<<<<<< Updated upstream
+=======
+    <EmbeddedResource Include="frm_gerenciar_agendamentos.resx">
+      <DependentUpon>frm_gerenciar_agendamentos.vb</DependentUpon>
+    </EmbeddedResource>
+>>>>>>> Stashed changes
     <EmbeddedResource Include="frm_gerenciar_clientes.resx">
       <DependentUpon>frm_gerenciar_clientes.vb</DependentUpon>
     </EmbeddedResource>
