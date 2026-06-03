@@ -18,4 +18,8 @@
 			MsgBox("Erro ao chamar o formulário.", MsgBoxStyle.Critical + MsgBoxStyle.OkOnly, "ATENÇÃO")
 		End Try
 	End Sub
+
+	Private Sub CoToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles CoToolStripMenuItem.Click
+
+	End Sub
 End Class

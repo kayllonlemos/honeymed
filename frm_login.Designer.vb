@@ -74,18 +74,18 @@ Partial Class frm_login
         '
         Me.lbl_rec_senha.AutoSize = True
         Me.lbl_rec_senha.BackColor = System.Drawing.Color.Transparent
-        Me.lbl_rec_senha.Font = New System.Drawing.Font("Comic Sans MS", 10.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lbl_rec_senha.Font = New System.Drawing.Font("Jaldi", 10.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lbl_rec_senha.ForeColor = System.Drawing.Color.FromArgb(CType(CType(252, Byte), Integer), CType(CType(194, Byte), Integer), CType(CType(26, Byte), Integer))
-        Me.lbl_rec_senha.Location = New System.Drawing.Point(508, 304)
+        Me.lbl_rec_senha.Location = New System.Drawing.Point(573, 301)
         Me.lbl_rec_senha.Name = "lbl_rec_senha"
-        Me.lbl_rec_senha.Size = New System.Drawing.Size(156, 25)
+        Me.lbl_rec_senha.Size = New System.Drawing.Size(147, 31)
         Me.lbl_rec_senha.TabIndex = 12
         Me.lbl_rec_senha.Text = "Recuperar senha"
         '
         'btn_entrar
         '
         Me.btn_entrar.BackColor = System.Drawing.Color.FromArgb(CType(CType(252, Byte), Integer), CType(CType(194, Byte), Integer), CType(CType(26, Byte), Integer))
-        Me.btn_entrar.Font = New System.Drawing.Font("Comic Sans MS", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btn_entrar.Font = New System.Drawing.Font("Jaldi", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btn_entrar.ForeColor = System.Drawing.Color.White
         Me.btn_entrar.Location = New System.Drawing.Point(508, 344)
         Me.btn_entrar.Name = "btn_entrar"
@@ -106,13 +106,13 @@ Partial Class frm_login
         '
         'Label3
         '
-        Me.Label3.Font = New System.Drawing.Font("Comic Sans MS", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label3.Location = New System.Drawing.Point(532, 43)
+        Me.Label3.Font = New System.Drawing.Font("JejuMyeongjo", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label3.Location = New System.Drawing.Point(486, 43)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(228, 47)
+        Me.Label3.Size = New System.Drawing.Size(274, 47)
         Me.Label3.TabIndex = 9
         Me.Label3.Text = "Insira seus dados:"
-        Me.Label3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.Label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'PictureBox3
         '
@@ -127,11 +127,10 @@ Partial Class frm_login
         '
         'Label2
         '
-        Me.Label2.AutoSize = True
-        Me.Label2.Font = New System.Drawing.Font("Comic Sans MS", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.Location = New System.Drawing.Point(508, 223)
+        Me.Label2.Font = New System.Drawing.Font("Jaldi", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label2.Location = New System.Drawing.Point(508, 218)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(64, 24)
+        Me.Label2.Size = New System.Drawing.Size(136, 29)
         Me.Label2.TabIndex = 6
         Me.Label2.Text = "Senha:"
         '
@@ -163,11 +162,10 @@ Partial Class frm_login
         '
         'Label1
         '
-        Me.Label1.AutoSize = True
-        Me.Label1.Font = New System.Drawing.Font("Comic Sans MS", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(508, 126)
+        Me.Label1.Font = New System.Drawing.Font("Jaldi", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.Location = New System.Drawing.Point(508, 119)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(154, 24)
+        Me.Label1.Size = New System.Drawing.Size(232, 32)
         Me.Label1.TabIndex = 2
         Me.Label1.Text = "Usuário ou E-mail:"
         '
@@ -215,18 +213,18 @@ Partial Class frm_login
         Me.Panel5.Controls.Add(Me.Label5)
         Me.Panel5.Location = New System.Drawing.Point(514, 34)
         Me.Panel5.Name = "Panel5"
-        Me.Panel5.Size = New System.Drawing.Size(248, 75)
+        Me.Panel5.Size = New System.Drawing.Size(272, 75)
         Me.Panel5.TabIndex = 2
         '
         'Label5
         '
         Me.Label5.BackColor = System.Drawing.Color.White
-        Me.Label5.Font = New System.Drawing.Font("Comic Sans MS", 16.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label5.Font = New System.Drawing.Font("JejuMyeongjo", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label5.Location = New System.Drawing.Point(6, 5)
         Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(236, 64)
+        Me.Label5.Size = New System.Drawing.Size(260, 64)
         Me.Label5.TabIndex = 0
-        Me.Label5.Text = "Bem vindo(a)..."
+        Me.Label5.Text = "  Bem vindo(a)..."
         Me.Label5.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
         'frm_login

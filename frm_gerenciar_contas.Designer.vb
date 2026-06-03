@@ -138,12 +138,13 @@ Partial Class frm_gerenciar_contas
         'lbl_frm_contas
         '
         Me.lbl_frm_contas.BackColor = System.Drawing.Color.Transparent
-        Me.lbl_frm_contas.Font = New System.Drawing.Font("JejuMyeongjo", 20.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lbl_frm_contas.Font = New System.Drawing.Font("Jockey One", 19.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(238, Byte))
         Me.lbl_frm_contas.Location = New System.Drawing.Point(175, 22)
         Me.lbl_frm_contas.Name = "lbl_frm_contas"
         Me.lbl_frm_contas.Size = New System.Drawing.Size(500, 55)
         Me.lbl_frm_contas.TabIndex = 24
         Me.lbl_frm_contas.Text = "Gerenciar Abelhudos/Contas:"
+        Me.lbl_frm_contas.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'lbl_csenha
         '

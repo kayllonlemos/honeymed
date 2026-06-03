@@ -76,6 +76,12 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="frm_about_us.Designer.vb">
+      <DependentUpon>frm_about_us.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frm_about_us.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="frm_gerenciar_agendamentos.Designer.vb">
       <DependentUpon>frm_gerenciar_agendamentos.vb</DependentUpon>
     </Compile>
@@ -132,6 +138,9 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="frm_about_us.resx">
+      <DependentUpon>frm_about_us.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frm_gerenciar_agendamentos.resx">
       <DependentUpon>frm_gerenciar_agendamentos.vb</DependentUpon>
     </EmbeddedResource>
