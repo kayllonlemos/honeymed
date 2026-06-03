@@ -267,26 +267,6 @@
 			Exit Sub
 		End Try
 	End Sub
-
-	Sub datasDisponiveis()
-		Try
-			With frm_gerenciar_agendamentos.cmb_data.Items
-				.Clear()
-				For i As Integer = 0 To 30
-					Dim data As String = DateTime.Now.AddDays(i).ToShortDateString()
-					SQL = $"select count(*) from tb_agendamentos where data_agendamento='{data}'"
-					rs = db.Execute(SQL)
-					If rs.Fields(0).Value < 4 Then
-						.Add(data)
-					End If
-				Next
-				If .Count > 0 Then frm_gerenciar_agendamentos.cmb_data.SelectedIndex = ""
-			End With
-		Catch ex As Exception
-			Exit Sub
-		End Try
-	End Sub
-
 	Sub horariosDisponiveis()
 		Try
 			With frm_gerenciar_agendamentos.cmb_horario.Items
@@ -298,8 +278,14 @@
 				If rs.EOF Then Exit Sub
 				Dim idPrestador As Integer = rs.Fields(0).Value
 
+				' LÓGICA DE EDIÇÃO: Ignora o horário do próprio agendamento que estamos editando
+				Dim queryIgnorarAtual As String = ""
+				If frm_gerenciar_agendamentos.txt_id_agendamento.Text <> "" Then
+					queryIgnorarAtual = $" and id_agendamento <> {frm_gerenciar_agendamentos.txt_id_agendamento.Text}"
+				End If
+
 				For Each h As String In horarios
-					SQL = $"select count(*) from tb_agendamentos where data_agendamento='{dataSelecionada}' and horario='{h}' and id_prestador={idPrestador}"
+					SQL = $"select count(*) from tb_agendamentos where data_agendamento='{dataSelecionada}' and horario='{h}' and id_prestador={idPrestador}{queryIgnorarAtual}"
 					rs = db.Execute(SQL)
 					If rs.Fields(0).Value = 0 Then
 						.Add(h)
@@ -313,13 +299,50 @@
 		End Try
 	End Sub
 
+	Sub datasDisponiveis()
+		Try
+			With frm_gerenciar_agendamentos.cmb_data.Items
+				.Clear()
+				Dim idPrestador As Integer = 0
+				Dim rsPrest = db.Execute($"select id from tb_prestadores where nome='{frm_gerenciar_agendamentos.cmb_prestador.Text}'")
+				If Not rsPrest.EOF Then idPrestador = rsPrest.Fields(0).Value
+
+				' LÓGICA DE EDIÇÃO: Ignora a contagem do próprio agendamento
+				Dim queryIgnorarAtual As String = ""
+				If frm_gerenciar_agendamentos.txt_id_agendamento.Text <> "" Then
+					queryIgnorarAtual = $" and id_agendamento <> {frm_gerenciar_agendamentos.txt_id_agendamento.Text}"
+				End If
+
+				For i As Integer = 0 To 30
+					Dim data As String = DateTime.Now.AddDays(i).ToShortDateString()
+					If idPrestador > 0 Then
+						SQL = $"select count(*) from tb_agendamentos where data_agendamento='{data}' and id_prestador={idPrestador}{queryIgnorarAtual}"
+					Else
+						SQL = $"select count(*) from tb_agendamentos where data_agendamento='{data}'{queryIgnorarAtual}"
+					End If
+					rs = db.Execute(SQL)
+
+					' Considerando que o limite diário seja de 4 agendamentos
+					If rs.Fields(0).Value < 4 Then
+						.Add(data)
+					End If
+				Next
+				If .Count > 0 Then frm_gerenciar_agendamentos.cmb_data.SelectedIndex = 0
+			End With
+		Catch ex As Exception
+			Exit Sub
+		End Try
+	End Sub
+
 	Sub DataGridViewAgendamentos()
 		Try
 			With frm_gerenciar_agendamentos.dgv_info
 				.Rows.Clear()
-				SQL = $"select a.id_agendamento, c.nome, a.id_prestador, a.id_especialidade, a.data_agendamento, a.horario
+				SQL = $"select a.id_agendamento, c.nome, p.nome, e.especialidade, a.data_agendamento, a.horario
                     from tb_agendamentos a
-                    inner join tb_clientes c on c.id_cliente = a.id_cliente"
+                    inner join tb_clientes c on c.id_cliente = a.id_cliente
+                    inner join tb_prestadores p on p.id = a.id_prestador
+                    inner join tb_especialidades e on e.id = a.id_especialidade"
 				rs = db.Execute(SQL)
 				Do While rs.EOF = False
 					.Rows.Add(rs.Fields(0).Value, rs.Fields(1).Value, rs.Fields(2).Value, rs.Fields(3).Value, rs.Fields(4).Value, rs.Fields(5).Value)
@@ -334,12 +357,14 @@
 	Sub Limpar_agendamento()
 		Try
 			With frm_gerenciar_agendamentos
+				.txt_id_agendamento.Text = ""
 				.txt_id_cliente.Text = ""
 				.cmb_prestador.Text = ""
+				.cmb_especialidade.Items.Clear()
 				.cmb_especialidade.Text = ""
 				.cmb_data.Text = ""
+				.cmb_horario.Items.Clear()
 				.cmb_horario.Text = ""
-				horariosDisponiveis()
 			End With
 		Catch ex As Exception
 			Exit Sub
