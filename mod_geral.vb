@@ -280,7 +280,7 @@
 						.Add(data)
 					End If
 				Next
-				If .Count > 0 Then frm_gerenciar_agendamentos.cmb_data.SelectedIndex = 0
+				If .Count > 0 Then frm_gerenciar_agendamentos.cmb_data.SelectedIndex = ""
 			End With
 		Catch ex As Exception
 			Exit Sub
@@ -317,8 +317,10 @@
 		Try
 			With frm_gerenciar_agendamentos.dgv_info
 				.Rows.Clear()
-				SQL = $"select * from tb_agendamentos"
-				rs = db.Execute(UCase(SQL))
+				SQL = $"select a.id_agendamento, c.nome, a.id_prestador, a.id_especialidade, a.data_agendamento, a.horario
+                    from tb_agendamentos a
+                    inner join tb_clientes c on c.id_cliente = a.id_cliente"
+				rs = db.Execute(SQL)
 				Do While rs.EOF = False
 					.Rows.Add(rs.Fields(0).Value, rs.Fields(1).Value, rs.Fields(2).Value, rs.Fields(3).Value, rs.Fields(4).Value, rs.Fields(5).Value)
 					rs.MoveNext()
