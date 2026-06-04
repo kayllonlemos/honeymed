@@ -82,6 +82,24 @@
     <Compile Include="frm_about_us.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="frm_consultar_agendamentos.Designer.vb">
+      <DependentUpon>frm_consultar_agendamentos.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frm_consultar_agendamentos.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_consultar_clientes.Designer.vb">
+      <DependentUpon>frm_consultar_clientes.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frm_consultar_clientes.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_consultar_prestadores.Designer.vb">
+      <DependentUpon>frm_consultar_prestadores.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frm_consultar_prestadores.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="frm_gerenciar_agendamentos.Designer.vb">
       <DependentUpon>frm_gerenciar_agendamentos.vb</DependentUpon>
     </Compile>
@@ -140,6 +158,15 @@
   <ItemGroup>
     <EmbeddedResource Include="frm_about_us.resx">
       <DependentUpon>frm_about_us.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_consultar_agendamentos.resx">
+      <DependentUpon>frm_consultar_agendamentos.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_consultar_clientes.resx">
+      <DependentUpon>frm_consultar_clientes.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_consultar_prestadores.resx">
+      <DependentUpon>frm_consultar_prestadores.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frm_gerenciar_agendamentos.resx">
       <DependentUpon>frm_gerenciar_agendamentos.vb</DependentUpon>
