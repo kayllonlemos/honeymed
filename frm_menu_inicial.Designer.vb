@@ -27,18 +27,18 @@ Partial Class frm_menu_inicial
         Me.btn_gravar = New System.Windows.Forms.ToolStripButton()
         Me.GerenciarToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.GerenciarClientesToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.ConsultarClínicasToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.GerenciarPrestadoresToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.GerenciarContasToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
-        Me.Label1 = New System.Windows.Forms.Label()
-        Me.PictureBox2 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox3 = New System.Windows.Forms.PictureBox()
         Me.CoToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ConsultarClienteToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ConsultarPrestadoresToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ConsultarAgendamentosToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.AgendarToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.AgendarToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
+        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
+        Me.Label1 = New System.Windows.Forms.Label()
+        Me.PictureBox2 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox3 = New System.Windows.Forms.PictureBox()
         Me.MenuStrip1.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -72,7 +72,7 @@ Partial Class frm_menu_inicial
         '
         'GerenciarToolStripMenuItem
         '
-        Me.GerenciarToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.GerenciarClientesToolStripMenuItem, Me.ConsultarClínicasToolStripMenuItem, Me.GerenciarContasToolStripMenuItem})
+        Me.GerenciarToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.GerenciarClientesToolStripMenuItem, Me.GerenciarPrestadoresToolStripMenuItem, Me.GerenciarContasToolStripMenuItem})
         Me.GerenciarToolStripMenuItem.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.GerenciarToolStripMenuItem.Name = "GerenciarToolStripMenuItem"
         Me.GerenciarToolStripMenuItem.Size = New System.Drawing.Size(109, 36)
@@ -84,17 +84,17 @@ Partial Class frm_menu_inicial
         Me.GerenciarClientesToolStripMenuItem.Image = CType(resources.GetObject("GerenciarClientesToolStripMenuItem.Image"), System.Drawing.Image)
         Me.GerenciarClientesToolStripMenuItem.Name = "GerenciarClientesToolStripMenuItem"
         Me.GerenciarClientesToolStripMenuItem.ShortcutKeys = System.Windows.Forms.Keys.F1
-        Me.GerenciarClientesToolStripMenuItem.Size = New System.Drawing.Size(287, 32)
+        Me.GerenciarClientesToolStripMenuItem.Size = New System.Drawing.Size(321, 32)
         Me.GerenciarClientesToolStripMenuItem.Text = "Gerenciar Clientes"
         '
-        'ConsultarClínicasToolStripMenuItem
+        'GerenciarPrestadoresToolStripMenuItem
         '
-        Me.ConsultarClínicasToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(CType(CType(252, Byte), Integer), CType(CType(194, Byte), Integer), CType(CType(26, Byte), Integer))
-        Me.ConsultarClínicasToolStripMenuItem.Image = CType(resources.GetObject("ConsultarClínicasToolStripMenuItem.Image"), System.Drawing.Image)
-        Me.ConsultarClínicasToolStripMenuItem.Name = "ConsultarClínicasToolStripMenuItem"
-        Me.ConsultarClínicasToolStripMenuItem.ShortcutKeys = System.Windows.Forms.Keys.F2
-        Me.ConsultarClínicasToolStripMenuItem.Size = New System.Drawing.Size(321, 32)
-        Me.ConsultarClínicasToolStripMenuItem.Text = "Gerenciar Prestadores"
+        Me.GerenciarPrestadoresToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(CType(CType(252, Byte), Integer), CType(CType(194, Byte), Integer), CType(CType(26, Byte), Integer))
+        Me.GerenciarPrestadoresToolStripMenuItem.Image = CType(resources.GetObject("GerenciarPrestadoresToolStripMenuItem.Image"), System.Drawing.Image)
+        Me.GerenciarPrestadoresToolStripMenuItem.Name = "GerenciarPrestadoresToolStripMenuItem"
+        Me.GerenciarPrestadoresToolStripMenuItem.ShortcutKeys = System.Windows.Forms.Keys.F2
+        Me.GerenciarPrestadoresToolStripMenuItem.Size = New System.Drawing.Size(321, 32)
+        Me.GerenciarPrestadoresToolStripMenuItem.Text = "Gerenciar Prestadores"
         '
         'GerenciarContasToolStripMenuItem
         '
@@ -102,56 +102,8 @@ Partial Class frm_menu_inicial
         Me.GerenciarContasToolStripMenuItem.Image = CType(resources.GetObject("GerenciarContasToolStripMenuItem.Image"), System.Drawing.Image)
         Me.GerenciarContasToolStripMenuItem.Name = "GerenciarContasToolStripMenuItem"
         Me.GerenciarContasToolStripMenuItem.ShortcutKeys = System.Windows.Forms.Keys.F3
-        Me.GerenciarContasToolStripMenuItem.Size = New System.Drawing.Size(287, 32)
+        Me.GerenciarContasToolStripMenuItem.Size = New System.Drawing.Size(321, 32)
         Me.GerenciarContasToolStripMenuItem.Text = "Gerenciar Contas"
-        '
-        'PictureBox1
-        '
-        Me.PictureBox1.Anchor = System.Windows.Forms.AnchorStyles.Top
-        Me.PictureBox1.BackColor = System.Drawing.Color.FromArgb(CType(CType(242, Byte), Integer), CType(CType(242, Byte), Integer), CType(CType(247, Byte), Integer))
-        Me.PictureBox1.BackgroundImage = CType(resources.GetObject("PictureBox1.BackgroundImage"), System.Drawing.Image)
-        Me.PictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.PictureBox1.Location = New System.Drawing.Point(568, 118)
-        Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(380, 93)
-        Me.PictureBox1.TabIndex = 1
-        Me.PictureBox1.TabStop = False
-        '
-        'Label1
-        '
-        Me.Label1.Anchor = System.Windows.Forms.AnchorStyles.Left
-        Me.Label1.AutoSize = True
-        Me.Label1.BackColor = System.Drawing.Color.FromArgb(CType(CType(242, Byte), Integer), CType(CType(242, Byte), Integer), CType(CType(247, Byte), Integer))
-        Me.Label1.Font = New System.Drawing.Font("JejuMyeongjo", 24.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(72, 277)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(405, 40)
-        Me.Label1.TabIndex = 2
-        Me.Label1.Text = "Diretrizes do Sistema:"
-        '
-        'PictureBox2
-        '
-        Me.PictureBox2.Anchor = System.Windows.Forms.AnchorStyles.Left
-        Me.PictureBox2.BackColor = System.Drawing.Color.FromArgb(CType(CType(242, Byte), Integer), CType(CType(242, Byte), Integer), CType(CType(247, Byte), Integer))
-        Me.PictureBox2.BackgroundImage = CType(resources.GetObject("PictureBox2.BackgroundImage"), System.Drawing.Image)
-        Me.PictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.PictureBox2.Location = New System.Drawing.Point(63, 367)
-        Me.PictureBox2.Name = "PictureBox2"
-        Me.PictureBox2.Size = New System.Drawing.Size(593, 355)
-        Me.PictureBox2.TabIndex = 6
-        Me.PictureBox2.TabStop = False
-        '
-        'PictureBox3
-        '
-        Me.PictureBox3.Anchor = System.Windows.Forms.AnchorStyles.Top
-        Me.PictureBox3.BackColor = System.Drawing.Color.FromArgb(CType(CType(242, Byte), Integer), CType(CType(242, Byte), Integer), CType(CType(247, Byte), Integer))
-        Me.PictureBox3.BackgroundImage = CType(resources.GetObject("PictureBox3.BackgroundImage"), System.Drawing.Image)
-        Me.PictureBox3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.PictureBox3.Location = New System.Drawing.Point(968, 128)
-        Me.PictureBox3.Name = "PictureBox3"
-        Me.PictureBox3.Size = New System.Drawing.Size(80, 73)
-        Me.PictureBox3.TabIndex = 7
-        Me.PictureBox3.TabStop = False
         '
         'CoToolStripMenuItem
         '
@@ -204,8 +156,56 @@ Partial Class frm_menu_inicial
         Me.AgendarToolStripMenuItem1.BackColor = System.Drawing.Color.FromArgb(CType(CType(252, Byte), Integer), CType(CType(194, Byte), Integer), CType(CType(26, Byte), Integer))
         Me.AgendarToolStripMenuItem1.Name = "AgendarToolStripMenuItem1"
         Me.AgendarToolStripMenuItem1.ShortcutKeys = System.Windows.Forms.Keys.F7
-        Me.AgendarToolStripMenuItem1.Size = New System.Drawing.Size(287, 32)
-        Me.AgendarToolStripMenuItem1.Text = "Agendar Consulta"
+        Me.AgendarToolStripMenuItem1.Size = New System.Drawing.Size(334, 32)
+        Me.AgendarToolStripMenuItem1.Text = "Agendar Procedimento"
+        '
+        'PictureBox1
+        '
+        Me.PictureBox1.Anchor = System.Windows.Forms.AnchorStyles.Top
+        Me.PictureBox1.BackColor = System.Drawing.Color.FromArgb(CType(CType(242, Byte), Integer), CType(CType(242, Byte), Integer), CType(CType(247, Byte), Integer))
+        Me.PictureBox1.BackgroundImage = CType(resources.GetObject("PictureBox1.BackgroundImage"), System.Drawing.Image)
+        Me.PictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.PictureBox1.Location = New System.Drawing.Point(568, 118)
+        Me.PictureBox1.Name = "PictureBox1"
+        Me.PictureBox1.Size = New System.Drawing.Size(380, 93)
+        Me.PictureBox1.TabIndex = 1
+        Me.PictureBox1.TabStop = False
+        '
+        'Label1
+        '
+        Me.Label1.Anchor = System.Windows.Forms.AnchorStyles.Left
+        Me.Label1.AutoSize = True
+        Me.Label1.BackColor = System.Drawing.Color.FromArgb(CType(CType(242, Byte), Integer), CType(CType(242, Byte), Integer), CType(CType(247, Byte), Integer))
+        Me.Label1.Font = New System.Drawing.Font("JejuMyeongjo", 24.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.Location = New System.Drawing.Point(72, 277)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(405, 40)
+        Me.Label1.TabIndex = 2
+        Me.Label1.Text = "Diretrizes do Sistema:"
+        '
+        'PictureBox2
+        '
+        Me.PictureBox2.Anchor = System.Windows.Forms.AnchorStyles.Left
+        Me.PictureBox2.BackColor = System.Drawing.Color.FromArgb(CType(CType(242, Byte), Integer), CType(CType(242, Byte), Integer), CType(CType(247, Byte), Integer))
+        Me.PictureBox2.BackgroundImage = CType(resources.GetObject("PictureBox2.BackgroundImage"), System.Drawing.Image)
+        Me.PictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.PictureBox2.Location = New System.Drawing.Point(63, 367)
+        Me.PictureBox2.Name = "PictureBox2"
+        Me.PictureBox2.Size = New System.Drawing.Size(593, 355)
+        Me.PictureBox2.TabIndex = 6
+        Me.PictureBox2.TabStop = False
+        '
+        'PictureBox3
+        '
+        Me.PictureBox3.Anchor = System.Windows.Forms.AnchorStyles.Top
+        Me.PictureBox3.BackColor = System.Drawing.Color.FromArgb(CType(CType(242, Byte), Integer), CType(CType(242, Byte), Integer), CType(CType(247, Byte), Integer))
+        Me.PictureBox3.BackgroundImage = CType(resources.GetObject("PictureBox3.BackgroundImage"), System.Drawing.Image)
+        Me.PictureBox3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.PictureBox3.Location = New System.Drawing.Point(968, 128)
+        Me.PictureBox3.Name = "PictureBox3"
+        Me.PictureBox3.Size = New System.Drawing.Size(80, 73)
+        Me.PictureBox3.TabIndex = 7
+        Me.PictureBox3.TabStop = False
         '
         'frm_menu_inicial
         '
@@ -240,7 +240,7 @@ Partial Class frm_menu_inicial
     Friend WithEvents GerenciarToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents btn_gravar As ToolStripButton
     Friend WithEvents GerenciarClientesToolStripMenuItem As ToolStripMenuItem
-    Friend WithEvents ConsultarClínicasToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents GerenciarPrestadoresToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents GerenciarContasToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents PictureBox1 As PictureBox
     Friend WithEvents Label1 As Label

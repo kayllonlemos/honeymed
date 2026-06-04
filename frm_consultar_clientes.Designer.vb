@@ -27,7 +27,7 @@ Partial Class frm_consultar_clientes
         Me.Panel2 = New System.Windows.Forms.Panel()
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.Panel3 = New System.Windows.Forms.Panel()
-        Me.txt_cpf = New System.Windows.Forms.MaskedTextBox()
+        Me.txt_nome = New System.Windows.Forms.TextBox()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.txt_id_cliente = New System.Windows.Forms.TextBox()
         Me.Label1 = New System.Windows.Forms.Label()
@@ -37,7 +37,7 @@ Partial Class frm_consultar_clientes
         Me.Column1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column3 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Column4 = New System.Windows.Forms.DataGridViewComboBoxColumn()
+        Me.Column4 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column5 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Label8 = New System.Windows.Forms.Label()
         Me.Label4 = New System.Windows.Forms.Label()
@@ -78,7 +78,7 @@ Partial Class frm_consultar_clientes
         'Panel3
         '
         Me.Panel3.BackColor = System.Drawing.Color.Black
-        Me.Panel3.Controls.Add(Me.txt_cpf)
+        Me.Panel3.Controls.Add(Me.txt_nome)
         Me.Panel3.Controls.Add(Me.Label2)
         Me.Panel3.Controls.Add(Me.txt_id_cliente)
         Me.Panel3.Controls.Add(Me.Label1)
@@ -88,26 +88,25 @@ Partial Class frm_consultar_clientes
         Me.Panel3.Size = New System.Drawing.Size(869, 58)
         Me.Panel3.TabIndex = 30
         '
-        'txt_cpf
+        'txt_nome
         '
-        Me.txt_cpf.Anchor = System.Windows.Forms.AnchorStyles.None
-        Me.txt_cpf.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txt_cpf.Location = New System.Drawing.Point(530, 18)
-        Me.txt_cpf.Mask = "999.999.999-99"
-        Me.txt_cpf.Name = "txt_cpf"
-        Me.txt_cpf.Size = New System.Drawing.Size(144, 27)
-        Me.txt_cpf.TabIndex = 33
+        Me.txt_nome.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.txt_nome.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txt_nome.Location = New System.Drawing.Point(618, 15)
+        Me.txt_nome.Name = "txt_nome"
+        Me.txt_nome.Size = New System.Drawing.Size(156, 27)
+        Me.txt_nome.TabIndex = 33
         '
         'Label2
         '
         Me.Label2.BackColor = System.Drawing.Color.FromArgb(CType(CType(252, Byte), Integer), CType(CType(194, Byte), Integer), CType(CType(26, Byte), Integer))
         Me.Label2.Font = New System.Drawing.Font("Bpmf Huninn", 13.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(136, Byte))
         Me.Label2.ForeColor = System.Drawing.Color.Black
-        Me.Label2.Location = New System.Drawing.Point(421, 14)
+        Me.Label2.Location = New System.Drawing.Point(406, 14)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(100, 28)
+        Me.Label2.Size = New System.Drawing.Size(222, 28)
         Me.Label2.TabIndex = 32
-        Me.Label2.Text = "CPF:"
+        Me.Label2.Text = "Nome Cliente:"
         '
         'txt_id_cliente
         '
@@ -196,7 +195,6 @@ Partial Class frm_consultar_clientes
         Me.Column4.MinimumWidth = 6
         Me.Column4.Name = "Column4"
         Me.Column4.Resizable = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.Column4.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic
         '
         'Column5
         '
@@ -233,6 +231,7 @@ Partial Class frm_consultar_clientes
         Me.Controls.Add(Me.Panel2)
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "frm_consultar_clientes"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Consultar Clientes"
         Me.Panel2.ResumeLayout(False)
         Me.Panel1.ResumeLayout(False)
@@ -254,11 +253,11 @@ Partial Class frm_consultar_clientes
     Friend WithEvents ToolStrip1 As ToolStrip
     Friend WithEvents txt_id_cliente As TextBox
     Friend WithEvents Label1 As Label
+    Friend WithEvents Label2 As Label
     Friend WithEvents Column1 As DataGridViewTextBoxColumn
     Friend WithEvents Column2 As DataGridViewTextBoxColumn
     Friend WithEvents Column3 As DataGridViewTextBoxColumn
-    Friend WithEvents Column4 As DataGridViewComboBoxColumn
+    Friend WithEvents Column4 As DataGridViewTextBoxColumn
     Friend WithEvents Column5 As DataGridViewTextBoxColumn
-    Friend WithEvents Label2 As Label
-    Friend WithEvents txt_cpf As MaskedTextBox
+    Friend WithEvents txt_nome As TextBox
 End Class

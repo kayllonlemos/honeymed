@@ -7,7 +7,7 @@
 		Try
 			db = CreateObject("ADODB.Connection")
 			db.Open("Provider=MSOLEDBSQL;Data Source=localhost;Initial Catalog=honeymed;trusted_connection=yes;")
-			MsgBox("Conexão Estabelecida!", MsgBoxStyle.Information + MsgBoxStyle.OkOnly, "AVISO")
+			'MsgBox("Conexão Estabelecida!", MsgBoxStyle.Information + MsgBoxStyle.OkOnly, "AVISO")
 		Catch ex As Exception
 			MsgBox("Erro: " & ex.Message, MsgBoxStyle.Critical + MsgBoxStyle.OkOnly, "ATENÇÃO!")
 		End Try
@@ -459,4 +459,93 @@
 			MsgBox("Erro ao filtrar: " & ex.Message, MsgBoxStyle.Critical + MsgBoxStyle.OkOnly, "ATENÇÃO!")
 		End Try
 	End Sub
+
+	Sub Filtrar_Generico(dgv As DataGridView, selectBase As String,
+						 campoBanco1 As String, valorTela1 As String,
+						 campoBanco2 As String, valorTela2 As String,
+						 ordem As String)
+		Try
+			If db.State = 0 Then Exit Sub
+
+			Dim limpo1 As String = valorTela1.Replace(".", "").Replace("-", "").Replace("_", "").Trim()
+			Dim limpo2 As String = valorTela2.Replace(".", "").Replace("-", "").Replace("_", "").Trim()
+
+			SQL = selectBase & " where 1=1 "
+
+			If limpo1 <> "" Then
+				SQL &= $" and {campoBanco1} = '{valorTela1}' "
+			End If
+
+			If limpo2 <> "" Then
+				SQL &= $" and {campoBanco2} = '{valorTela2}' "
+			End If
+
+			SQL &= " " & ordem
+
+			rs = db.Execute(SQL)
+
+			dgv.Rows.Clear()
+
+			Do While rs.EOF = False
+				Dim qtdColunas As Integer = rs.Fields.Count
+				Dim linhaDados(qtdColunas - 1) As Object
+
+				For i As Integer = 0 To qtdColunas - 1
+					linhaDados(i) = rs.Fields(i).Value
+				Next
+
+				dgv.Rows.Add(linhaDados)
+				rs.MoveNext()
+			Loop
+
+		Catch ex As Exception
+			MsgBox("Erro ao filtrar os dados: " & ex.Message, MsgBoxStyle.Critical + MsgBoxStyle.OkOnly, "ATENÇÃO!")
+		End Try
+	End Sub
+
+	Sub Dados_DataGridViewConsultaClientes()
+		Try
+			SQL = "select id_cliente, cpf, nome, tipo_plano, email from tb_clientes order by nome asc"
+			rs = db.Execute(SQL)
+			With frm_consultar_clientes.dgv_info
+				.Rows.Clear()
+				Do While rs.EOF = False
+					.Rows.Add(rs.Fields(0).Value, rs.Fields(1).Value, rs.Fields(2).Value,
+							  rs.Fields(3).Value, rs.Fields(4).Value)
+					rs.MoveNext()
+				Loop
+			End With
+		Catch ex As Exception
+			Exit Sub
+		End Try
+	End Sub
+
+	Sub Filtrar_ConsultaClientes(valorId As String, valorCpf As String)
+		Try
+			SQL = "select id_cliente, cpf, nome, tipo_plano, email from tb_clientes where 1=1 "
+
+			If valorId.Trim() <> "" Then
+				SQL &= $" and id_cliente = '{valorId.Trim()}' "
+			End If
+
+			If valorCpf.Trim() <> "" Then
+				SQL &= $" and cpf = '{valorCpf.Trim()}' "
+			End If
+
+			SQL &= " order by nome asc"
+
+			rs = db.Execute(SQL)
+			With frm_consultar_clientes.dgv_info
+				.Rows.Clear()
+				Do While rs.EOF = False
+					.Rows.Add(rs.Fields(0).Value, rs.Fields(1).Value, rs.Fields(2).Value,
+							  rs.Fields(3).Value, rs.Fields(4).Value)
+					rs.MoveNext()
+				Loop
+			End With
+		Catch ex As Exception
+			Exit Sub
+		End Try
+	End Sub
+
 End Module

@@ -27,20 +27,21 @@ Partial Class frm_consultar_agendamentos
         Me.Panel2 = New System.Windows.Forms.Panel()
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.Panel3 = New System.Windows.Forms.Panel()
+        Me.txt_id_cliente = New System.Windows.Forms.TextBox()
+        Me.Label2 = New System.Windows.Forms.Label()
         Me.txt_id_agendamento = New System.Windows.Forms.TextBox()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.ToolStrip1 = New System.Windows.Forms.ToolStrip()
         Me.Panel9 = New System.Windows.Forms.Panel()
+        Me.Label8 = New System.Windows.Forms.Label()
+        Me.Label4 = New System.Windows.Forms.Label()
         Me.dgv_info = New System.Windows.Forms.DataGridView()
         Me.Column1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column3 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Column4 = New System.Windows.Forms.DataGridViewComboBoxColumn()
+        Me.Column4 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column5 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Label8 = New System.Windows.Forms.Label()
-        Me.Label4 = New System.Windows.Forms.Label()
-        Me.txt_id_cliente = New System.Windows.Forms.TextBox()
-        Me.Label2 = New System.Windows.Forms.Label()
+        Me.Column6 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Panel2.SuspendLayout()
         Me.Panel1.SuspendLayout()
         Me.Panel3.SuspendLayout()
@@ -88,6 +89,26 @@ Partial Class frm_consultar_agendamentos
         Me.Panel3.Size = New System.Drawing.Size(873, 58)
         Me.Panel3.TabIndex = 30
         '
+        'txt_id_cliente
+        '
+        Me.txt_id_cliente.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.txt_id_cliente.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txt_id_cliente.Location = New System.Drawing.Point(643, 16)
+        Me.txt_id_cliente.Name = "txt_id_cliente"
+        Me.txt_id_cliente.Size = New System.Drawing.Size(156, 27)
+        Me.txt_id_cliente.TabIndex = 33
+        '
+        'Label2
+        '
+        Me.Label2.BackColor = System.Drawing.Color.FromArgb(CType(CType(252, Byte), Integer), CType(CType(194, Byte), Integer), CType(CType(26, Byte), Integer))
+        Me.Label2.Font = New System.Drawing.Font("Bpmf Huninn", 13.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(136, Byte))
+        Me.Label2.ForeColor = System.Drawing.Color.Black
+        Me.Label2.Location = New System.Drawing.Point(483, 13)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(178, 28)
+        Me.Label2.TabIndex = 32
+        Me.Label2.Text = "ID Cliente:"
+        '
         'txt_id_agendamento
         '
         Me.txt_id_agendamento.Anchor = System.Windows.Forms.AnchorStyles.None
@@ -132,57 +153,6 @@ Partial Class frm_consultar_agendamentos
         Me.Panel9.Size = New System.Drawing.Size(767, 255)
         Me.Panel9.TabIndex = 27
         '
-        'dgv_info
-        '
-        Me.dgv_info.AllowUserToAddRows = False
-        Me.dgv_info.AllowUserToDeleteRows = False
-        Me.dgv_info.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
-        Me.dgv_info.BackgroundColor = System.Drawing.Color.White
-        Me.dgv_info.ColumnHeadersHeight = 24
-        Me.dgv_info.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Column1, Me.Column2, Me.Column3, Me.Column4, Me.Column5})
-        Me.dgv_info.Location = New System.Drawing.Point(11, 11)
-        Me.dgv_info.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
-        Me.dgv_info.Name = "dgv_info"
-        Me.dgv_info.RowHeadersWidth = 51
-        DataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control
-        DataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        Me.dgv_info.RowsDefaultCellStyle = DataGridViewCellStyle1
-        Me.dgv_info.RowTemplate.Height = 24
-        Me.dgv_info.Size = New System.Drawing.Size(747, 234)
-        Me.dgv_info.TabIndex = 25
-        '
-        'Column1
-        '
-        Me.Column1.HeaderText = "ID"
-        Me.Column1.MinimumWidth = 6
-        Me.Column1.Name = "Column1"
-        '
-        'Column2
-        '
-        Me.Column2.HeaderText = "CPF"
-        Me.Column2.MinimumWidth = 6
-        Me.Column2.Name = "Column2"
-        '
-        'Column3
-        '
-        Me.Column3.HeaderText = "Nome Cliente"
-        Me.Column3.MinimumWidth = 6
-        Me.Column3.Name = "Column3"
-        '
-        'Column4
-        '
-        Me.Column4.HeaderText = "Tipo Plano"
-        Me.Column4.MinimumWidth = 6
-        Me.Column4.Name = "Column4"
-        Me.Column4.Resizable = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.Column4.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic
-        '
-        'Column5
-        '
-        Me.Column5.HeaderText = "E-mail"
-        Me.Column5.MinimumWidth = 6
-        Me.Column5.Name = "Column5"
-        '
         'Label8
         '
         Me.Label8.BackColor = System.Drawing.Color.Transparent
@@ -204,25 +174,65 @@ Partial Class frm_consultar_agendamentos
         Me.Label4.Text = "Bem vindo(a)..."
         Me.Label4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
-        'txt_id_cliente
+        'dgv_info
         '
-        Me.txt_id_cliente.Anchor = System.Windows.Forms.AnchorStyles.None
-        Me.txt_id_cliente.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txt_id_cliente.Location = New System.Drawing.Point(643, 16)
-        Me.txt_id_cliente.Name = "txt_id_cliente"
-        Me.txt_id_cliente.Size = New System.Drawing.Size(156, 27)
-        Me.txt_id_cliente.TabIndex = 33
+        Me.dgv_info.AllowUserToAddRows = False
+        Me.dgv_info.AllowUserToDeleteRows = False
+        Me.dgv_info.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
+        Me.dgv_info.BackgroundColor = System.Drawing.Color.White
+        DataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(CType(CType(252, Byte), Integer), CType(CType(194, Byte), Integer), CType(CType(26, Byte), Integer))
+        DataGridViewCellStyle1.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(217, Byte), Integer), CType(CType(168, Byte), Integer), CType(CType(26, Byte), Integer))
+        DataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.dgv_info.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle1
+        Me.dgv_info.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.dgv_info.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Column1, Me.Column2, Me.Column3, Me.Column4, Me.Column5, Me.Column6})
+        Me.dgv_info.Location = New System.Drawing.Point(10, 10)
+        Me.dgv_info.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.dgv_info.Name = "dgv_info"
+        Me.dgv_info.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToAllHeaders
+        Me.dgv_info.RowTemplate.Height = 24
+        Me.dgv_info.Size = New System.Drawing.Size(747, 234)
+        Me.dgv_info.TabIndex = 26
         '
-        'Label2
+        'Column1
         '
-        Me.Label2.BackColor = System.Drawing.Color.FromArgb(CType(CType(252, Byte), Integer), CType(CType(194, Byte), Integer), CType(CType(26, Byte), Integer))
-        Me.Label2.Font = New System.Drawing.Font("Bpmf Huninn", 13.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(136, Byte))
-        Me.Label2.ForeColor = System.Drawing.Color.Black
-        Me.Label2.Location = New System.Drawing.Point(483, 13)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(178, 28)
-        Me.Label2.TabIndex = 32
-        Me.Label2.Text = "ID Cliente:"
+        Me.Column1.HeaderText = "ID"
+        Me.Column1.MinimumWidth = 6
+        Me.Column1.Name = "Column1"
+        '
+        'Column2
+        '
+        Me.Column2.HeaderText = "Cliente"
+        Me.Column2.MinimumWidth = 6
+        Me.Column2.Name = "Column2"
+        '
+        'Column3
+        '
+        Me.Column3.HeaderText = "Prestador"
+        Me.Column3.MinimumWidth = 6
+        Me.Column3.Name = "Column3"
+        '
+        'Column4
+        '
+        Me.Column4.HeaderText = "Especialidade"
+        Me.Column4.MinimumWidth = 6
+        Me.Column4.Name = "Column4"
+        '
+        'Column5
+        '
+        Me.Column5.HeaderText = "Data"
+        Me.Column5.MinimumWidth = 6
+        Me.Column5.Name = "Column5"
+        '
+        'Column6
+        '
+        Me.Column6.HeaderText = "Horário"
+        Me.Column6.MinimumWidth = 6
+        Me.Column6.Name = "Column6"
         '
         'frm_consultar_agendamentos
         '
@@ -251,14 +261,15 @@ Partial Class frm_consultar_agendamentos
     Friend WithEvents Label1 As Label
     Friend WithEvents ToolStrip1 As ToolStrip
     Friend WithEvents Panel9 As Panel
-    Friend WithEvents dgv_info As DataGridView
-    Friend WithEvents Column1 As DataGridViewTextBoxColumn
-    Friend WithEvents Column2 As DataGridViewTextBoxColumn
-    Friend WithEvents Column3 As DataGridViewTextBoxColumn
-    Friend WithEvents Column4 As DataGridViewComboBoxColumn
-    Friend WithEvents Column5 As DataGridViewTextBoxColumn
     Friend WithEvents Label8 As Label
     Friend WithEvents Label4 As Label
     Friend WithEvents txt_id_cliente As TextBox
     Friend WithEvents Label2 As Label
+    Friend WithEvents dgv_info As DataGridView
+    Friend WithEvents Column1 As DataGridViewTextBoxColumn
+    Friend WithEvents Column2 As DataGridViewTextBoxColumn
+    Friend WithEvents Column3 As DataGridViewTextBoxColumn
+    Friend WithEvents Column4 As DataGridViewTextBoxColumn
+    Friend WithEvents Column5 As DataGridViewTextBoxColumn
+    Friend WithEvents Column6 As DataGridViewTextBoxColumn
 End Class
