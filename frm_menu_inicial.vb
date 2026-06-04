@@ -1,15 +1,11 @@
 ﻿Public Class frm_menu_inicial
-    Private Sub GerenciarContasToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles GerenciarContasToolStripMenuItem.Click
+	Private Sub GerenciarContasToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles GerenciarContasToolStripMenuItem.Click
 		Try
 			frm_gerenciar_contas.ShowDialog()
 		Catch ex As Exception
 			MsgBox("Erro ao chamar o formulário.", MsgBoxStyle.Critical + MsgBoxStyle.OkOnly, "ATENÇÃO")
 		End Try
 	End Sub
-
-	'Private Sub frm_menu_inicial_FormClosed(sender As Object, e As FormClosedEventArgs) Handles Me.FormClosed
-	'Application.Restart()
-	'End Sub
 
 	Private Sub GerenciarClientesToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles GerenciarClientesToolStripMenuItem.Click
 		Try
@@ -65,5 +61,15 @@
 		Catch ex As Exception
 			MsgBox("Erro ao chamar o formulário.", MsgBoxStyle.Critical + MsgBoxStyle.OkOnly, "ATENÇÃO")
 		End Try
+	End Sub
+
+	Private Sub frm_menu_inicial_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+		If acesso_admin = False Then
+			With MenuStrip1
+				GerenciarClientesToolStripMenuItem.Enabled = False
+				GerenciarPrestadoresToolStripMenuItem.Enabled = False
+				GerenciarContasToolStripMenuItem.Enabled = False
+			End With
+		End If
 	End Sub
 End Class

@@ -1,5 +1,6 @@
 ﻿Module mod_geral
 	Public diretorio, SQL, resp, aux, aux2 As String
+	Public acesso_admin As Boolean
 	Public db As New ADODB.Connection
 	Public rs As New ADODB.Recordset
 
@@ -107,6 +108,7 @@
 				.Items.Clear()
 				.Items.Add("ATIVA")
 				.Items.Add("INATIVA")
+				.Items.Add("SUSPENSA")
 			End With
 		Catch ex As Exception
 			Exit Sub

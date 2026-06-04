@@ -13,16 +13,28 @@
                 rs = db.Execute(SQL)
                 If rs.EOF = False Then
                     If UCase(txt_senha.Text) = rs.Fields(4).Value Then
-                        MsgBox("LOGIN EFETUADO COM SUCESSO!!!", MsgBoxStyle.Information + MsgBoxStyle.OkOnly, "ATENÇÃO!")
-                        Try
-                            Me.Hide()
-                            frm_menu_inicial.ShowDialog()
-                            Me.Close()
-                        Catch ex As Exception
-                            MsgBox("Erro ao chamar o formulário.", MsgBoxStyle.Critical + MsgBoxStyle.OkOnly, "ATENÇÃO")
+                        If rs.Fields(5).Value = "INATIVA" Then
+                            MsgBox("Sua Conta Está INATIVA!" & vbCrLf & "Entre em Contato com o Administrador.", MsgBoxStyle.Critical + MsgBoxStyle.OkOnly, "ATENÇÃO")
+                            Exit Sub
+                        ElseIf rs.Fields(5).Value = "SUSPENSA" Then
+                            MsgBox("Sua Conta Está SUSPENSA!" & vbCrLf & "Entre em Contato com o Administrador.", MsgBoxStyle.Critical + MsgBoxStyle.OkOnly, "ATENÇÃO")
+                            Exit Sub
+                        End If
+                        If rs.Fields(2).Value = "ABELHA RAINHA" Then
+                                acesso_admin = True
+                            Else
+                                acesso_admin = False
+                            End If
+                            MsgBox("LOGIN EFETUADO COM SUCESSO!!!", MsgBoxStyle.Information + MsgBoxStyle.OkOnly, "ATENÇÃO!")
+                            Try
+                                Me.Hide()
+                                frm_menu_inicial.ShowDialog()
+                                Me.Close()
+                            Catch ex As Exception
+                            MsgBox("Erro ao Chamar o Formulário.", MsgBoxStyle.Critical + MsgBoxStyle.OkOnly, "ATENÇÃO")
                         End Try
-                    Else
-                        MsgBox("SENHA INCORRETA!!!", MsgBoxStyle.Information + MsgBoxStyle.OkOnly, "ATENÇÃO!")
+                        Else
+                            MsgBox("SENHA INCORRETA!!!", MsgBoxStyle.Information + MsgBoxStyle.OkOnly, "ATENÇÃO!")
                     End If
                 Else
                     MsgBox("Usuário ou E-mail Não Existem!", MsgBoxStyle.Information + MsgBoxStyle.OkOnly, "ATENÇÃO!")
