@@ -1,4 +1,6 @@
-﻿Public Class frm_gerenciar_clientes
+﻿Imports System.Diagnostics.Eventing.Reader
+
+Public Class frm_gerenciar_clientes
     Private Sub frm_gerenciar_clientes_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Conectar_banco()
         Carregar_comboBoxClientes()
@@ -132,5 +134,9 @@
         Catch ex As Exception
             MsgBox("Erro!", MsgBoxStyle.Critical + MsgBoxStyle.OkOnly, "ATENÇÃO")
         End Try
+    End Sub
+
+    Private Sub Panel1_Paint(sender As Object, e As PaintEventArgs) Handles Panel1.Paint
+
     End Sub
 End Class

@@ -61,11 +61,11 @@ Partial Class frm_gerenciar_prestadores
         Me.Panel2.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.Panel2.BackColor = System.Drawing.Color.Black
         Me.Panel2.Controls.Add(Me.Panel1)
-        Me.Panel2.Location = New System.Drawing.Point(-3, 0)
-        Me.Panel2.Margin = New System.Windows.Forms.Padding(2)
+        Me.Panel2.Location = New System.Drawing.Point(-4, 0)
+        Me.Panel2.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.Panel2.Name = "Panel2"
         Me.Panel2.RightToLeft = System.Windows.Forms.RightToLeft.No
-        Me.Panel2.Size = New System.Drawing.Size(652, 432)
+        Me.Panel2.Size = New System.Drawing.Size(869, 532)
         Me.Panel2.TabIndex = 5
         '
         'Panel1
@@ -89,11 +89,11 @@ Partial Class frm_gerenciar_prestadores
         Me.Panel1.Controls.Add(Me.lbl_prestador)
         Me.Panel1.Controls.Add(Me.txt_prestador)
         Me.Panel1.Controls.Add(Me.Panel3)
-        Me.Panel1.Location = New System.Drawing.Point(9, 9)
-        Me.Panel1.Margin = New System.Windows.Forms.Padding(2)
+        Me.Panel1.Location = New System.Drawing.Point(12, 11)
+        Me.Panel1.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.Panel1.Name = "Panel1"
         Me.Panel1.RightToLeft = System.Windows.Forms.RightToLeft.No
-        Me.Panel1.Size = New System.Drawing.Size(634, 387)
+        Me.Panel1.Size = New System.Drawing.Size(845, 476)
         Me.Panel1.TabIndex = 1
         '
         'btn_editar
@@ -101,10 +101,10 @@ Partial Class frm_gerenciar_prestadores
         Me.btn_editar.BackColor = System.Drawing.Color.FromArgb(CType(CType(252, Byte), Integer), CType(CType(194, Byte), Integer), CType(CType(26, Byte), Integer))
         Me.btn_editar.Font = New System.Drawing.Font("Jaldi", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btn_editar.ForeColor = System.Drawing.Color.White
-        Me.btn_editar.Location = New System.Drawing.Point(493, 246)
-        Me.btn_editar.Margin = New System.Windows.Forms.Padding(2)
+        Me.btn_editar.Location = New System.Drawing.Point(657, 303)
+        Me.btn_editar.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.btn_editar.Name = "btn_editar"
-        Me.btn_editar.Size = New System.Drawing.Size(111, 35)
+        Me.btn_editar.Size = New System.Drawing.Size(148, 43)
         Me.btn_editar.TabIndex = 31
         Me.btn_editar.Text = "EDITAR"
         Me.btn_editar.UseVisualStyleBackColor = False
@@ -114,10 +114,9 @@ Partial Class frm_gerenciar_prestadores
         Me.lbl_fone.AutoSize = True
         Me.lbl_fone.BackColor = System.Drawing.Color.Transparent
         Me.lbl_fone.Font = New System.Drawing.Font("Bpmf Huninn", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(136, Byte))
-        Me.lbl_fone.Location = New System.Drawing.Point(20, 278)
-        Me.lbl_fone.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.lbl_fone.Location = New System.Drawing.Point(27, 342)
         Me.lbl_fone.Name = "lbl_fone"
-        Me.lbl_fone.Size = New System.Drawing.Size(81, 21)
+        Me.lbl_fone.Size = New System.Drawing.Size(98, 26)
         Me.lbl_fone.TabIndex = 29
         Me.lbl_fone.Text = "Telefone:"
         '
@@ -125,41 +124,40 @@ Partial Class frm_gerenciar_prestadores
         '
         Me.Panel12.BackColor = System.Drawing.Color.FromArgb(CType(CType(252, Byte), Integer), CType(CType(194, Byte), Integer), CType(CType(26, Byte), Integer))
         Me.Panel12.Controls.Add(Me.txt_fone)
-        Me.Panel12.Location = New System.Drawing.Point(24, 303)
-        Me.Panel12.Margin = New System.Windows.Forms.Padding(2)
+        Me.Panel12.Location = New System.Drawing.Point(32, 373)
+        Me.Panel12.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.Panel12.Name = "Panel12"
-        Me.Panel12.Size = New System.Drawing.Size(209, 32)
+        Me.Panel12.Size = New System.Drawing.Size(279, 39)
         Me.Panel12.TabIndex = 30
         '
         'txt_fone
         '
-        Me.txt_fone.Location = New System.Drawing.Point(8, 6)
-        Me.txt_fone.Margin = New System.Windows.Forms.Padding(2)
+        Me.txt_fone.Location = New System.Drawing.Point(11, 7)
+        Me.txt_fone.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.txt_fone.Mask = "+55 (99) 99999-9999"
         Me.txt_fone.Name = "txt_fone"
-        Me.txt_fone.Size = New System.Drawing.Size(195, 20)
+        Me.txt_fone.Size = New System.Drawing.Size(259, 22)
         Me.txt_fone.TabIndex = 34
         '
         'Label8
         '
         Me.Label8.BackColor = System.Drawing.Color.Transparent
-        Me.Label8.Font = New System.Drawing.Font("JejuMyeongjo", 20.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label8.Location = New System.Drawing.Point(172, 37)
-        Me.Label8.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.Label8.Font = New System.Drawing.Font("Jockey One", 19.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(238, Byte))
+        Me.Label8.Location = New System.Drawing.Point(236, 26)
         Me.Label8.Name = "Label8"
-        Me.Label8.Size = New System.Drawing.Size(302, 45)
+        Me.Label8.Size = New System.Drawing.Size(403, 55)
         Me.Label8.TabIndex = 24
         Me.Label8.Text = "Gerenciar Prestadores:"
+        Me.Label8.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'lbl_especialidades
         '
         Me.lbl_especialidades.AutoSize = True
         Me.lbl_especialidades.BackColor = System.Drawing.Color.Transparent
         Me.lbl_especialidades.Font = New System.Drawing.Font("Bpmf Huninn", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(136, Byte))
-        Me.lbl_especialidades.Location = New System.Drawing.Point(257, 150)
-        Me.lbl_especialidades.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.lbl_especialidades.Location = New System.Drawing.Point(343, 185)
         Me.lbl_especialidades.Name = "lbl_especialidades"
-        Me.lbl_especialidades.Size = New System.Drawing.Size(126, 21)
+        Me.lbl_especialidades.Size = New System.Drawing.Size(152, 26)
         Me.lbl_especialidades.TabIndex = 19
         Me.lbl_especialidades.Text = "Especialidades:"
         '
@@ -167,19 +165,19 @@ Partial Class frm_gerenciar_prestadores
         '
         Me.Panel7.BackColor = System.Drawing.Color.FromArgb(CType(CType(252, Byte), Integer), CType(CType(194, Byte), Integer), CType(CType(26, Byte), Integer))
         Me.Panel7.Controls.Add(Me.txt_especialidades)
-        Me.Panel7.Location = New System.Drawing.Point(261, 176)
-        Me.Panel7.Margin = New System.Windows.Forms.Padding(2)
+        Me.Panel7.Location = New System.Drawing.Point(348, 217)
+        Me.Panel7.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.Panel7.Name = "Panel7"
-        Me.Panel7.Size = New System.Drawing.Size(209, 159)
+        Me.Panel7.Size = New System.Drawing.Size(279, 196)
         Me.Panel7.TabIndex = 20
         '
         'txt_especialidades
         '
-        Me.txt_especialidades.Location = New System.Drawing.Point(8, 7)
-        Me.txt_especialidades.Margin = New System.Windows.Forms.Padding(2)
+        Me.txt_especialidades.Location = New System.Drawing.Point(11, 9)
+        Me.txt_especialidades.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.txt_especialidades.Multiline = True
         Me.txt_especialidades.Name = "txt_especialidades"
-        Me.txt_especialidades.Size = New System.Drawing.Size(195, 145)
+        Me.txt_especialidades.Size = New System.Drawing.Size(259, 178)
         Me.txt_especialidades.TabIndex = 32
         '
         'lbl_email
@@ -187,10 +185,9 @@ Partial Class frm_gerenciar_prestadores
         Me.lbl_email.AutoSize = True
         Me.lbl_email.BackColor = System.Drawing.Color.Transparent
         Me.lbl_email.Font = New System.Drawing.Font("Bpmf Huninn", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(136, Byte))
-        Me.lbl_email.Location = New System.Drawing.Point(257, 87)
-        Me.lbl_email.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.lbl_email.Location = New System.Drawing.Point(343, 107)
         Me.lbl_email.Name = "lbl_email"
-        Me.lbl_email.Size = New System.Drawing.Size(61, 21)
+        Me.lbl_email.Size = New System.Drawing.Size(76, 26)
         Me.lbl_email.TabIndex = 16
         Me.lbl_email.Text = "E-mail:"
         '
@@ -198,18 +195,18 @@ Partial Class frm_gerenciar_prestadores
         '
         Me.Panel8.BackColor = System.Drawing.Color.FromArgb(CType(CType(252, Byte), Integer), CType(CType(194, Byte), Integer), CType(CType(26, Byte), Integer))
         Me.Panel8.Controls.Add(Me.txt_email)
-        Me.Panel8.Location = New System.Drawing.Point(261, 112)
-        Me.Panel8.Margin = New System.Windows.Forms.Padding(2)
+        Me.Panel8.Location = New System.Drawing.Point(348, 138)
+        Me.Panel8.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.Panel8.Name = "Panel8"
-        Me.Panel8.Size = New System.Drawing.Size(209, 32)
+        Me.Panel8.Size = New System.Drawing.Size(279, 39)
         Me.Panel8.TabIndex = 17
         '
         'txt_email
         '
-        Me.txt_email.Location = New System.Drawing.Point(8, 6)
-        Me.txt_email.Margin = New System.Windows.Forms.Padding(2)
+        Me.txt_email.Location = New System.Drawing.Point(11, 7)
+        Me.txt_email.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.txt_email.Name = "txt_email"
-        Me.txt_email.Size = New System.Drawing.Size(195, 20)
+        Me.txt_email.Size = New System.Drawing.Size(259, 22)
         Me.txt_email.TabIndex = 2
         '
         'lbl_endereco
@@ -217,10 +214,9 @@ Partial Class frm_gerenciar_prestadores
         Me.lbl_endereco.AutoSize = True
         Me.lbl_endereco.BackColor = System.Drawing.Color.Transparent
         Me.lbl_endereco.Font = New System.Drawing.Font("Bpmf Huninn", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(136, Byte))
-        Me.lbl_endereco.Location = New System.Drawing.Point(20, 216)
-        Me.lbl_endereco.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.lbl_endereco.Location = New System.Drawing.Point(27, 266)
         Me.lbl_endereco.Name = "lbl_endereco"
-        Me.lbl_endereco.Size = New System.Drawing.Size(86, 21)
+        Me.lbl_endereco.Size = New System.Drawing.Size(104, 26)
         Me.lbl_endereco.TabIndex = 13
         Me.lbl_endereco.Text = "Endereço:"
         '
@@ -228,18 +224,18 @@ Partial Class frm_gerenciar_prestadores
         '
         Me.Panel5.BackColor = System.Drawing.Color.FromArgb(CType(CType(252, Byte), Integer), CType(CType(194, Byte), Integer), CType(CType(26, Byte), Integer))
         Me.Panel5.Controls.Add(Me.txt_endereco)
-        Me.Panel5.Location = New System.Drawing.Point(24, 241)
-        Me.Panel5.Margin = New System.Windows.Forms.Padding(2)
+        Me.Panel5.Location = New System.Drawing.Point(32, 297)
+        Me.Panel5.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.Panel5.Name = "Panel5"
-        Me.Panel5.Size = New System.Drawing.Size(209, 32)
+        Me.Panel5.Size = New System.Drawing.Size(279, 39)
         Me.Panel5.TabIndex = 14
         '
         'txt_endereco
         '
-        Me.txt_endereco.Location = New System.Drawing.Point(8, 6)
-        Me.txt_endereco.Margin = New System.Windows.Forms.Padding(2)
+        Me.txt_endereco.Location = New System.Drawing.Point(11, 7)
+        Me.txt_endereco.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.txt_endereco.Name = "txt_endereco"
-        Me.txt_endereco.Size = New System.Drawing.Size(195, 20)
+        Me.txt_endereco.Size = New System.Drawing.Size(259, 22)
         Me.txt_endereco.TabIndex = 33
         '
         'btn_salvar
@@ -247,10 +243,10 @@ Partial Class frm_gerenciar_prestadores
         Me.btn_salvar.BackColor = System.Drawing.Color.FromArgb(CType(CType(252, Byte), Integer), CType(CType(194, Byte), Integer), CType(CType(26, Byte), Integer))
         Me.btn_salvar.Font = New System.Drawing.Font("Jaldi", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btn_salvar.ForeColor = System.Drawing.Color.White
-        Me.btn_salvar.Location = New System.Drawing.Point(493, 300)
-        Me.btn_salvar.Margin = New System.Windows.Forms.Padding(2)
+        Me.btn_salvar.Location = New System.Drawing.Point(657, 369)
+        Me.btn_salvar.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.btn_salvar.Name = "btn_salvar"
-        Me.btn_salvar.Size = New System.Drawing.Size(111, 35)
+        Me.btn_salvar.Size = New System.Drawing.Size(148, 43)
         Me.btn_salvar.TabIndex = 11
         Me.btn_salvar.Text = "SALVAR"
         Me.btn_salvar.UseVisualStyleBackColor = False
@@ -258,10 +254,9 @@ Partial Class frm_gerenciar_prestadores
         'Label4
         '
         Me.Label4.Font = New System.Drawing.Font("Comic Sans MS", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label4.Location = New System.Drawing.Point(231, -81)
-        Me.Label4.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.Label4.Location = New System.Drawing.Point(308, -100)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(162, 38)
+        Me.Label4.Size = New System.Drawing.Size(216, 47)
         Me.Label4.TabIndex = 10
         Me.Label4.Text = "Bem vindo(a)..."
         Me.Label4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
@@ -271,10 +266,9 @@ Partial Class frm_gerenciar_prestadores
         Me.lbl_tipo_prestador.AutoSize = True
         Me.lbl_tipo_prestador.BackColor = System.Drawing.Color.Transparent
         Me.lbl_tipo_prestador.Font = New System.Drawing.Font("Bpmf Huninn", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(136, Byte))
-        Me.lbl_tipo_prestador.Location = New System.Drawing.Point(20, 150)
-        Me.lbl_tipo_prestador.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.lbl_tipo_prestador.Location = New System.Drawing.Point(27, 185)
         Me.lbl_tipo_prestador.Name = "lbl_tipo_prestador"
-        Me.lbl_tipo_prestador.Size = New System.Drawing.Size(152, 21)
+        Me.lbl_tipo_prestador.Size = New System.Drawing.Size(182, 26)
         Me.lbl_tipo_prestador.TabIndex = 6
         Me.lbl_tipo_prestador.Text = "Tipo de Prestador:"
         '
@@ -282,19 +276,19 @@ Partial Class frm_gerenciar_prestadores
         '
         Me.Panel4.BackColor = System.Drawing.Color.FromArgb(CType(CType(252, Byte), Integer), CType(CType(194, Byte), Integer), CType(CType(26, Byte), Integer))
         Me.Panel4.Controls.Add(Me.cmb_tipo_prestador)
-        Me.Panel4.Location = New System.Drawing.Point(24, 176)
-        Me.Panel4.Margin = New System.Windows.Forms.Padding(2)
+        Me.Panel4.Location = New System.Drawing.Point(32, 217)
+        Me.Panel4.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.Panel4.Name = "Panel4"
-        Me.Panel4.Size = New System.Drawing.Size(209, 32)
+        Me.Panel4.Size = New System.Drawing.Size(279, 39)
         Me.Panel4.TabIndex = 8
         '
         'cmb_tipo_prestador
         '
         Me.cmb_tipo_prestador.FormattingEnabled = True
-        Me.cmb_tipo_prestador.Location = New System.Drawing.Point(8, 6)
-        Me.cmb_tipo_prestador.Margin = New System.Windows.Forms.Padding(2)
+        Me.cmb_tipo_prestador.Location = New System.Drawing.Point(11, 7)
+        Me.cmb_tipo_prestador.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.cmb_tipo_prestador.Name = "cmb_tipo_prestador"
-        Me.cmb_tipo_prestador.Size = New System.Drawing.Size(195, 21)
+        Me.cmb_tipo_prestador.Size = New System.Drawing.Size(259, 24)
         Me.cmb_tipo_prestador.TabIndex = 1
         '
         'lbl_prestador
@@ -302,38 +296,37 @@ Partial Class frm_gerenciar_prestadores
         Me.lbl_prestador.AutoSize = True
         Me.lbl_prestador.BackColor = System.Drawing.Color.Transparent
         Me.lbl_prestador.Font = New System.Drawing.Font("Bpmf Huninn", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(136, Byte))
-        Me.lbl_prestador.Location = New System.Drawing.Point(20, 87)
-        Me.lbl_prestador.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.lbl_prestador.Location = New System.Drawing.Point(27, 107)
         Me.lbl_prestador.Name = "lbl_prestador"
-        Me.lbl_prestador.Size = New System.Drawing.Size(165, 21)
+        Me.lbl_prestador.Size = New System.Drawing.Size(199, 26)
         Me.lbl_prestador.TabIndex = 2
         Me.lbl_prestador.Text = "Nome do Prestador:"
         '
         'txt_prestador
         '
-        Me.txt_prestador.Location = New System.Drawing.Point(32, 119)
-        Me.txt_prestador.Margin = New System.Windows.Forms.Padding(2)
+        Me.txt_prestador.Location = New System.Drawing.Point(43, 146)
+        Me.txt_prestador.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.txt_prestador.Name = "txt_prestador"
-        Me.txt_prestador.Size = New System.Drawing.Size(195, 20)
+        Me.txt_prestador.Size = New System.Drawing.Size(259, 22)
         Me.txt_prestador.TabIndex = 1
         '
         'Panel3
         '
         Me.Panel3.BackColor = System.Drawing.Color.FromArgb(CType(CType(252, Byte), Integer), CType(CType(194, Byte), Integer), CType(CType(26, Byte), Integer))
-        Me.Panel3.Location = New System.Drawing.Point(24, 112)
-        Me.Panel3.Margin = New System.Windows.Forms.Padding(2)
+        Me.Panel3.Location = New System.Drawing.Point(32, 138)
+        Me.Panel3.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.Panel3.Name = "Panel3"
-        Me.Panel3.Size = New System.Drawing.Size(209, 32)
+        Me.Panel3.Size = New System.Drawing.Size(279, 39)
         Me.Panel3.TabIndex = 4
         '
         'frm_gerenciar_prestadores
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(647, 406)
+        Me.ClientSize = New System.Drawing.Size(863, 500)
         Me.Controls.Add(Me.Panel2)
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
-        Me.Margin = New System.Windows.Forms.Padding(2)
+        Me.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.Name = "frm_gerenciar_prestadores"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Gerenciar Prestadores"

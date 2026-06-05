@@ -1,5 +1,5 @@
 ﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
-Partial Class frm_gerenciar_contas
+Partial Class frm_gerenciar_agendamentos
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
@@ -22,46 +22,47 @@ Partial Class frm_gerenciar_contas
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frm_gerenciar_contas))
         Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frm_gerenciar_agendamentos))
         Me.Panel2 = New System.Windows.Forms.Panel()
         Me.Panel1 = New System.Windows.Forms.Panel()
-        Me.Panel10 = New System.Windows.Forms.Panel()
-        Me.img_foto = New System.Windows.Forms.PictureBox()
-        Me.lbl_frm_contas = New System.Windows.Forms.Label()
-        Me.lbl_csenha = New System.Windows.Forms.Label()
-        Me.txt_csenha = New System.Windows.Forms.TextBox()
+        Me.lbl_id_agendamento = New System.Windows.Forms.Label()
+        Me.txt_id_agendamento = New System.Windows.Forms.TextBox()
         Me.Panel6 = New System.Windows.Forms.Panel()
-        Me.lbl_fone = New System.Windows.Forms.Label()
-        Me.txt_fone = New System.Windows.Forms.TextBox()
+        Me.lbl_frm_ger_agendamentos = New System.Windows.Forms.Label()
+        Me.lbl_horario = New System.Windows.Forms.Label()
         Me.Panel7 = New System.Windows.Forms.Panel()
-        Me.lbl_tipo_conta = New System.Windows.Forms.Label()
+        Me.cmb_horario = New System.Windows.Forms.ComboBox()
+        Me.lbl_data = New System.Windows.Forms.Label()
         Me.Panel8 = New System.Windows.Forms.Panel()
-        Me.cmb_tipo_conta = New System.Windows.Forms.ComboBox()
-        Me.lbl_senha = New System.Windows.Forms.Label()
-        Me.txt_senha = New System.Windows.Forms.TextBox()
+        Me.cmb_data = New System.Windows.Forms.ComboBox()
+        Me.lbl_especialidade = New System.Windows.Forms.Label()
         Me.Panel5 = New System.Windows.Forms.Panel()
+        Me.cmb_especialidade = New System.Windows.Forms.ComboBox()
         Me.btn_salvar = New System.Windows.Forms.Button()
         Me.Label4 = New System.Windows.Forms.Label()
-        Me.lbl_email = New System.Windows.Forms.Label()
-        Me.txt_email = New System.Windows.Forms.TextBox()
+        Me.lbl_prestador = New System.Windows.Forms.Label()
         Me.Panel4 = New System.Windows.Forms.Panel()
-        Me.lbl_usuario = New System.Windows.Forms.Label()
-        Me.txt_usuario = New System.Windows.Forms.TextBox()
+        Me.cmb_prestador = New System.Windows.Forms.ComboBox()
+        Me.lbl_id_cliente = New System.Windows.Forms.Label()
+        Me.txt_id_cliente = New System.Windows.Forms.TextBox()
         Me.Panel3 = New System.Windows.Forms.Panel()
         Me.Panel9 = New System.Windows.Forms.Panel()
         Me.dgv_info = New System.Windows.Forms.DataGridView()
         Me.Column1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column3 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Column4 = New System.Windows.Forms.DataGridViewComboBoxColumn()
-        Me.Column5 = New System.Windows.Forms.DataGridViewImageColumn()
-        Me.Column6 = New System.Windows.Forms.DataGridViewImageColumn()
+        Me.Column4 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column5 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column6 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column7 = New System.Windows.Forms.DataGridViewImageColumn()
+        Me.Column8 = New System.Windows.Forms.DataGridViewImageColumn()
         Me.Panel2.SuspendLayout()
         Me.Panel1.SuspendLayout()
-        Me.Panel10.SuspendLayout()
-        CType(Me.img_foto, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.Panel7.SuspendLayout()
         Me.Panel8.SuspendLayout()
+        Me.Panel5.SuspendLayout()
+        Me.Panel4.SuspendLayout()
         Me.Panel9.SuspendLayout()
         CType(Me.dgv_info, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -71,37 +72,33 @@ Partial Class frm_gerenciar_contas
         Me.Panel2.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.Panel2.BackColor = System.Drawing.Color.Black
         Me.Panel2.Controls.Add(Me.Panel1)
-        Me.Panel2.Location = New System.Drawing.Point(-1, -1)
+        Me.Panel2.Location = New System.Drawing.Point(0, -2)
         Me.Panel2.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.Panel2.Name = "Panel2"
         Me.Panel2.RightToLeft = System.Windows.Forms.RightToLeft.No
         Me.Panel2.Size = New System.Drawing.Size(857, 591)
-        Me.Panel2.TabIndex = 3
+        Me.Panel2.TabIndex = 4
         '
         'Panel1
         '
         Me.Panel1.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.Panel1.BackColor = System.Drawing.Color.White
-        Me.Panel1.Controls.Add(Me.Panel10)
-        Me.Panel1.Controls.Add(Me.lbl_frm_contas)
-        Me.Panel1.Controls.Add(Me.lbl_csenha)
-        Me.Panel1.Controls.Add(Me.txt_csenha)
+        Me.Panel1.Controls.Add(Me.lbl_id_agendamento)
+        Me.Panel1.Controls.Add(Me.txt_id_agendamento)
         Me.Panel1.Controls.Add(Me.Panel6)
-        Me.Panel1.Controls.Add(Me.lbl_fone)
-        Me.Panel1.Controls.Add(Me.txt_fone)
+        Me.Panel1.Controls.Add(Me.lbl_frm_ger_agendamentos)
+        Me.Panel1.Controls.Add(Me.lbl_horario)
         Me.Panel1.Controls.Add(Me.Panel7)
-        Me.Panel1.Controls.Add(Me.lbl_tipo_conta)
+        Me.Panel1.Controls.Add(Me.lbl_data)
         Me.Panel1.Controls.Add(Me.Panel8)
-        Me.Panel1.Controls.Add(Me.lbl_senha)
-        Me.Panel1.Controls.Add(Me.txt_senha)
+        Me.Panel1.Controls.Add(Me.lbl_especialidade)
         Me.Panel1.Controls.Add(Me.Panel5)
         Me.Panel1.Controls.Add(Me.btn_salvar)
         Me.Panel1.Controls.Add(Me.Label4)
-        Me.Panel1.Controls.Add(Me.lbl_email)
-        Me.Panel1.Controls.Add(Me.txt_email)
+        Me.Panel1.Controls.Add(Me.lbl_prestador)
         Me.Panel1.Controls.Add(Me.Panel4)
-        Me.Panel1.Controls.Add(Me.lbl_usuario)
-        Me.Panel1.Controls.Add(Me.txt_usuario)
+        Me.Panel1.Controls.Add(Me.lbl_id_cliente)
+        Me.Panel1.Controls.Add(Me.txt_id_cliente)
         Me.Panel1.Controls.Add(Me.Panel3)
         Me.Panel1.Controls.Add(Me.Panel9)
         Me.Panel1.Location = New System.Drawing.Point(7, 11)
@@ -111,154 +108,134 @@ Partial Class frm_gerenciar_contas
         Me.Panel1.Size = New System.Drawing.Size(843, 571)
         Me.Panel1.TabIndex = 1
         '
-        'Panel10
+        'lbl_id_agendamento
         '
-        Me.Panel10.BackColor = System.Drawing.Color.Black
-        Me.Panel10.Controls.Add(Me.img_foto)
-        Me.Panel10.Location = New System.Drawing.Point(651, 91)
-        Me.Panel10.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
-        Me.Panel10.Name = "Panel10"
-        Me.Panel10.Size = New System.Drawing.Size(169, 176)
-        Me.Panel10.TabIndex = 27
+        Me.lbl_id_agendamento.AutoSize = True
+        Me.lbl_id_agendamento.BackColor = System.Drawing.Color.Transparent
+        Me.lbl_id_agendamento.Font = New System.Drawing.Font("Bpmf Huninn", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(136, Byte))
+        Me.lbl_id_agendamento.Location = New System.Drawing.Point(350, 82)
+        Me.lbl_id_agendamento.Name = "lbl_id_agendamento"
+        Me.lbl_id_agendamento.Size = New System.Drawing.Size(207, 26)
+        Me.lbl_id_agendamento.TabIndex = 28
+        Me.lbl_id_agendamento.Text = "ID do Agendamento:"
         '
-        'img_foto
+        'txt_id_agendamento
         '
-        Me.img_foto.Anchor = System.Windows.Forms.AnchorStyles.None
-        Me.img_foto.BackColor = System.Drawing.Color.White
-        Me.img_foto.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.img_foto.Image = CType(resources.GetObject("img_foto.Image"), System.Drawing.Image)
-        Me.img_foto.Location = New System.Drawing.Point(11, 10)
-        Me.img_foto.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
-        Me.img_foto.Name = "img_foto"
-        Me.img_foto.Size = New System.Drawing.Size(149, 156)
-        Me.img_foto.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.img_foto.TabIndex = 3
-        Me.img_foto.TabStop = False
-        '
-        'lbl_frm_contas
-        '
-        Me.lbl_frm_contas.BackColor = System.Drawing.Color.Transparent
-        Me.lbl_frm_contas.Font = New System.Drawing.Font("Jockey One", 19.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(238, Byte))
-        Me.lbl_frm_contas.Location = New System.Drawing.Point(175, 22)
-        Me.lbl_frm_contas.Name = "lbl_frm_contas"
-        Me.lbl_frm_contas.Size = New System.Drawing.Size(500, 55)
-        Me.lbl_frm_contas.TabIndex = 24
-        Me.lbl_frm_contas.Text = "Gerenciar Abelhudos/Contas:"
-        Me.lbl_frm_contas.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
-        '
-        'lbl_csenha
-        '
-        Me.lbl_csenha.AutoSize = True
-        Me.lbl_csenha.BackColor = System.Drawing.Color.Transparent
-        Me.lbl_csenha.Font = New System.Drawing.Font("Bpmf Huninn", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(136, Byte))
-        Me.lbl_csenha.Location = New System.Drawing.Point(349, 254)
-        Me.lbl_csenha.Name = "lbl_csenha"
-        Me.lbl_csenha.Size = New System.Drawing.Size(174, 26)
-        Me.lbl_csenha.TabIndex = 22
-        Me.lbl_csenha.Text = "Confirmar Senha:"
-        '
-        'txt_csenha
-        '
-        Me.txt_csenha.Location = New System.Drawing.Point(364, 292)
-        Me.txt_csenha.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
-        Me.txt_csenha.Name = "txt_csenha"
-        Me.txt_csenha.Size = New System.Drawing.Size(259, 22)
-        Me.txt_csenha.TabIndex = 21
+        Me.txt_id_agendamento.Location = New System.Drawing.Point(365, 121)
+        Me.txt_id_agendamento.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.txt_id_agendamento.Name = "txt_id_agendamento"
+        Me.txt_id_agendamento.Size = New System.Drawing.Size(259, 22)
+        Me.txt_id_agendamento.TabIndex = 27
         '
         'Panel6
         '
         Me.Panel6.BackColor = System.Drawing.Color.FromArgb(CType(CType(252, Byte), Integer), CType(CType(194, Byte), Integer), CType(CType(26, Byte), Integer))
-        Me.Panel6.Location = New System.Drawing.Point(355, 283)
+        Me.Panel6.Location = New System.Drawing.Point(354, 112)
         Me.Panel6.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.Panel6.Name = "Panel6"
         Me.Panel6.Size = New System.Drawing.Size(279, 39)
-        Me.Panel6.TabIndex = 23
+        Me.Panel6.TabIndex = 29
         '
-        'lbl_fone
+        'lbl_frm_ger_agendamentos
         '
-        Me.lbl_fone.AutoSize = True
-        Me.lbl_fone.BackColor = System.Drawing.Color.Transparent
-        Me.lbl_fone.Font = New System.Drawing.Font("Bpmf Huninn", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(136, Byte))
-        Me.lbl_fone.Location = New System.Drawing.Point(349, 166)
-        Me.lbl_fone.Name = "lbl_fone"
-        Me.lbl_fone.Size = New System.Drawing.Size(98, 26)
-        Me.lbl_fone.TabIndex = 19
-        Me.lbl_fone.Text = "Telefone:"
+        Me.lbl_frm_ger_agendamentos.BackColor = System.Drawing.Color.Transparent
+        Me.lbl_frm_ger_agendamentos.Font = New System.Drawing.Font("Jockey One", 19.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(238, Byte))
+        Me.lbl_frm_ger_agendamentos.Location = New System.Drawing.Point(181, 9)
+        Me.lbl_frm_ger_agendamentos.Name = "lbl_frm_ger_agendamentos"
+        Me.lbl_frm_ger_agendamentos.Size = New System.Drawing.Size(500, 55)
+        Me.lbl_frm_ger_agendamentos.TabIndex = 24
+        Me.lbl_frm_ger_agendamentos.Text = "Gerenciar Agendamentos:"
+        Me.lbl_frm_ger_agendamentos.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
-        'txt_fone
+        'lbl_horario
         '
-        Me.txt_fone.Location = New System.Drawing.Point(364, 203)
-        Me.txt_fone.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
-        Me.txt_fone.Name = "txt_fone"
-        Me.txt_fone.Size = New System.Drawing.Size(259, 22)
-        Me.txt_fone.TabIndex = 18
+        Me.lbl_horario.AutoSize = True
+        Me.lbl_horario.BackColor = System.Drawing.Color.Transparent
+        Me.lbl_horario.Font = New System.Drawing.Font("Bpmf Huninn", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(136, Byte))
+        Me.lbl_horario.Location = New System.Drawing.Point(349, 254)
+        Me.lbl_horario.Name = "lbl_horario"
+        Me.lbl_horario.Size = New System.Drawing.Size(86, 26)
+        Me.lbl_horario.TabIndex = 19
+        Me.lbl_horario.Text = "Horário:"
         '
         'Panel7
         '
         Me.Panel7.BackColor = System.Drawing.Color.FromArgb(CType(CType(252, Byte), Integer), CType(CType(194, Byte), Integer), CType(CType(26, Byte), Integer))
-        Me.Panel7.Location = New System.Drawing.Point(355, 196)
+        Me.Panel7.Controls.Add(Me.cmb_horario)
+        Me.Panel7.Location = New System.Drawing.Point(355, 284)
         Me.Panel7.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.Panel7.Name = "Panel7"
         Me.Panel7.Size = New System.Drawing.Size(279, 39)
         Me.Panel7.TabIndex = 20
         '
-        'lbl_tipo_conta
+        'cmb_horario
         '
-        Me.lbl_tipo_conta.AutoSize = True
-        Me.lbl_tipo_conta.BackColor = System.Drawing.Color.Transparent
-        Me.lbl_tipo_conta.Font = New System.Drawing.Font("Bpmf Huninn", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(136, Byte))
-        Me.lbl_tipo_conta.Location = New System.Drawing.Point(349, 82)
-        Me.lbl_tipo_conta.Name = "lbl_tipo_conta"
-        Me.lbl_tipo_conta.Size = New System.Drawing.Size(159, 26)
-        Me.lbl_tipo_conta.TabIndex = 16
-        Me.lbl_tipo_conta.Text = "Tipo de Abelha:"
+        Me.cmb_horario.FormattingEnabled = True
+        Me.cmb_horario.Location = New System.Drawing.Point(10, 7)
+        Me.cmb_horario.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.cmb_horario.Name = "cmb_horario"
+        Me.cmb_horario.Size = New System.Drawing.Size(259, 24)
+        Me.cmb_horario.TabIndex = 2
+        '
+        'lbl_data
+        '
+        Me.lbl_data.AutoSize = True
+        Me.lbl_data.BackColor = System.Drawing.Color.Transparent
+        Me.lbl_data.Font = New System.Drawing.Font("Bpmf Huninn", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(136, Byte))
+        Me.lbl_data.Location = New System.Drawing.Point(349, 166)
+        Me.lbl_data.Name = "lbl_data"
+        Me.lbl_data.Size = New System.Drawing.Size(61, 26)
+        Me.lbl_data.TabIndex = 16
+        Me.lbl_data.Text = "Data:"
         '
         'Panel8
         '
         Me.Panel8.BackColor = System.Drawing.Color.FromArgb(CType(CType(252, Byte), Integer), CType(CType(194, Byte), Integer), CType(CType(26, Byte), Integer))
-        Me.Panel8.Controls.Add(Me.cmb_tipo_conta)
-        Me.Panel8.Location = New System.Drawing.Point(355, 112)
+        Me.Panel8.Controls.Add(Me.cmb_data)
+        Me.Panel8.Location = New System.Drawing.Point(355, 196)
         Me.Panel8.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.Panel8.Name = "Panel8"
         Me.Panel8.Size = New System.Drawing.Size(279, 39)
         Me.Panel8.TabIndex = 17
         '
-        'cmb_tipo_conta
+        'cmb_data
         '
-        Me.cmb_tipo_conta.FormattingEnabled = True
-        Me.cmb_tipo_conta.Location = New System.Drawing.Point(11, 7)
-        Me.cmb_tipo_conta.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
-        Me.cmb_tipo_conta.Name = "cmb_tipo_conta"
-        Me.cmb_tipo_conta.Size = New System.Drawing.Size(259, 24)
-        Me.cmb_tipo_conta.TabIndex = 0
+        Me.cmb_data.FormattingEnabled = True
+        Me.cmb_data.Location = New System.Drawing.Point(10, 7)
+        Me.cmb_data.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.cmb_data.Name = "cmb_data"
+        Me.cmb_data.Size = New System.Drawing.Size(259, 24)
+        Me.cmb_data.TabIndex = 2
         '
-        'lbl_senha
+        'lbl_especialidade
         '
-        Me.lbl_senha.AutoSize = True
-        Me.lbl_senha.BackColor = System.Drawing.Color.Transparent
-        Me.lbl_senha.Font = New System.Drawing.Font("Bpmf Huninn", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(136, Byte))
-        Me.lbl_senha.Location = New System.Drawing.Point(33, 254)
-        Me.lbl_senha.Name = "lbl_senha"
-        Me.lbl_senha.Size = New System.Drawing.Size(75, 26)
-        Me.lbl_senha.TabIndex = 13
-        Me.lbl_senha.Text = "Senha:"
-        '
-        'txt_senha
-        '
-        Me.txt_senha.Location = New System.Drawing.Point(48, 292)
-        Me.txt_senha.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
-        Me.txt_senha.Name = "txt_senha"
-        Me.txt_senha.Size = New System.Drawing.Size(259, 22)
-        Me.txt_senha.TabIndex = 12
+        Me.lbl_especialidade.AutoSize = True
+        Me.lbl_especialidade.BackColor = System.Drawing.Color.Transparent
+        Me.lbl_especialidade.Font = New System.Drawing.Font("Bpmf Huninn", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(136, Byte))
+        Me.lbl_especialidade.Location = New System.Drawing.Point(33, 254)
+        Me.lbl_especialidade.Name = "lbl_especialidade"
+        Me.lbl_especialidade.Size = New System.Drawing.Size(143, 26)
+        Me.lbl_especialidade.TabIndex = 13
+        Me.lbl_especialidade.Text = "Especialidade:"
         '
         'Panel5
         '
         Me.Panel5.BackColor = System.Drawing.Color.FromArgb(CType(CType(252, Byte), Integer), CType(CType(194, Byte), Integer), CType(CType(26, Byte), Integer))
+        Me.Panel5.Controls.Add(Me.cmb_especialidade)
         Me.Panel5.Location = New System.Drawing.Point(37, 283)
         Me.Panel5.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.Panel5.Name = "Panel5"
         Me.Panel5.Size = New System.Drawing.Size(279, 39)
         Me.Panel5.TabIndex = 14
+        '
+        'cmb_especialidade
+        '
+        Me.cmb_especialidade.FormattingEnabled = True
+        Me.cmb_especialidade.Location = New System.Drawing.Point(10, 7)
+        Me.cmb_especialidade.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.cmb_especialidade.Name = "cmb_especialidade"
+        Me.cmb_especialidade.Size = New System.Drawing.Size(259, 24)
+        Me.cmb_especialidade.TabIndex = 2
         '
         'btn_salvar
         '
@@ -283,52 +260,54 @@ Partial Class frm_gerenciar_contas
         Me.Label4.Text = "Bem vindo(a)..."
         Me.Label4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
-        'lbl_email
+        'lbl_prestador
         '
-        Me.lbl_email.AutoSize = True
-        Me.lbl_email.BackColor = System.Drawing.Color.Transparent
-        Me.lbl_email.Font = New System.Drawing.Font("Bpmf Huninn", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(136, Byte))
-        Me.lbl_email.Location = New System.Drawing.Point(33, 166)
-        Me.lbl_email.Name = "lbl_email"
-        Me.lbl_email.Size = New System.Drawing.Size(76, 26)
-        Me.lbl_email.TabIndex = 6
-        Me.lbl_email.Text = "E-mail:"
-        '
-        'txt_email
-        '
-        Me.txt_email.Location = New System.Drawing.Point(48, 203)
-        Me.txt_email.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
-        Me.txt_email.Name = "txt_email"
-        Me.txt_email.Size = New System.Drawing.Size(259, 22)
-        Me.txt_email.TabIndex = 5
+        Me.lbl_prestador.AutoSize = True
+        Me.lbl_prestador.BackColor = System.Drawing.Color.Transparent
+        Me.lbl_prestador.Font = New System.Drawing.Font("Bpmf Huninn", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(136, Byte))
+        Me.lbl_prestador.Location = New System.Drawing.Point(33, 166)
+        Me.lbl_prestador.Name = "lbl_prestador"
+        Me.lbl_prestador.Size = New System.Drawing.Size(106, 26)
+        Me.lbl_prestador.TabIndex = 6
+        Me.lbl_prestador.Text = "Prestador:"
         '
         'Panel4
         '
         Me.Panel4.BackColor = System.Drawing.Color.FromArgb(CType(CType(252, Byte), Integer), CType(CType(194, Byte), Integer), CType(CType(26, Byte), Integer))
+        Me.Panel4.Controls.Add(Me.cmb_prestador)
         Me.Panel4.Location = New System.Drawing.Point(37, 196)
         Me.Panel4.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.Panel4.Name = "Panel4"
         Me.Panel4.Size = New System.Drawing.Size(279, 39)
         Me.Panel4.TabIndex = 8
         '
-        'lbl_usuario
+        'cmb_prestador
         '
-        Me.lbl_usuario.AutoSize = True
-        Me.lbl_usuario.BackColor = System.Drawing.Color.Transparent
-        Me.lbl_usuario.Font = New System.Drawing.Font("Bpmf Huninn", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(136, Byte))
-        Me.lbl_usuario.Location = New System.Drawing.Point(33, 82)
-        Me.lbl_usuario.Name = "lbl_usuario"
-        Me.lbl_usuario.Size = New System.Drawing.Size(234, 26)
-        Me.lbl_usuario.TabIndex = 2
-        Me.lbl_usuario.Text = "Usuário do Funcionário:"
+        Me.cmb_prestador.FormattingEnabled = True
+        Me.cmb_prestador.Location = New System.Drawing.Point(10, 7)
+        Me.cmb_prestador.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.cmb_prestador.Name = "cmb_prestador"
+        Me.cmb_prestador.Size = New System.Drawing.Size(259, 24)
+        Me.cmb_prestador.TabIndex = 1
         '
-        'txt_usuario
+        'lbl_id_cliente
         '
-        Me.txt_usuario.Location = New System.Drawing.Point(48, 121)
-        Me.txt_usuario.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
-        Me.txt_usuario.Name = "txt_usuario"
-        Me.txt_usuario.Size = New System.Drawing.Size(259, 22)
-        Me.txt_usuario.TabIndex = 1
+        Me.lbl_id_cliente.AutoSize = True
+        Me.lbl_id_cliente.BackColor = System.Drawing.Color.Transparent
+        Me.lbl_id_cliente.Font = New System.Drawing.Font("Bpmf Huninn", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(136, Byte))
+        Me.lbl_id_cliente.Location = New System.Drawing.Point(33, 82)
+        Me.lbl_id_cliente.Name = "lbl_id_cliente"
+        Me.lbl_id_cliente.Size = New System.Drawing.Size(139, 26)
+        Me.lbl_id_cliente.TabIndex = 2
+        Me.lbl_id_cliente.Text = "ID do Cliente:"
+        '
+        'txt_id_cliente
+        '
+        Me.txt_id_cliente.Location = New System.Drawing.Point(48, 121)
+        Me.txt_id_cliente.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.txt_id_cliente.Name = "txt_id_cliente"
+        Me.txt_id_cliente.Size = New System.Drawing.Size(259, 22)
+        Me.txt_id_cliente.TabIndex = 1
         '
         'Panel3
         '
@@ -364,7 +343,7 @@ Partial Class frm_gerenciar_contas
         DataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
         Me.dgv_info.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle1
         Me.dgv_info.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.dgv_info.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Column1, Me.Column2, Me.Column3, Me.Column4, Me.Column5, Me.Column6})
+        Me.dgv_info.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Column1, Me.Column2, Me.Column3, Me.Column4, Me.Column5, Me.Column6, Me.Column7, Me.Column8})
         Me.dgv_info.Location = New System.Drawing.Point(11, 11)
         Me.dgv_info.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.dgv_info.Name = "dgv_info"
@@ -375,60 +354,73 @@ Partial Class frm_gerenciar_contas
         '
         'Column1
         '
-        Me.Column1.HeaderText = "Usuário"
+        Me.Column1.HeaderText = "ID"
         Me.Column1.MinimumWidth = 6
         Me.Column1.Name = "Column1"
         '
         'Column2
         '
-        Me.Column2.HeaderText = "E-mail"
+        Me.Column2.HeaderText = "Cliente"
         Me.Column2.MinimumWidth = 6
         Me.Column2.Name = "Column2"
         '
         'Column3
         '
-        Me.Column3.HeaderText = "Senha"
+        Me.Column3.HeaderText = "Prestador"
         Me.Column3.MinimumWidth = 6
         Me.Column3.Name = "Column3"
         '
         'Column4
         '
-        Me.Column4.HeaderText = "Status Conta"
+        Me.Column4.HeaderText = "Especialidade"
         Me.Column4.MinimumWidth = 6
         Me.Column4.Name = "Column4"
         '
         'Column5
         '
-        Me.Column5.HeaderText = "Editar"
+        Me.Column5.HeaderText = "Data"
         Me.Column5.MinimumWidth = 6
         Me.Column5.Name = "Column5"
         '
         'Column6
         '
-        Me.Column6.HeaderText = "Excluir"
+        Me.Column6.HeaderText = "Horário"
         Me.Column6.MinimumWidth = 6
         Me.Column6.Name = "Column6"
         '
-        'frm_gerenciar_contas
+        'Column7
+        '
+        Me.Column7.HeaderText = "Editar"
+        Me.Column7.MinimumWidth = 6
+        Me.Column7.Name = "Column7"
+        Me.Column7.Resizable = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.Column7.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic
+        '
+        'Column8
+        '
+        Me.Column8.HeaderText = "Cancelar"
+        Me.Column8.MinimumWidth = 6
+        Me.Column8.Name = "Column8"
+        Me.Column8.Resizable = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.Column8.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic
+        '
+        'frm_gerenciar_agendamentos
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.BackgroundImage = CType(resources.GetObject("$this.BackgroundImage"), System.Drawing.Image)
-        Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.ClientSize = New System.Drawing.Size(855, 587)
+        Me.ClientSize = New System.Drawing.Size(857, 587)
         Me.Controls.Add(Me.Panel2)
-        Me.DoubleBuffered = True
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
-        Me.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
-        Me.Name = "frm_gerenciar_contas"
+        Me.Name = "frm_gerenciar_agendamentos"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
-        Me.Text = "Gerenciar Contas"
+        Me.Text = "Gerenciar Agendamentos"
         Me.Panel2.ResumeLayout(False)
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()
-        Me.Panel10.ResumeLayout(False)
-        CType(Me.img_foto, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.Panel7.ResumeLayout(False)
         Me.Panel8.ResumeLayout(False)
+        Me.Panel5.ResumeLayout(False)
+        Me.Panel4.ResumeLayout(False)
         Me.Panel9.ResumeLayout(False)
         CType(Me.dgv_info, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
@@ -437,35 +429,35 @@ Partial Class frm_gerenciar_contas
 
     Friend WithEvents Panel2 As Panel
     Friend WithEvents Panel1 As Panel
-    Friend WithEvents lbl_frm_contas As Label
-    Friend WithEvents lbl_csenha As Label
-    Friend WithEvents txt_csenha As TextBox
-    Friend WithEvents Panel6 As Panel
-    Friend WithEvents lbl_fone As Label
-    Friend WithEvents txt_fone As TextBox
+    Friend WithEvents lbl_frm_ger_agendamentos As Label
+    Friend WithEvents lbl_horario As Label
     Friend WithEvents Panel7 As Panel
-    Friend WithEvents lbl_tipo_conta As Label
+    Friend WithEvents lbl_data As Label
     Friend WithEvents Panel8 As Panel
-    Friend WithEvents cmb_tipo_conta As ComboBox
-    Friend WithEvents lbl_senha As Label
-    Friend WithEvents txt_senha As TextBox
+    Friend WithEvents lbl_especialidade As Label
     Friend WithEvents Panel5 As Panel
     Friend WithEvents btn_salvar As Button
     Friend WithEvents Label4 As Label
-    Friend WithEvents lbl_email As Label
-    Friend WithEvents txt_email As TextBox
+    Friend WithEvents lbl_prestador As Label
     Friend WithEvents Panel4 As Panel
-    Friend WithEvents img_foto As PictureBox
-    Friend WithEvents lbl_usuario As Label
-    Friend WithEvents txt_usuario As TextBox
+    Friend WithEvents lbl_id_cliente As Label
+    Friend WithEvents txt_id_cliente As TextBox
     Friend WithEvents Panel3 As Panel
     Friend WithEvents Panel9 As Panel
     Friend WithEvents dgv_info As DataGridView
-    Friend WithEvents Panel10 As Panel
+    Friend WithEvents cmb_prestador As ComboBox
+    Friend WithEvents cmb_especialidade As ComboBox
+    Friend WithEvents cmb_horario As ComboBox
+    Friend WithEvents cmb_data As ComboBox
     Friend WithEvents Column1 As DataGridViewTextBoxColumn
     Friend WithEvents Column2 As DataGridViewTextBoxColumn
     Friend WithEvents Column3 As DataGridViewTextBoxColumn
-    Friend WithEvents Column4 As DataGridViewComboBoxColumn
-    Friend WithEvents Column5 As DataGridViewImageColumn
-    Friend WithEvents Column6 As DataGridViewImageColumn
+    Friend WithEvents Column4 As DataGridViewTextBoxColumn
+    Friend WithEvents Column5 As DataGridViewTextBoxColumn
+    Friend WithEvents Column6 As DataGridViewTextBoxColumn
+    Friend WithEvents Column7 As DataGridViewImageColumn
+    Friend WithEvents Column8 As DataGridViewImageColumn
+    Friend WithEvents lbl_id_agendamento As Label
+    Friend WithEvents txt_id_agendamento As TextBox
+    Friend WithEvents Panel6 As Panel
 End Class
