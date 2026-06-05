@@ -56,6 +56,7 @@
     <Reference Include="System.Deployment" />
     <Reference Include="System.Drawing" />
     <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
     <Reference Include="System.Xml" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -124,6 +125,24 @@
     <Compile Include="frm_gerenciar_prestadores.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="frm_graf_cliente_por_plano.Designer.vb">
+      <DependentUpon>frm_graf_cliente_por_plano.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frm_graf_cliente_por_plano.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_graf_media_prestador.Designer.vb">
+      <DependentUpon>frm_graf_media_prestador.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frm_graf_media_prestador.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_graf_servicos.Designer.vb">
+      <DependentUpon>frm_graf_servicos.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frm_graf_servicos.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="frm_login.vb">
       <SubType>Form</SubType>
     </Compile>
@@ -154,6 +173,21 @@
     </Compile>
     <Compile Include="frm_relatorio_funcionarios.vb">
       <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="honeymedDataSet.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>honeymedDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="honeymedDataSet1.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>honeymedDataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="honeymedDataSet2.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>honeymedDataSet2.xsd</DependentUpon>
     </Compile>
     <Compile Include="mod_geral.vb" />
     <Compile Include="My Project\AssemblyInfo.vb" />
@@ -198,6 +232,15 @@
     <EmbeddedResource Include="frm_gerenciar_prestadores.resx">
       <DependentUpon>frm_gerenciar_prestadores.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frm_graf_cliente_por_plano.resx">
+      <DependentUpon>frm_graf_cliente_por_plano.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_graf_media_prestador.resx">
+      <DependentUpon>frm_graf_media_prestador.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_graf_servicos.resx">
+      <DependentUpon>frm_graf_servicos.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frm_login.resx">
       <DependentUpon>frm_login.vb</DependentUpon>
     </EmbeddedResource>
@@ -221,6 +264,39 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
+    <None Include="honeymedDataSet.xsc">
+      <DependentUpon>honeymedDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="honeymedDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>honeymedDataSet.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="honeymedDataSet.xss">
+      <DependentUpon>honeymedDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="honeymedDataSet1.xsc">
+      <DependentUpon>honeymedDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="honeymedDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>honeymedDataSet1.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="honeymedDataSet1.xss">
+      <DependentUpon>honeymedDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="honeymedDataSet2.xsc">
+      <DependentUpon>honeymedDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="honeymedDataSet2.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>honeymedDataSet2.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="honeymedDataSet2.xss">
+      <DependentUpon>honeymedDataSet2.xsd</DependentUpon>
+    </None>
     <None Include="My Project\Application.myapp">
       <Generator>MyApplicationCodeGenerator</Generator>
       <LastGenOutput>Application.Designer.vb</LastGenOutput>
