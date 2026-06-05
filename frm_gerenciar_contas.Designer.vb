@@ -33,8 +33,8 @@ Partial Class frm_gerenciar_contas
         Me.txt_csenha = New System.Windows.Forms.TextBox()
         Me.Panel6 = New System.Windows.Forms.Panel()
         Me.lbl_fone = New System.Windows.Forms.Label()
-        Me.txt_fone = New System.Windows.Forms.TextBox()
         Me.Panel7 = New System.Windows.Forms.Panel()
+        Me.txt_fone = New System.Windows.Forms.MaskedTextBox()
         Me.lbl_tipo_conta = New System.Windows.Forms.Label()
         Me.Panel8 = New System.Windows.Forms.Panel()
         Me.cmb_tipo_conta = New System.Windows.Forms.ComboBox()
@@ -61,6 +61,7 @@ Partial Class frm_gerenciar_contas
         Me.Panel1.SuspendLayout()
         Me.Panel10.SuspendLayout()
         CType(Me.img_foto, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.Panel7.SuspendLayout()
         Me.Panel8.SuspendLayout()
         Me.Panel9.SuspendLayout()
         CType(Me.dgv_info, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -88,7 +89,6 @@ Partial Class frm_gerenciar_contas
         Me.Panel1.Controls.Add(Me.txt_csenha)
         Me.Panel1.Controls.Add(Me.Panel6)
         Me.Panel1.Controls.Add(Me.lbl_fone)
-        Me.Panel1.Controls.Add(Me.txt_fone)
         Me.Panel1.Controls.Add(Me.Panel7)
         Me.Panel1.Controls.Add(Me.lbl_tipo_conta)
         Me.Panel1.Controls.Add(Me.Panel8)
@@ -185,22 +185,24 @@ Partial Class frm_gerenciar_contas
         Me.lbl_fone.TabIndex = 19
         Me.lbl_fone.Text = "Telefone:"
         '
-        'txt_fone
-        '
-        Me.txt_fone.Location = New System.Drawing.Point(364, 203)
-        Me.txt_fone.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
-        Me.txt_fone.Name = "txt_fone"
-        Me.txt_fone.Size = New System.Drawing.Size(259, 22)
-        Me.txt_fone.TabIndex = 18
-        '
         'Panel7
         '
         Me.Panel7.BackColor = System.Drawing.Color.FromArgb(CType(CType(252, Byte), Integer), CType(CType(194, Byte), Integer), CType(CType(26, Byte), Integer))
+        Me.Panel7.Controls.Add(Me.txt_fone)
         Me.Panel7.Location = New System.Drawing.Point(355, 196)
         Me.Panel7.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.Panel7.Name = "Panel7"
         Me.Panel7.Size = New System.Drawing.Size(279, 39)
         Me.Panel7.TabIndex = 20
+        '
+        'txt_fone
+        '
+        Me.txt_fone.Location = New System.Drawing.Point(10, 8)
+        Me.txt_fone.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.txt_fone.Mask = "+55 (99) 99999-9999"
+        Me.txt_fone.Name = "txt_fone"
+        Me.txt_fone.Size = New System.Drawing.Size(259, 22)
+        Me.txt_fone.TabIndex = 35
         '
         'lbl_tipo_conta
         '
@@ -400,12 +402,14 @@ Partial Class frm_gerenciar_contas
         'Column5
         '
         Me.Column5.HeaderText = "Editar"
+        Me.Column5.Image = CType(resources.GetObject("Column5.Image"), System.Drawing.Image)
         Me.Column5.MinimumWidth = 6
         Me.Column5.Name = "Column5"
         '
         'Column6
         '
         Me.Column6.HeaderText = "Excluir"
+        Me.Column6.Image = CType(resources.GetObject("Column6.Image"), System.Drawing.Image)
         Me.Column6.MinimumWidth = 6
         Me.Column6.Name = "Column6"
         '
@@ -428,6 +432,8 @@ Partial Class frm_gerenciar_contas
         Me.Panel1.PerformLayout()
         Me.Panel10.ResumeLayout(False)
         CType(Me.img_foto, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.Panel7.ResumeLayout(False)
+        Me.Panel7.PerformLayout()
         Me.Panel8.ResumeLayout(False)
         Me.Panel9.ResumeLayout(False)
         CType(Me.dgv_info, System.ComponentModel.ISupportInitialize).EndInit()
@@ -442,7 +448,6 @@ Partial Class frm_gerenciar_contas
     Friend WithEvents txt_csenha As TextBox
     Friend WithEvents Panel6 As Panel
     Friend WithEvents lbl_fone As Label
-    Friend WithEvents txt_fone As TextBox
     Friend WithEvents Panel7 As Panel
     Friend WithEvents lbl_tipo_conta As Label
     Friend WithEvents Panel8 As Panel
@@ -462,6 +467,7 @@ Partial Class frm_gerenciar_contas
     Friend WithEvents Panel9 As Panel
     Friend WithEvents dgv_info As DataGridView
     Friend WithEvents Panel10 As Panel
+    Friend WithEvents txt_fone As MaskedTextBox
     Friend WithEvents Column1 As DataGridViewTextBoxColumn
     Friend WithEvents Column2 As DataGridViewTextBoxColumn
     Friend WithEvents Column3 As DataGridViewTextBoxColumn

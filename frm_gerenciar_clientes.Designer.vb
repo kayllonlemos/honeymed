@@ -450,7 +450,7 @@ Partial Class frm_gerenciar_clientes
         '
         'Column1
         '
-        Me.Column1.HeaderText = "ID"
+        Me.Column1.HeaderText = "Matrícula"
         Me.Column1.MinimumWidth = 6
         Me.Column1.Name = "Column1"
         '
@@ -483,12 +483,14 @@ Partial Class frm_gerenciar_clientes
         'Column6
         '
         Me.Column6.HeaderText = "Editar"
+        Me.Column6.Image = CType(resources.GetObject("Column6.Image"), System.Drawing.Image)
         Me.Column6.MinimumWidth = 6
         Me.Column6.Name = "Column6"
         '
         'Column7
         '
         Me.Column7.HeaderText = "Excluir"
+        Me.Column7.Image = CType(resources.GetObject("Column7.Image"), System.Drawing.Image)
         Me.Column7.MinimumWidth = 6
         Me.Column7.Name = "Column7"
         '

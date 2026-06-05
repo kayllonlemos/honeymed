@@ -59,4 +59,14 @@
             MsgBox("Erro ao chamar o formulário.", MsgBoxStyle.Critical + MsgBoxStyle.OkOnly, "ATENÇÃO")
         End Try
     End Sub
+
+    Private Sub btn_visualizar_senha_Click(sender As Object, e As EventArgs) Handles btn_visualizar_senha.Click
+        If txt_senha.PasswordChar = "•"c Then
+            txt_senha.PasswordChar = ControlChars.NullChar
+            btn_visualizar_senha.BackgroundImage = Image.FromFile(System.IO.Path.Combine(Application.StartupPath, "Imagens", "eye-off-icon.png"))
+        Else
+            txt_senha.PasswordChar = "•"c
+            btn_visualizar_senha.BackgroundImage = Image.FromFile(System.IO.Path.Combine(Application.StartupPath, "Imagens", "eye-icon.png"))
+        End If
+    End Sub
 End Class

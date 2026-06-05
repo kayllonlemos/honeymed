@@ -40,8 +40,10 @@ Partial Class frm_login
         Me.Panel2 = New System.Windows.Forms.Panel()
         Me.Panel5 = New System.Windows.Forms.Panel()
         Me.Label5 = New System.Windows.Forms.Label()
+        Me.btn_visualizar_senha = New System.Windows.Forms.Button()
         Me.Panel1.SuspendLayout()
         CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.Panel4.SuspendLayout()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel5.SuspendLayout()
@@ -138,15 +140,17 @@ Partial Class frm_login
         '
         Me.txt_senha.Location = New System.Drawing.Point(518, 258)
         Me.txt_senha.Name = "txt_senha"
-        Me.txt_senha.Size = New System.Drawing.Size(259, 22)
+        Me.txt_senha.PasswordChar = Global.Microsoft.VisualBasic.ChrW(8226)
+        Me.txt_senha.Size = New System.Drawing.Size(229, 22)
         Me.txt_senha.TabIndex = 5
         '
         'Panel4
         '
         Me.Panel4.BackColor = System.Drawing.Color.FromArgb(CType(CType(252, Byte), Integer), CType(CType(194, Byte), Integer), CType(CType(26, Byte), Integer))
+        Me.Panel4.Controls.Add(Me.btn_visualizar_senha)
         Me.Panel4.Location = New System.Drawing.Point(508, 250)
         Me.Panel4.Name = "Panel4"
-        Me.Panel4.Size = New System.Drawing.Size(279, 39)
+        Me.Panel4.Size = New System.Drawing.Size(279, 43)
         Me.Panel4.TabIndex = 8
         '
         'PictureBox2
@@ -193,7 +197,7 @@ Partial Class frm_login
         Me.Panel3.BackColor = System.Drawing.Color.FromArgb(CType(CType(252, Byte), Integer), CType(CType(194, Byte), Integer), CType(CType(26, Byte), Integer))
         Me.Panel3.Location = New System.Drawing.Point(508, 153)
         Me.Panel3.Name = "Panel3"
-        Me.Panel3.Size = New System.Drawing.Size(279, 39)
+        Me.Panel3.Size = New System.Drawing.Size(279, 42)
         Me.Panel3.TabIndex = 4
         '
         'Panel2
@@ -227,6 +231,17 @@ Partial Class frm_login
         Me.Label5.Text = "  Bem vindo(a)..."
         Me.Label5.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
+        'btn_visualizar_senha
+        '
+        Me.btn_visualizar_senha.BackColor = System.Drawing.SystemColors.Window
+        Me.btn_visualizar_senha.BackgroundImage = CType(resources.GetObject("btn_visualizar_senha.BackgroundImage"), System.Drawing.Image)
+        Me.btn_visualizar_senha.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.btn_visualizar_senha.Location = New System.Drawing.Point(245, 10)
+        Me.btn_visualizar_senha.Name = "btn_visualizar_senha"
+        Me.btn_visualizar_senha.Size = New System.Drawing.Size(25, 25)
+        Me.btn_visualizar_senha.TabIndex = 15
+        Me.btn_visualizar_senha.UseVisualStyleBackColor = False
+        '
         'frm_login
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
@@ -244,6 +259,7 @@ Partial Class frm_login
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()
         CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.Panel4.ResumeLayout(False)
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Panel5.ResumeLayout(False)
@@ -268,4 +284,5 @@ Partial Class frm_login
 	Friend WithEvents Label5 As Label
 	Friend WithEvents btn_entrar As Button
 	Friend WithEvents lbl_rec_senha As Label
+    Friend WithEvents btn_visualizar_senha As Button
 End Class
