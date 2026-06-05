@@ -22,31 +22,35 @@ Partial Class frm_consultar_prestadores
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frm_consultar_prestadores))
         Me.Panel2 = New System.Windows.Forms.Panel()
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.Panel3 = New System.Windows.Forms.Panel()
+        Me.cmb_especialidade = New System.Windows.Forms.ComboBox()
+        Me.cmb_prestador = New System.Windows.Forms.ComboBox()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.ToolStrip1 = New System.Windows.Forms.ToolStrip()
         Me.Panel9 = New System.Windows.Forms.Panel()
         Me.dgv_info = New System.Windows.Forms.DataGridView()
-        Me.Label8 = New System.Windows.Forms.Label()
-        Me.Label4 = New System.Windows.Forms.Label()
-        Me.cmb_prestador = New System.Windows.Forms.ComboBox()
-        Me.cmb_especialidade = New System.Windows.Forms.ComboBox()
         Me.Column1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column3 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column4 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column5 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column6 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Label8 = New System.Windows.Forms.Label()
+        Me.Label4 = New System.Windows.Forms.Label()
+        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox2 = New System.Windows.Forms.PictureBox()
         Me.Panel2.SuspendLayout()
         Me.Panel1.SuspendLayout()
         Me.Panel3.SuspendLayout()
         Me.Panel9.SuspendLayout()
         CType(Me.dgv_info, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Panel2
@@ -79,6 +83,8 @@ Partial Class frm_consultar_prestadores
         'Panel3
         '
         Me.Panel3.BackColor = System.Drawing.Color.Black
+        Me.Panel3.Controls.Add(Me.PictureBox2)
+        Me.Panel3.Controls.Add(Me.PictureBox1)
         Me.Panel3.Controls.Add(Me.cmb_especialidade)
         Me.Panel3.Controls.Add(Me.cmb_prestador)
         Me.Panel3.Controls.Add(Me.Label2)
@@ -88,6 +94,24 @@ Partial Class frm_consultar_prestadores
         Me.Panel3.Name = "Panel3"
         Me.Panel3.Size = New System.Drawing.Size(855, 58)
         Me.Panel3.TabIndex = 30
+        '
+        'cmb_especialidade
+        '
+        Me.cmb_especialidade.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.cmb_especialidade.FormattingEnabled = True
+        Me.cmb_especialidade.Location = New System.Drawing.Point(629, 15)
+        Me.cmb_especialidade.Name = "cmb_especialidade"
+        Me.cmb_especialidade.Size = New System.Drawing.Size(156, 28)
+        Me.cmb_especialidade.TabIndex = 35
+        '
+        'cmb_prestador
+        '
+        Me.cmb_prestador.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.cmb_prestador.FormattingEnabled = True
+        Me.cmb_prestador.Location = New System.Drawing.Point(225, 15)
+        Me.cmb_prestador.Name = "cmb_prestador"
+        Me.cmb_prestador.Size = New System.Drawing.Size(156, 28)
+        Me.cmb_prestador.TabIndex = 34
         '
         'Label2
         '
@@ -105,7 +129,7 @@ Partial Class frm_consultar_prestadores
         Me.Label1.BackColor = System.Drawing.Color.FromArgb(CType(CType(252, Byte), Integer), CType(CType(194, Byte), Integer), CType(CType(26, Byte), Integer))
         Me.Label1.Font = New System.Drawing.Font("Bpmf Huninn", 13.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(136, Byte))
         Me.Label1.ForeColor = System.Drawing.Color.Black
-        Me.Label1.Location = New System.Drawing.Point(43, 13)
+        Me.Label1.Location = New System.Drawing.Point(73, 13)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(162, 28)
         Me.Label1.TabIndex = 30
@@ -147,51 +171,12 @@ Partial Class frm_consultar_prestadores
         Me.dgv_info.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.dgv_info.Name = "dgv_info"
         Me.dgv_info.RowHeadersWidth = 51
-        DataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control
-        DataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        Me.dgv_info.RowsDefaultCellStyle = DataGridViewCellStyle1
+        DataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control
+        DataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        Me.dgv_info.RowsDefaultCellStyle = DataGridViewCellStyle2
         Me.dgv_info.RowTemplate.Height = 24
         Me.dgv_info.Size = New System.Drawing.Size(747, 234)
         Me.dgv_info.TabIndex = 25
-        '
-        'Label8
-        '
-        Me.Label8.BackColor = System.Drawing.Color.Transparent
-        Me.Label8.Font = New System.Drawing.Font("Jockey One", 19.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(238, Byte))
-        Me.Label8.Location = New System.Drawing.Point(215, 22)
-        Me.Label8.Name = "Label8"
-        Me.Label8.Size = New System.Drawing.Size(403, 55)
-        Me.Label8.TabIndex = 24
-        Me.Label8.Text = "Consultar Prestadores:"
-        Me.Label8.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
-        '
-        'Label4
-        '
-        Me.Label4.Font = New System.Drawing.Font("Comic Sans MS", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label4.Location = New System.Drawing.Point(308, -100)
-        Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(216, 47)
-        Me.Label4.TabIndex = 10
-        Me.Label4.Text = "Bem vindo(a)..."
-        Me.Label4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        '
-        'cmb_prestador
-        '
-        Me.cmb_prestador.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.cmb_prestador.FormattingEnabled = True
-        Me.cmb_prestador.Location = New System.Drawing.Point(200, 15)
-        Me.cmb_prestador.Name = "cmb_prestador"
-        Me.cmb_prestador.Size = New System.Drawing.Size(156, 28)
-        Me.cmb_prestador.TabIndex = 34
-        '
-        'cmb_especialidade
-        '
-        Me.cmb_especialidade.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.cmb_especialidade.FormattingEnabled = True
-        Me.cmb_especialidade.Location = New System.Drawing.Point(629, 15)
-        Me.cmb_especialidade.Name = "cmb_especialidade"
-        Me.cmb_especialidade.Size = New System.Drawing.Size(156, 28)
-        Me.cmb_especialidade.TabIndex = 35
         '
         'Column1
         '
@@ -229,6 +214,49 @@ Partial Class frm_consultar_prestadores
         Me.Column6.MinimumWidth = 6
         Me.Column6.Name = "Column6"
         '
+        'Label8
+        '
+        Me.Label8.BackColor = System.Drawing.Color.Transparent
+        Me.Label8.Font = New System.Drawing.Font("Jockey One", 19.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(238, Byte))
+        Me.Label8.Location = New System.Drawing.Point(215, 22)
+        Me.Label8.Name = "Label8"
+        Me.Label8.Size = New System.Drawing.Size(403, 55)
+        Me.Label8.TabIndex = 24
+        Me.Label8.Text = "Consultar Prestadores:"
+        Me.Label8.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
+        'Label4
+        '
+        Me.Label4.Font = New System.Drawing.Font("Comic Sans MS", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label4.Location = New System.Drawing.Point(308, -100)
+        Me.Label4.Name = "Label4"
+        Me.Label4.Size = New System.Drawing.Size(216, 47)
+        Me.Label4.TabIndex = 10
+        Me.Label4.Text = "Bem vindo(a)..."
+        Me.Label4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        '
+        'PictureBox1
+        '
+        Me.PictureBox1.BackColor = System.Drawing.Color.FromArgb(CType(CType(252, Byte), Integer), CType(CType(194, Byte), Integer), CType(CType(26, Byte), Integer))
+        Me.PictureBox1.BackgroundImage = CType(resources.GetObject("PictureBox1.BackgroundImage"), System.Drawing.Image)
+        Me.PictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.PictureBox1.Location = New System.Drawing.Point(390, 12)
+        Me.PictureBox1.Name = "PictureBox1"
+        Me.PictureBox1.Size = New System.Drawing.Size(38, 31)
+        Me.PictureBox1.TabIndex = 36
+        Me.PictureBox1.TabStop = False
+        '
+        'PictureBox2
+        '
+        Me.PictureBox2.BackColor = System.Drawing.Color.FromArgb(CType(CType(252, Byte), Integer), CType(CType(194, Byte), Integer), CType(CType(26, Byte), Integer))
+        Me.PictureBox2.BackgroundImage = CType(resources.GetObject("PictureBox2.BackgroundImage"), System.Drawing.Image)
+        Me.PictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.PictureBox2.Location = New System.Drawing.Point(37, 12)
+        Me.PictureBox2.Name = "PictureBox2"
+        Me.PictureBox2.Size = New System.Drawing.Size(38, 32)
+        Me.PictureBox2.TabIndex = 37
+        Me.PictureBox2.TabStop = False
+        '
         'frm_consultar_prestadores
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
@@ -244,6 +272,8 @@ Partial Class frm_consultar_prestadores
         Me.Panel3.ResumeLayout(False)
         Me.Panel9.ResumeLayout(False)
         CType(Me.dgv_info, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -266,4 +296,6 @@ Partial Class frm_consultar_prestadores
     Friend WithEvents Column4 As DataGridViewTextBoxColumn
     Friend WithEvents Column5 As DataGridViewTextBoxColumn
     Friend WithEvents Column6 As DataGridViewTextBoxColumn
+    Friend WithEvents PictureBox1 As PictureBox
+    Friend WithEvents PictureBox2 As PictureBox
 End Class

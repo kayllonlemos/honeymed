@@ -22,7 +22,7 @@ Partial Class frm_consultar_clientes
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle9 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frm_consultar_clientes))
         Me.Panel2 = New System.Windows.Forms.Panel()
         Me.Panel1 = New System.Windows.Forms.Panel()
@@ -41,11 +41,17 @@ Partial Class frm_consultar_clientes
         Me.Column5 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Label8 = New System.Windows.Forms.Label()
         Me.Label4 = New System.Windows.Forms.Label()
+        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox2 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox3 = New System.Windows.Forms.PictureBox()
         Me.Panel2.SuspendLayout()
         Me.Panel1.SuspendLayout()
         Me.Panel3.SuspendLayout()
         Me.Panel9.SuspendLayout()
         CType(Me.dgv_info, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Panel2
@@ -64,6 +70,7 @@ Partial Class frm_consultar_clientes
         '
         Me.Panel1.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.Panel1.BackColor = System.Drawing.Color.White
+        Me.Panel1.Controls.Add(Me.PictureBox1)
         Me.Panel1.Controls.Add(Me.Panel3)
         Me.Panel1.Controls.Add(Me.Panel9)
         Me.Panel1.Controls.Add(Me.Label8)
@@ -78,6 +85,8 @@ Partial Class frm_consultar_clientes
         'Panel3
         '
         Me.Panel3.BackColor = System.Drawing.Color.Black
+        Me.Panel3.Controls.Add(Me.PictureBox3)
+        Me.Panel3.Controls.Add(Me.PictureBox2)
         Me.Panel3.Controls.Add(Me.txt_nome)
         Me.Panel3.Controls.Add(Me.Label2)
         Me.Panel3.Controls.Add(Me.txt_id_cliente)
@@ -92,7 +101,7 @@ Partial Class frm_consultar_clientes
         '
         Me.txt_nome.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.txt_nome.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txt_nome.Location = New System.Drawing.Point(618, 15)
+        Me.txt_nome.Location = New System.Drawing.Point(656, 15)
         Me.txt_nome.Name = "txt_nome"
         Me.txt_nome.Size = New System.Drawing.Size(156, 27)
         Me.txt_nome.TabIndex = 33
@@ -102,7 +111,7 @@ Partial Class frm_consultar_clientes
         Me.Label2.BackColor = System.Drawing.Color.FromArgb(CType(CType(252, Byte), Integer), CType(CType(194, Byte), Integer), CType(CType(26, Byte), Integer))
         Me.Label2.Font = New System.Drawing.Font("Bpmf Huninn", 13.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(136, Byte))
         Me.Label2.ForeColor = System.Drawing.Color.Black
-        Me.Label2.Location = New System.Drawing.Point(406, 14)
+        Me.Label2.Location = New System.Drawing.Point(444, 14)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(222, 28)
         Me.Label2.TabIndex = 32
@@ -112,7 +121,7 @@ Partial Class frm_consultar_clientes
         '
         Me.txt_id_cliente.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.txt_id_cliente.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txt_id_cliente.Location = New System.Drawing.Point(103, 15)
+        Me.txt_id_cliente.Location = New System.Drawing.Point(221, 15)
         Me.txt_id_cliente.Name = "txt_id_cliente"
         Me.txt_id_cliente.Size = New System.Drawing.Size(156, 27)
         Me.txt_id_cliente.TabIndex = 31
@@ -122,11 +131,11 @@ Partial Class frm_consultar_clientes
         Me.Label1.BackColor = System.Drawing.Color.FromArgb(CType(CType(252, Byte), Integer), CType(CType(194, Byte), Integer), CType(CType(26, Byte), Integer))
         Me.Label1.Font = New System.Drawing.Font("Bpmf Huninn", 13.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(136, Byte))
         Me.Label1.ForeColor = System.Drawing.Color.Black
-        Me.Label1.Location = New System.Drawing.Point(43, 14)
+        Me.Label1.Location = New System.Drawing.Point(74, 14)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(100, 28)
+        Me.Label1.Size = New System.Drawing.Size(175, 28)
         Me.Label1.TabIndex = 30
-        Me.Label1.Text = "ID:"
+        Me.Label1.Text = "Matrícula:"
         '
         'ToolStrip1
         '
@@ -164,9 +173,9 @@ Partial Class frm_consultar_clientes
         Me.dgv_info.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.dgv_info.Name = "dgv_info"
         Me.dgv_info.RowHeadersWidth = 51
-        DataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control
-        DataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        Me.dgv_info.RowsDefaultCellStyle = DataGridViewCellStyle1
+        DataGridViewCellStyle9.BackColor = System.Drawing.SystemColors.Control
+        DataGridViewCellStyle9.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        Me.dgv_info.RowsDefaultCellStyle = DataGridViewCellStyle9
         Me.dgv_info.RowTemplate.Height = 24
         Me.dgv_info.Size = New System.Drawing.Size(747, 234)
         Me.dgv_info.TabIndex = 25
@@ -223,6 +232,38 @@ Partial Class frm_consultar_clientes
         Me.Label4.Text = "Bem vindo(a)..."
         Me.Label4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
+        'PictureBox1
+        '
+        Me.PictureBox1.BackgroundImage = CType(resources.GetObject("PictureBox1.BackgroundImage"), System.Drawing.Image)
+        Me.PictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.PictureBox1.Location = New System.Drawing.Point(549, 27)
+        Me.PictureBox1.Name = "PictureBox1"
+        Me.PictureBox1.Size = New System.Drawing.Size(45, 42)
+        Me.PictureBox1.TabIndex = 31
+        Me.PictureBox1.TabStop = False
+        '
+        'PictureBox2
+        '
+        Me.PictureBox2.BackColor = System.Drawing.Color.FromArgb(CType(CType(252, Byte), Integer), CType(CType(194, Byte), Integer), CType(CType(26, Byte), Integer))
+        Me.PictureBox2.BackgroundImage = CType(resources.GetObject("PictureBox2.BackgroundImage"), System.Drawing.Image)
+        Me.PictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.PictureBox2.Location = New System.Drawing.Point(39, 15)
+        Me.PictureBox2.Name = "PictureBox2"
+        Me.PictureBox2.Size = New System.Drawing.Size(32, 30)
+        Me.PictureBox2.TabIndex = 34
+        Me.PictureBox2.TabStop = False
+        '
+        'PictureBox3
+        '
+        Me.PictureBox3.BackColor = System.Drawing.Color.FromArgb(CType(CType(252, Byte), Integer), CType(CType(194, Byte), Integer), CType(CType(26, Byte), Integer))
+        Me.PictureBox3.BackgroundImage = CType(resources.GetObject("PictureBox3.BackgroundImage"), System.Drawing.Image)
+        Me.PictureBox3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.PictureBox3.Location = New System.Drawing.Point(408, 14)
+        Me.PictureBox3.Name = "PictureBox3"
+        Me.PictureBox3.Size = New System.Drawing.Size(39, 32)
+        Me.PictureBox3.TabIndex = 35
+        Me.PictureBox3.TabStop = False
+        '
         'frm_consultar_clientes
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
@@ -239,6 +280,9 @@ Partial Class frm_consultar_clientes
         Me.Panel3.PerformLayout()
         Me.Panel9.ResumeLayout(False)
         CType(Me.dgv_info, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -260,4 +304,7 @@ Partial Class frm_consultar_clientes
     Friend WithEvents Column4 As DataGridViewTextBoxColumn
     Friend WithEvents Column5 As DataGridViewTextBoxColumn
     Friend WithEvents txt_nome As TextBox
+    Friend WithEvents PictureBox1 As PictureBox
+    Friend WithEvents PictureBox2 As PictureBox
+    Friend WithEvents PictureBox3 As PictureBox
 End Class

@@ -398,9 +398,9 @@ Partial Class frm_gerenciar_clientes
         Me.lbl_id.Font = New System.Drawing.Font("Bpmf Huninn", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(136, Byte))
         Me.lbl_id.Location = New System.Drawing.Point(33, 73)
         Me.lbl_id.Name = "lbl_id"
-        Me.lbl_id.Size = New System.Drawing.Size(38, 26)
+        Me.lbl_id.Size = New System.Drawing.Size(104, 26)
         Me.lbl_id.TabIndex = 2
-        Me.lbl_id.Text = "ID:"
+        Me.lbl_id.Text = "Matrícula:"
         '
         'txt_id
         '

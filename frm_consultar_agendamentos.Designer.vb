@@ -33,8 +33,6 @@ Partial Class frm_consultar_agendamentos
         Me.Label1 = New System.Windows.Forms.Label()
         Me.ToolStrip1 = New System.Windows.Forms.ToolStrip()
         Me.Panel9 = New System.Windows.Forms.Panel()
-        Me.Label8 = New System.Windows.Forms.Label()
-        Me.Label4 = New System.Windows.Forms.Label()
         Me.dgv_info = New System.Windows.Forms.DataGridView()
         Me.Column1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -42,11 +40,15 @@ Partial Class frm_consultar_agendamentos
         Me.Column4 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column5 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column6 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Label8 = New System.Windows.Forms.Label()
+        Me.Label4 = New System.Windows.Forms.Label()
+        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.Panel2.SuspendLayout()
         Me.Panel1.SuspendLayout()
         Me.Panel3.SuspendLayout()
         Me.Panel9.SuspendLayout()
         CType(Me.dgv_info, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Panel2
@@ -65,6 +67,7 @@ Partial Class frm_consultar_agendamentos
         '
         Me.Panel1.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.Panel1.BackColor = System.Drawing.Color.White
+        Me.Panel1.Controls.Add(Me.PictureBox1)
         Me.Panel1.Controls.Add(Me.Panel3)
         Me.Panel1.Controls.Add(Me.Panel9)
         Me.Panel1.Controls.Add(Me.Label8)
@@ -93,7 +96,7 @@ Partial Class frm_consultar_agendamentos
         '
         Me.txt_id_cliente.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.txt_id_cliente.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txt_id_cliente.Location = New System.Drawing.Point(643, 16)
+        Me.txt_id_cliente.Location = New System.Drawing.Point(641, 15)
         Me.txt_id_cliente.Name = "txt_id_cliente"
         Me.txt_id_cliente.Size = New System.Drawing.Size(156, 27)
         Me.txt_id_cliente.TabIndex = 33
@@ -152,27 +155,6 @@ Partial Class frm_consultar_agendamentos
         Me.Panel9.Name = "Panel9"
         Me.Panel9.Size = New System.Drawing.Size(767, 255)
         Me.Panel9.TabIndex = 27
-        '
-        'Label8
-        '
-        Me.Label8.BackColor = System.Drawing.Color.Transparent
-        Me.Label8.Font = New System.Drawing.Font("Jockey One", 19.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(238, Byte))
-        Me.Label8.Location = New System.Drawing.Point(216, 21)
-        Me.Label8.Name = "Label8"
-        Me.Label8.Size = New System.Drawing.Size(403, 55)
-        Me.Label8.TabIndex = 24
-        Me.Label8.Text = "Consultar Agendamentos:"
-        Me.Label8.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
-        '
-        'Label4
-        '
-        Me.Label4.Font = New System.Drawing.Font("Comic Sans MS", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label4.Location = New System.Drawing.Point(308, -100)
-        Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(216, 47)
-        Me.Label4.TabIndex = 10
-        Me.Label4.Text = "Bem vindo(a)..."
-        Me.Label4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
         'dgv_info
         '
@@ -234,6 +216,37 @@ Partial Class frm_consultar_agendamentos
         Me.Column6.MinimumWidth = 6
         Me.Column6.Name = "Column6"
         '
+        'Label8
+        '
+        Me.Label8.BackColor = System.Drawing.Color.Transparent
+        Me.Label8.Font = New System.Drawing.Font("Jockey One", 19.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(238, Byte))
+        Me.Label8.Location = New System.Drawing.Point(216, 21)
+        Me.Label8.Name = "Label8"
+        Me.Label8.Size = New System.Drawing.Size(403, 55)
+        Me.Label8.TabIndex = 24
+        Me.Label8.Text = "Consultar Agendamentos:"
+        Me.Label8.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
+        'Label4
+        '
+        Me.Label4.Font = New System.Drawing.Font("Comic Sans MS", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label4.Location = New System.Drawing.Point(308, -100)
+        Me.Label4.Name = "Label4"
+        Me.Label4.Size = New System.Drawing.Size(216, 47)
+        Me.Label4.TabIndex = 10
+        Me.Label4.Text = "Bem vindo(a)..."
+        Me.Label4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        '
+        'PictureBox1
+        '
+        Me.PictureBox1.BackgroundImage = CType(resources.GetObject("PictureBox1.BackgroundImage"), System.Drawing.Image)
+        Me.PictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.PictureBox1.Location = New System.Drawing.Point(587, 29)
+        Me.PictureBox1.Name = "PictureBox1"
+        Me.PictureBox1.Size = New System.Drawing.Size(48, 47)
+        Me.PictureBox1.TabIndex = 31
+        Me.PictureBox1.TabStop = False
+        '
         'frm_consultar_agendamentos
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
@@ -250,6 +263,7 @@ Partial Class frm_consultar_agendamentos
         Me.Panel3.PerformLayout()
         Me.Panel9.ResumeLayout(False)
         CType(Me.dgv_info, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -272,4 +286,5 @@ Partial Class frm_consultar_agendamentos
     Friend WithEvents Column4 As DataGridViewTextBoxColumn
     Friend WithEvents Column5 As DataGridViewTextBoxColumn
     Friend WithEvents Column6 As DataGridViewTextBoxColumn
+    Friend WithEvents PictureBox1 As PictureBox
 End Class
