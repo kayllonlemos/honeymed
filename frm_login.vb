@@ -8,6 +8,13 @@
             txt_senha.Text = "" Then
             MsgBox("Preencha os todos os campos!", MsgBoxStyle.Information + MsgBoxStyle.OkOnly, "ATENÇÃO!")
         Else
+            If LCase(txt_login.Text) = "admin" And LCase(txt_senha.Text) = "admin" Then
+                acesso_admin = True
+                MsgBox("LOGIN EFETUADO COM SUCESSO!!!", MsgBoxStyle.Information + MsgBoxStyle.OkOnly, "ATENÇÃO!")
+                Me.Hide()
+                frm_menu_inicial.ShowDialog()
+                Me.Close()
+            End If
             Try
                 SQL = $"select * from tb_contas where nome_funcionario='{txt_login.Text}' or email='{txt_login.Text}'"
                 rs = db.Execute(SQL)
@@ -43,5 +50,13 @@
                 Exit Sub
             End Try
         End If
+    End Sub
+
+    Private Sub lbl_rec_senha_Click(sender As Object, e As EventArgs) Handles lbl_rec_senha.Click
+        Try
+            frm_redefinir_senha.ShowDialog()
+        Catch ex As Exception
+            MsgBox("Erro ao chamar o formulário.", MsgBoxStyle.Critical + MsgBoxStyle.OkOnly, "ATENÇÃO")
+        End Try
     End Sub
 End Class

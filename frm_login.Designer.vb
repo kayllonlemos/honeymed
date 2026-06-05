@@ -74,11 +74,11 @@ Partial Class frm_login
         '
         Me.lbl_rec_senha.AutoSize = True
         Me.lbl_rec_senha.BackColor = System.Drawing.Color.Transparent
-        Me.lbl_rec_senha.Font = New System.Drawing.Font("Jaldi", 10.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lbl_rec_senha.Font = New System.Drawing.Font("Jaldi", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lbl_rec_senha.ForeColor = System.Drawing.Color.FromArgb(CType(CType(252, Byte), Integer), CType(CType(194, Byte), Integer), CType(CType(26, Byte), Integer))
-        Me.lbl_rec_senha.Location = New System.Drawing.Point(573, 301)
+        Me.lbl_rec_senha.Location = New System.Drawing.Point(562, 301)
         Me.lbl_rec_senha.Name = "lbl_rec_senha"
-        Me.lbl_rec_senha.Size = New System.Drawing.Size(147, 31)
+        Me.lbl_rec_senha.Size = New System.Drawing.Size(157, 34)
         Me.lbl_rec_senha.TabIndex = 12
         Me.lbl_rec_senha.Text = "Recuperar senha"
         '
@@ -89,7 +89,7 @@ Partial Class frm_login
         Me.btn_entrar.ForeColor = System.Drawing.Color.White
         Me.btn_entrar.Location = New System.Drawing.Point(508, 344)
         Me.btn_entrar.Name = "btn_entrar"
-        Me.btn_entrar.Size = New System.Drawing.Size(279, 43)
+        Me.btn_entrar.Size = New System.Drawing.Size(279, 47)
         Me.btn_entrar.TabIndex = 11
         Me.btn_entrar.Text = "ENTRAR"
         Me.btn_entrar.UseVisualStyleBackColor = False

@@ -10,7 +10,7 @@
 			db.Open("Provider=MSOLEDBSQL;Data Source=localhost;Initial Catalog=honeymed;trusted_connection=yes;")
 			'MsgBox("Conexão Estabelecida!", MsgBoxStyle.Information + MsgBoxStyle.OkOnly, "AVISO")
 		Catch ex As Exception
-			MsgBox("Erro: " & ex.Message, MsgBoxStyle.Critical + MsgBoxStyle.OkOnly, "ATENÇÃO!")
+			MsgBox("Erro ao Conectar ao Banco: " & ex.Message, MsgBoxStyle.Critical + MsgBoxStyle.OkOnly, "ATENÇÃO!")
 		End Try
 	End Sub
 
