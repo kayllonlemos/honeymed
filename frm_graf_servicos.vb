@@ -2,7 +2,6 @@
 Imports System.Windows.Forms.DataVisualization.Charting
 
 Public Class Gráfico
-
     Private Sub frm_graf_servicos_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
         Dim connectionString As String = "Server=localhost;Database=honeymed;Trusted_Connection=True;TrustServerCertificate=True;"
@@ -25,18 +24,18 @@ Public Class Gráfico
         Chart1.BackColor = Color.White
         Chart1.Titles.Clear()
         Chart1.Titles.Add("Procedimentos mais Procurados")
-        Chart1.Titles(0).Font = New Font("Segoe UI", 13, FontStyle.Bold)
+        Chart1.Titles(0).Font = New Font("Jockey One", 32, FontStyle.Regular)
         Chart1.Titles(0).ForeColor = Color.Black
 
         Chart1.Legends.Clear()
         Dim legenda As New Legend("Legenda")
         legenda.Docking = Docking.Bottom
         legenda.Alignment = StringAlignment.Center
-        legenda.Font = New Font("Segoe UI", 9)
+        legenda.Font = New Font("Bpmf Huninn", 12)
         Chart1.Legends.Add(legenda)
 
         Chart1.ChartAreas(0).AxisX.Title = "Procedimentos"
-        Chart1.ChartAreas(0).AxisX.TitleFont = New Font("Segoe UI", 9)
+        Chart1.ChartAreas(0).AxisX.TitleFont = New Font("Jaldi", 12, FontStyle.Bold)
         Chart1.ChartAreas(0).AxisX.LabelStyle.Enabled = False
         Chart1.ChartAreas(0).AxisX.MajorTickMark.Enabled = False
         Chart1.ChartAreas(0).AxisY.Interval = 1
@@ -45,7 +44,7 @@ Public Class Gráfico
         Dim serie As New Series("Servicos")
         serie.ChartType = SeriesChartType.Column
         serie.IsValueShownAsLabel = True
-        serie.Font = New Font("Segoe UI", 8, FontStyle.Bold)
+        serie.Font = New Font("Segoe UI", 11, FontStyle.Bold)
         serie.LabelForeColor = Color.Black
         serie.CustomProperties = "PointWidth=0.6, GapWidth=0.8"
 
@@ -94,5 +93,4 @@ Public Class Gráfico
         Next
 
     End Sub
-
 End Class

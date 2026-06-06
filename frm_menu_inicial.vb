@@ -95,4 +95,51 @@
 		End If
 	End Sub
 
+	Private Sub btn_logout_Click(sender As Object, e As EventArgs) Handles btn_logout.Click
+		resp = MsgBox("Deseja Encerrar Sessão?", MsgBoxStyle.Information + MsgBoxStyle.YesNo, "ATENÇÃO!")
+		If resp = vbYes Then
+			acesso_admin = False
+			Application.Restart()
+		End If
+	End Sub
+
+	Private Sub RelatórioDeClientesToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles RelatórioDeClientesToolStripMenuItem.Click
+		Try
+			frm_relatorio_clientes.ShowDialog()
+		Catch ex As Exception
+			MsgBox("Erro ao chamar o formulário.", MsgBoxStyle.Critical + MsgBoxStyle.OkOnly, "ATENÇÃO")
+		End Try
+	End Sub
+
+	Private Sub RelatórioDeFuncionáriosToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles RelatórioDeFuncionáriosToolStripMenuItem.Click
+		Try
+			frm_relatorio_funcionarios.ShowDialog()
+		Catch ex As Exception
+			MsgBox("Erro ao chamar o formulário.", MsgBoxStyle.Critical + MsgBoxStyle.OkOnly, "ATENÇÃO")
+		End Try
+	End Sub
+
+	Private Sub RelatórioAgendamentosPrestadorToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles RelatórioAgendamentosPrestadorToolStripMenuItem.Click
+		Try
+			frm_graf_media_prestador.ShowDialog()
+		Catch ex As Exception
+			MsgBox("Erro ao chamar o formulário.", MsgBoxStyle.Critical + MsgBoxStyle.OkOnly, "ATENÇÃO")
+		End Try
+	End Sub
+
+	Private Sub RelatórioToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles RelatórioToolStripMenuItem.Click
+		Try
+			frm_graf_cliente_por_plano.ShowDialog()
+		Catch ex As Exception
+			MsgBox("Erro ao chamar o formulário.", MsgBoxStyle.Critical + MsgBoxStyle.OkOnly, "ATENÇÃO")
+		End Try
+	End Sub
+
+	Private Sub RelatórioToolStripMenuItem1_Click(sender As Object, e As EventArgs) Handles RelatórioToolStripMenuItem1.Click
+		Try
+			Gráfico.ShowDialog()
+		Catch ex As Exception
+			MsgBox("Erro ao chamar o formulário.", MsgBoxStyle.Critical + MsgBoxStyle.OkOnly, "ATENÇÃO")
+		End Try
+	End Sub
 End Class
