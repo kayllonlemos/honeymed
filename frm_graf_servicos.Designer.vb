@@ -1,5 +1,5 @@
 ﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
-Partial Class frm_graf_servicos
+Partial Class Gráfico
     Inherits System.Windows.Forms.Form
 
     'Descartar substituições de formulário para limpar a lista de componentes.
@@ -26,11 +26,10 @@ Partial Class frm_graf_servicos
         Dim ChartArea1 As System.Windows.Forms.DataVisualization.Charting.ChartArea = New System.Windows.Forms.DataVisualization.Charting.ChartArea()
         Dim Legend1 As System.Windows.Forms.DataVisualization.Charting.Legend = New System.Windows.Forms.DataVisualization.Charting.Legend()
         Dim Series1 As System.Windows.Forms.DataVisualization.Charting.Series = New System.Windows.Forms.DataVisualization.Charting.Series()
-        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frm_graf_servicos))
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Gráfico))
         Me.Chart1 = New System.Windows.Forms.DataVisualization.Charting.Chart()
         Me.TbespecialidadesBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.HoneymedDataSet = New HoneyMed.honeymedDataSet()
-        Me.Label1 = New System.Windows.Forms.Label()
         Me.Tb_especialidadesTableAdapter = New HoneyMed.honeymedDataSetTableAdapters.tb_especialidadesTableAdapter()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         CType(Me.Chart1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -47,7 +46,8 @@ Partial Class frm_graf_servicos
         Me.Chart1.DataSource = Me.TbespecialidadesBindingSource
         Legend1.Name = "Legend1"
         Me.Chart1.Legends.Add(Legend1)
-        Me.Chart1.Location = New System.Drawing.Point(142, 142)
+        Me.Chart1.Location = New System.Drawing.Point(-6, -1)
+        Me.Chart1.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.Chart1.Name = "Chart1"
         Me.Chart1.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.None
         Me.Chart1.PaletteCustomColors = New System.Drawing.Color() {System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(0, Byte), Integer))}
@@ -55,7 +55,7 @@ Partial Class frm_graf_servicos
         Series1.Legend = "Legend1"
         Series1.Name = "Series1"
         Me.Chart1.Series.Add(Series1)
-        Me.Chart1.Size = New System.Drawing.Size(559, 336)
+        Me.Chart1.Size = New System.Drawing.Size(1136, 621)
         Me.Chart1.TabIndex = 0
         Me.Chart1.Text = "Chart1"
         '
@@ -69,15 +69,6 @@ Partial Class frm_graf_servicos
         Me.HoneymedDataSet.DataSetName = "honeymedDataSet"
         Me.HoneymedDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
         '
-        'Label1
-        '
-        Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(262, 98)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(204, 13)
-        Me.Label1.TabIndex = 1
-        Me.Label1.Text = "Média de Procedimentos mais procurados"
-        '
         'Tb_especialidadesTableAdapter
         '
         Me.Tb_especialidadesTableAdapter.ClearBeforeFill = True
@@ -86,34 +77,34 @@ Partial Class frm_graf_servicos
         '
         Me.PictureBox1.BackgroundImage = CType(resources.GetObject("PictureBox1.BackgroundImage"), System.Drawing.Image)
         Me.PictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.PictureBox1.Location = New System.Drawing.Point(243, 456)
+        Me.PictureBox1.Location = New System.Drawing.Point(324, 561)
+        Me.PictureBox1.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(21, 22)
+        Me.PictureBox1.Size = New System.Drawing.Size(28, 27)
         Me.PictureBox1.TabIndex = 2
         Me.PictureBox1.TabStop = False
         '
-        'frm_graf_servicos
+        'Gráfico
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(843, 503)
+        Me.ClientSize = New System.Drawing.Size(1124, 619)
         Me.Controls.Add(Me.PictureBox1)
-        Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.Chart1)
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
-        Me.Name = "frm_graf_servicos"
-        Me.Text = "frm_graf_servicos"
+        Me.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.Name = "Gráfico"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
+        Me.Text = "Procedimentos Mais Procurados"
         CType(Me.Chart1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.TbespecialidadesBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.HoneymedDataSet, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
-        Me.PerformLayout()
 
     End Sub
 
     Friend WithEvents Chart1 As DataVisualization.Charting.Chart
-    Friend WithEvents Label1 As Label
     Friend WithEvents HoneymedDataSet As honeymedDataSet
     Friend WithEvents TbespecialidadesBindingSource As BindingSource
     Friend WithEvents Tb_especialidadesTableAdapter As honeymedDataSetTableAdapters.tb_especialidadesTableAdapter
