@@ -63,6 +63,7 @@
 		End Try
 	End Sub
 
+	Dim WithEvents wmp As AxWMPLib.AxWindowsMediaPlayer
 	Private Sub frm_menu_inicial_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 		If acesso_admin = False Then
 			With MenuStrip1
@@ -71,5 +72,27 @@
 				GerenciarContasToolStripMenuItem.Enabled = False
 			End With
 		End If
+		wmp = New AxWMPLib.AxWindowsMediaPlayer()
+
+		panel_fatbee.SuspendLayout()
+		panel_fatbee.Controls.Add(wmp)
+
+		wmp.CreateControl()
+
+		wmp.Dock = DockStyle.Fill
+		wmp.uiMode = "none"
+
+		AddHandler wmp.PlayStateChange, AddressOf Wmp_PlayStateChange
+		wmp.settings.setMode("loop", True)
+		wmp.URL = Application.StartupPath & "\Videos\Fat bee playing violin original.mp4"
+
+		panel_fatbee.ResumeLayout()
 	End Sub
+
+	Private Sub Wmp_PlayStateChange(sender As Object, e As AxWMPLib._WMPOCXEvents_PlayStateChangeEvent)
+		If e.newState = 8 Then
+			wmp.settings.mute = True
+		End If
+	End Sub
+
 End Class

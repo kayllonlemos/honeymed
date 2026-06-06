@@ -149,4 +149,40 @@
         End Try
     End Sub
 
+    Private Sub txt_id_agendamento_LostFocus(sender As Object, e As EventArgs) Handles txt_id_agendamento.LostFocus
+        rs = db.Execute($"select a.id_agendamento, a.id_cliente, p.nome, e.especialidade, a.data_agendamento, a.horario
+                                      from tb_agendamentos a
+                                      inner join tb_prestadores p on p.id = a.id_prestador
+                                      inner join tb_especialidades e on e.id = a.id_especialidade
+                                      where a.id_agendamento={txt_id_agendamento.Text}")
+
+        If rs.EOF = False Then
+            carregando = True
+
+            Dim vIdAgendamento As String = rs.Fields(0).Value.ToString()
+            Dim vIdCliente As String = rs.Fields(1).Value.ToString()
+            Dim vPrestador As String = rs.Fields(2).Value.ToString()
+            Dim vEspecialidade As String = rs.Fields(3).Value.ToString()
+            Dim vData As String = rs.Fields(4).Value.ToString()
+            Dim vHorario As String = rs.Fields(5).Value.ToString()
+
+            txt_id_agendamento.Text = vIdAgendamento
+            txt_id_cliente.Text = vIdCliente
+            cmb_prestador.Text = vPrestador
+
+            Carregar_especialidadesAgendamento()
+            cmb_especialidade.Text = vEspecialidade
+
+            datasDisponiveis()
+            cmb_data.Text = vData
+
+            horariosDisponiveis()
+            cmb_horario.Text = vHorario
+
+            carregando = False
+        Else
+            MsgBox("O ID do Agendamento não existe!" & vbCrLf & "Ignore-o para marcar um novo agendamento.", MsgBoxStyle.Exclamation + MsgBoxStyle.OkOnly, "ATENÇÃO!")
+            Limpar_agendamento()
+        End If
+    End Sub
 End Class

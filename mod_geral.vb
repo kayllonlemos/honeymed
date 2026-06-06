@@ -31,6 +31,12 @@
 			Try
 				If IsNumeric(aux) Then
 					SQL = $"select * from tb_clientes where id_cliente='{aux}'"
+					rs = db.Execute(SQL)
+					If rs.EOF = True Then
+						MsgBox("Matrícula do Cliente Não Encontrada!" & vbCrLf & "Para Registrar um Novo Cliente," & vbCrLf & "Mantenha Este Campo Vazio!", MsgBoxStyle.Exclamation + MsgBoxStyle.OkOnly, "ATENÇÃO")
+						Limpar_cadastroClientes()
+						Exit Sub
+					End If
 				Else
 					SQL = $"select * from tb_clientes where cpf='{aux}' or email='{aux}'"
 				End If
@@ -147,6 +153,7 @@
 	Sub Limpar_cadastroClientes()
 		Try
 			With frm_gerenciar_clientes
+				.txt_id.Text = ""
 				.txt_cpf.Text = ""
 				.cmb_sexo.Text = ""
 				.txt_fone.Text = ""

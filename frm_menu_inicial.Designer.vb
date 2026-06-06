@@ -39,6 +39,7 @@ Partial Class frm_menu_inicial
         Me.Label1 = New System.Windows.Forms.Label()
         Me.PictureBox2 = New System.Windows.Forms.PictureBox()
         Me.PictureBox3 = New System.Windows.Forms.PictureBox()
+        Me.panel_fatbee = New System.Windows.Forms.Panel()
         Me.MenuStrip1.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -207,6 +208,14 @@ Partial Class frm_menu_inicial
         Me.PictureBox3.TabIndex = 7
         Me.PictureBox3.TabStop = False
         '
+        'panel_fatbee
+        '
+        Me.panel_fatbee.BackColor = System.Drawing.Color.FromArgb(CType(CType(252, Byte), Integer), CType(CType(194, Byte), Integer), CType(CType(26, Byte), Integer))
+        Me.panel_fatbee.Location = New System.Drawing.Point(752, 306)
+        Me.panel_fatbee.Name = "panel_fatbee"
+        Me.panel_fatbee.Size = New System.Drawing.Size(655, 416)
+        Me.panel_fatbee.TabIndex = 8
+        '
         'frm_menu_inicial
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
@@ -215,6 +224,7 @@ Partial Class frm_menu_inicial
         Me.BackgroundImage = CType(resources.GetObject("$this.BackgroundImage"), System.Drawing.Image)
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.ClientSize = New System.Drawing.Size(1902, 1033)
+        Me.Controls.Add(Me.panel_fatbee)
         Me.Controls.Add(Me.PictureBox3)
         Me.Controls.Add(Me.PictureBox2)
         Me.Controls.Add(Me.Label1)
@@ -252,4 +262,5 @@ Partial Class frm_menu_inicial
     Friend WithEvents ConsultarAgendamentosToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents AgendarToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents AgendarToolStripMenuItem1 As ToolStripMenuItem
+    Friend WithEvents panel_fatbee As Panel
 End Class

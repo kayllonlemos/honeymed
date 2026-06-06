@@ -458,7 +458,7 @@ Partial Class frm_gerenciar_agendamentos
         '
         'Column1
         '
-        Me.Column1.HeaderText = "ID"
+        Me.Column1.HeaderText = "ID Agend."
         Me.Column1.MinimumWidth = 6
         Me.Column1.Name = "Column1"
         '
