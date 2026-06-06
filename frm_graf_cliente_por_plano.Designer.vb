@@ -26,14 +26,15 @@ Partial Class frm_graf_cliente_por_plano
         Dim ChartArea1 As System.Windows.Forms.DataVisualization.Charting.ChartArea = New System.Windows.Forms.DataVisualization.Charting.ChartArea()
         Dim Legend1 As System.Windows.Forms.DataVisualization.Charting.Legend = New System.Windows.Forms.DataVisualization.Charting.Legend()
         Dim Series1 As System.Windows.Forms.DataVisualization.Charting.Series = New System.Windows.Forms.DataVisualization.Charting.Series()
+        Dim Title1 As System.Windows.Forms.DataVisualization.Charting.Title = New System.Windows.Forms.DataVisualization.Charting.Title()
         Me.Chart1 = New System.Windows.Forms.DataVisualization.Charting.Chart()
-        Me.Label1 = New System.Windows.Forms.Label()
-        Me.HoneymedDataSet2 = New HoneyMed.honeymedDataSet2()
         Me.TbclientesBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.HoneymedDataSet2 = New HoneyMed.honeymedDataSet2()
+        Me.Label1 = New System.Windows.Forms.Label()
         Me.Tb_clientesTableAdapter = New HoneyMed.honeymedDataSet2TableAdapters.tb_clientesTableAdapter()
         CType(Me.Chart1, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.HoneymedDataSet2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.TbclientesBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.HoneymedDataSet2, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Chart1
@@ -52,6 +53,18 @@ Partial Class frm_graf_cliente_por_plano
         Me.Chart1.Size = New System.Drawing.Size(539, 300)
         Me.Chart1.TabIndex = 0
         Me.Chart1.Text = "Chart1"
+        Title1.Name = "Média de Clientes por Plano"
+        Me.Chart1.Titles.Add(Title1)
+        '
+        'TbclientesBindingSource
+        '
+        Me.TbclientesBindingSource.DataMember = "tb_clientes"
+        Me.TbclientesBindingSource.DataSource = Me.HoneymedDataSet2
+        '
+        'HoneymedDataSet2
+        '
+        Me.HoneymedDataSet2.DataSetName = "honeymedDataSet2"
+        Me.HoneymedDataSet2.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
         '
         'Label1
         '
@@ -61,16 +74,6 @@ Partial Class frm_graf_cliente_por_plano
         Me.Label1.Size = New System.Drawing.Size(137, 13)
         Me.Label1.TabIndex = 1
         Me.Label1.Text = "Média de clientes por plano"
-        '
-        'HoneymedDataSet2
-        '
-        Me.HoneymedDataSet2.DataSetName = "honeymedDataSet2"
-        Me.HoneymedDataSet2.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
-        '
-        'TbclientesBindingSource
-        '
-        Me.TbclientesBindingSource.DataMember = "tb_clientes"
-        Me.TbclientesBindingSource.DataSource = Me.HoneymedDataSet2
         '
         'Tb_clientesTableAdapter
         '
@@ -86,8 +89,8 @@ Partial Class frm_graf_cliente_por_plano
         Me.Name = "frm_graf_cliente_por_plano"
         Me.Text = "frm_graf_cliente_por_plano"
         CType(Me.Chart1, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.HoneymedDataSet2, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.TbclientesBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.HoneymedDataSet2, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 

@@ -28,13 +28,15 @@ Partial Class frm_graf_servicos
         Dim Series1 As System.Windows.Forms.DataVisualization.Charting.Series = New System.Windows.Forms.DataVisualization.Charting.Series()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frm_graf_servicos))
         Me.Chart1 = New System.Windows.Forms.DataVisualization.Charting.Chart()
-        Me.Label1 = New System.Windows.Forms.Label()
-        Me.HoneymedDataSet = New HoneyMed.honeymedDataSet()
         Me.TbespecialidadesBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.HoneymedDataSet = New HoneyMed.honeymedDataSet()
+        Me.Label1 = New System.Windows.Forms.Label()
         Me.Tb_especialidadesTableAdapter = New HoneyMed.honeymedDataSetTableAdapters.tb_especialidadesTableAdapter()
+        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         CType(Me.Chart1, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.HoneymedDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.TbespecialidadesBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.HoneymedDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Chart1
@@ -57,6 +59,16 @@ Partial Class frm_graf_servicos
         Me.Chart1.TabIndex = 0
         Me.Chart1.Text = "Chart1"
         '
+        'TbespecialidadesBindingSource
+        '
+        Me.TbespecialidadesBindingSource.DataMember = "tb_especialidades"
+        Me.TbespecialidadesBindingSource.DataSource = Me.HoneymedDataSet
+        '
+        'HoneymedDataSet
+        '
+        Me.HoneymedDataSet.DataSetName = "honeymedDataSet"
+        Me.HoneymedDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        '
         'Label1
         '
         Me.Label1.AutoSize = True
@@ -66,33 +78,35 @@ Partial Class frm_graf_servicos
         Me.Label1.TabIndex = 1
         Me.Label1.Text = "Média de Procedimentos mais procurados"
         '
-        'HoneymedDataSet
-        '
-        Me.HoneymedDataSet.DataSetName = "honeymedDataSet"
-        Me.HoneymedDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
-        '
-        'TbespecialidadesBindingSource
-        '
-        Me.TbespecialidadesBindingSource.DataMember = "tb_especialidades"
-        Me.TbespecialidadesBindingSource.DataSource = Me.HoneymedDataSet
-        '
         'Tb_especialidadesTableAdapter
         '
         Me.Tb_especialidadesTableAdapter.ClearBeforeFill = True
+        '
+        'PictureBox1
+        '
+        Me.PictureBox1.BackgroundImage = CType(resources.GetObject("PictureBox1.BackgroundImage"), System.Drawing.Image)
+        Me.PictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.PictureBox1.Location = New System.Drawing.Point(243, 456)
+        Me.PictureBox1.Name = "PictureBox1"
+        Me.PictureBox1.Size = New System.Drawing.Size(21, 22)
+        Me.PictureBox1.TabIndex = 2
+        Me.PictureBox1.TabStop = False
         '
         'frm_graf_servicos
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(843, 503)
+        Me.Controls.Add(Me.PictureBox1)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.Chart1)
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "frm_graf_servicos"
         Me.Text = "frm_graf_servicos"
         CType(Me.Chart1, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.HoneymedDataSet, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.TbespecialidadesBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.HoneymedDataSet, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -103,4 +117,5 @@ Partial Class frm_graf_servicos
     Friend WithEvents HoneymedDataSet As honeymedDataSet
     Friend WithEvents TbespecialidadesBindingSource As BindingSource
     Friend WithEvents Tb_especialidadesTableAdapter As honeymedDataSetTableAdapters.tb_especialidadesTableAdapter
+    Friend WithEvents PictureBox1 As PictureBox
 End Class

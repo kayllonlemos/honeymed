@@ -88,10 +88,10 @@ Partial Class frm_gerenciar_agendamentos
         Me.Panel2.BackColor = System.Drawing.Color.Black
         Me.Panel2.Controls.Add(Me.Panel1)
         Me.Panel2.Location = New System.Drawing.Point(0, -2)
-        Me.Panel2.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.Panel2.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.Panel2.Name = "Panel2"
         Me.Panel2.RightToLeft = System.Windows.Forms.RightToLeft.No
-        Me.Panel2.Size = New System.Drawing.Size(857, 591)
+        Me.Panel2.Size = New System.Drawing.Size(643, 480)
         Me.Panel2.TabIndex = 4
         '
         'Panel1
@@ -124,20 +124,21 @@ Partial Class frm_gerenciar_agendamentos
         Me.Panel1.Controls.Add(Me.txt_id_cliente)
         Me.Panel1.Controls.Add(Me.Panel3)
         Me.Panel1.Controls.Add(Me.Panel9)
-        Me.Panel1.Location = New System.Drawing.Point(7, 11)
-        Me.Panel1.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.Panel1.Location = New System.Drawing.Point(5, 9)
+        Me.Panel1.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.Panel1.Name = "Panel1"
         Me.Panel1.RightToLeft = System.Windows.Forms.RightToLeft.No
-        Me.Panel1.Size = New System.Drawing.Size(843, 571)
+        Me.Panel1.Size = New System.Drawing.Size(632, 464)
         Me.Panel1.TabIndex = 1
         '
         'PictureBox7
         '
         Me.PictureBox7.BackgroundImage = CType(resources.GetObject("PictureBox7.BackgroundImage"), System.Drawing.Image)
         Me.PictureBox7.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.PictureBox7.Location = New System.Drawing.Point(570, 167)
+        Me.PictureBox7.Location = New System.Drawing.Point(428, 136)
+        Me.PictureBox7.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.PictureBox7.Name = "PictureBox7"
-        Me.PictureBox7.Size = New System.Drawing.Size(25, 22)
+        Me.PictureBox7.Size = New System.Drawing.Size(19, 18)
         Me.PictureBox7.TabIndex = 37
         Me.PictureBox7.TabStop = False
         '
@@ -145,9 +146,10 @@ Partial Class frm_gerenciar_agendamentos
         '
         Me.PictureBox6.BackgroundImage = CType(resources.GetObject("PictureBox6.BackgroundImage"), System.Drawing.Image)
         Me.PictureBox6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.PictureBox6.Location = New System.Drawing.Point(307, 163)
+        Me.PictureBox6.Location = New System.Drawing.Point(230, 132)
+        Me.PictureBox6.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.PictureBox6.Name = "PictureBox6"
-        Me.PictureBox6.Size = New System.Drawing.Size(35, 29)
+        Me.PictureBox6.Size = New System.Drawing.Size(26, 24)
         Me.PictureBox6.TabIndex = 36
         Me.PictureBox6.TabStop = False
         '
@@ -155,9 +157,10 @@ Partial Class frm_gerenciar_agendamentos
         '
         Me.PictureBox5.BackgroundImage = CType(resources.GetObject("PictureBox5.BackgroundImage"), System.Drawing.Image)
         Me.PictureBox5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.PictureBox5.Location = New System.Drawing.Point(41, 162)
+        Me.PictureBox5.Location = New System.Drawing.Point(31, 132)
+        Me.PictureBox5.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.PictureBox5.Name = "PictureBox5"
-        Me.PictureBox5.Size = New System.Drawing.Size(35, 27)
+        Me.PictureBox5.Size = New System.Drawing.Size(26, 22)
         Me.PictureBox5.TabIndex = 35
         Me.PictureBox5.TabStop = False
         '
@@ -165,9 +168,10 @@ Partial Class frm_gerenciar_agendamentos
         '
         Me.PictureBox4.BackgroundImage = CType(resources.GetObject("PictureBox4.BackgroundImage"), System.Drawing.Image)
         Me.PictureBox4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.PictureBox4.Location = New System.Drawing.Point(569, 80)
+        Me.PictureBox4.Location = New System.Drawing.Point(427, 65)
+        Me.PictureBox4.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.PictureBox4.Name = "PictureBox4"
-        Me.PictureBox4.Size = New System.Drawing.Size(31, 27)
+        Me.PictureBox4.Size = New System.Drawing.Size(23, 22)
         Me.PictureBox4.TabIndex = 34
         Me.PictureBox4.TabStop = False
         '
@@ -175,9 +179,10 @@ Partial Class frm_gerenciar_agendamentos
         '
         Me.PictureBox3.BackgroundImage = CType(resources.GetObject("PictureBox3.BackgroundImage"), System.Drawing.Image)
         Me.PictureBox3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.PictureBox3.Location = New System.Drawing.Point(304, 77)
+        Me.PictureBox3.Location = New System.Drawing.Point(228, 63)
+        Me.PictureBox3.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.PictureBox3.Name = "PictureBox3"
-        Me.PictureBox3.Size = New System.Drawing.Size(38, 33)
+        Me.PictureBox3.Size = New System.Drawing.Size(28, 27)
         Me.PictureBox3.TabIndex = 33
         Me.PictureBox3.TabStop = False
         '
@@ -185,9 +190,10 @@ Partial Class frm_gerenciar_agendamentos
         '
         Me.PictureBox2.BackgroundImage = CType(resources.GetObject("PictureBox2.BackgroundImage"), System.Drawing.Image)
         Me.PictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.PictureBox2.Location = New System.Drawing.Point(40, 75)
+        Me.PictureBox2.Location = New System.Drawing.Point(30, 61)
+        Me.PictureBox2.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.PictureBox2.Name = "PictureBox2"
-        Me.PictureBox2.Size = New System.Drawing.Size(32, 34)
+        Me.PictureBox2.Size = New System.Drawing.Size(24, 28)
         Me.PictureBox2.TabIndex = 32
         Me.PictureBox2.TabStop = False
         '
@@ -195,9 +201,10 @@ Partial Class frm_gerenciar_agendamentos
         '
         Me.Label1.BackColor = System.Drawing.Color.Transparent
         Me.Label1.Font = New System.Drawing.Font("Bpmf Huninn", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(136, Byte))
-        Me.Label1.Location = New System.Drawing.Point(32, 266)
+        Me.Label1.Location = New System.Drawing.Point(24, 216)
+        Me.Label1.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(587, 55)
+        Me.Label1.Size = New System.Drawing.Size(440, 45)
         Me.Label1.TabIndex = 31
         Me.Label1.Text = "• Realize o agendamento preenchendo os campos em ordem (da esquerda para direita," &
     " de cima pra baixo)"
@@ -206,9 +213,10 @@ Partial Class frm_gerenciar_agendamentos
         '
         Me.PictureBox1.BackgroundImage = CType(resources.GetObject("PictureBox1.BackgroundImage"), System.Drawing.Image)
         Me.PictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.PictureBox1.Location = New System.Drawing.Point(220, 30)
+        Me.PictureBox1.Location = New System.Drawing.Point(165, 24)
+        Me.PictureBox1.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(33, 30)
+        Me.PictureBox1.Size = New System.Drawing.Size(25, 24)
         Me.PictureBox1.TabIndex = 30
         Me.PictureBox1.TabStop = False
         '
@@ -217,36 +225,38 @@ Partial Class frm_gerenciar_agendamentos
         Me.lbl_id_agendamento.AutoSize = True
         Me.lbl_id_agendamento.BackColor = System.Drawing.Color.Transparent
         Me.lbl_id_agendamento.Font = New System.Drawing.Font("Bpmf Huninn", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(136, Byte))
-        Me.lbl_id_agendamento.Location = New System.Drawing.Point(75, 78)
+        Me.lbl_id_agendamento.Location = New System.Drawing.Point(56, 63)
+        Me.lbl_id_agendamento.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.lbl_id_agendamento.Name = "lbl_id_agendamento"
-        Me.lbl_id_agendamento.Size = New System.Drawing.Size(207, 26)
+        Me.lbl_id_agendamento.Size = New System.Drawing.Size(169, 21)
         Me.lbl_id_agendamento.TabIndex = 28
         Me.lbl_id_agendamento.Text = "ID do Agendamento:"
         '
         'txt_id_agendamento
         '
-        Me.txt_id_agendamento.Location = New System.Drawing.Point(48, 121)
-        Me.txt_id_agendamento.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.txt_id_agendamento.Location = New System.Drawing.Point(36, 98)
+        Me.txt_id_agendamento.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.txt_id_agendamento.Name = "txt_id_agendamento"
-        Me.txt_id_agendamento.Size = New System.Drawing.Size(219, 22)
+        Me.txt_id_agendamento.Size = New System.Drawing.Size(165, 20)
         Me.txt_id_agendamento.TabIndex = 27
         '
         'Panel6
         '
         Me.Panel6.BackColor = System.Drawing.Color.FromArgb(CType(CType(252, Byte), Integer), CType(CType(194, Byte), Integer), CType(CType(26, Byte), Integer))
-        Me.Panel6.Location = New System.Drawing.Point(37, 112)
-        Me.Panel6.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.Panel6.Location = New System.Drawing.Point(28, 91)
+        Me.Panel6.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.Panel6.Name = "Panel6"
-        Me.Panel6.Size = New System.Drawing.Size(242, 39)
+        Me.Panel6.Size = New System.Drawing.Size(182, 32)
         Me.Panel6.TabIndex = 29
         '
         'lbl_frm_ger_agendamentos
         '
         Me.lbl_frm_ger_agendamentos.BackColor = System.Drawing.Color.Transparent
         Me.lbl_frm_ger_agendamentos.Font = New System.Drawing.Font("Jockey One", 19.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(238, Byte))
-        Me.lbl_frm_ger_agendamentos.Location = New System.Drawing.Point(182, 16)
+        Me.lbl_frm_ger_agendamentos.Location = New System.Drawing.Point(136, 13)
+        Me.lbl_frm_ger_agendamentos.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.lbl_frm_ger_agendamentos.Name = "lbl_frm_ger_agendamentos"
-        Me.lbl_frm_ger_agendamentos.Size = New System.Drawing.Size(500, 55)
+        Me.lbl_frm_ger_agendamentos.Size = New System.Drawing.Size(375, 45)
         Me.lbl_frm_ger_agendamentos.TabIndex = 24
         Me.lbl_frm_ger_agendamentos.Text = "Agendar Procedimento:"
         Me.lbl_frm_ger_agendamentos.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -256,9 +266,10 @@ Partial Class frm_gerenciar_agendamentos
         Me.lbl_horario.AutoSize = True
         Me.lbl_horario.BackColor = System.Drawing.Color.Transparent
         Me.lbl_horario.Font = New System.Drawing.Font("Bpmf Huninn", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(136, Byte))
-        Me.lbl_horario.Location = New System.Drawing.Point(600, 164)
+        Me.lbl_horario.Location = New System.Drawing.Point(450, 133)
+        Me.lbl_horario.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.lbl_horario.Name = "lbl_horario"
-        Me.lbl_horario.Size = New System.Drawing.Size(86, 26)
+        Me.lbl_horario.Size = New System.Drawing.Size(71, 21)
         Me.lbl_horario.TabIndex = 19
         Me.lbl_horario.Text = "Horário:"
         '
@@ -266,19 +277,19 @@ Partial Class frm_gerenciar_agendamentos
         '
         Me.Panel7.BackColor = System.Drawing.Color.FromArgb(CType(CType(252, Byte), Integer), CType(CType(194, Byte), Integer), CType(CType(26, Byte), Integer))
         Me.Panel7.Controls.Add(Me.cmb_horario)
-        Me.Panel7.Location = New System.Drawing.Point(564, 196)
-        Me.Panel7.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.Panel7.Location = New System.Drawing.Point(423, 158)
+        Me.Panel7.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.Panel7.Name = "Panel7"
-        Me.Panel7.Size = New System.Drawing.Size(234, 39)
+        Me.Panel7.Size = New System.Drawing.Size(176, 32)
         Me.Panel7.TabIndex = 20
         '
         'cmb_horario
         '
         Me.cmb_horario.FormattingEnabled = True
-        Me.cmb_horario.Location = New System.Drawing.Point(10, 7)
-        Me.cmb_horario.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.cmb_horario.Location = New System.Drawing.Point(8, 6)
+        Me.cmb_horario.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.cmb_horario.Name = "cmb_horario"
-        Me.cmb_horario.Size = New System.Drawing.Size(210, 24)
+        Me.cmb_horario.Size = New System.Drawing.Size(158, 21)
         Me.cmb_horario.TabIndex = 2
         '
         'lbl_data
@@ -286,9 +297,10 @@ Partial Class frm_gerenciar_agendamentos
         Me.lbl_data.AutoSize = True
         Me.lbl_data.BackColor = System.Drawing.Color.Transparent
         Me.lbl_data.Font = New System.Drawing.Font("Bpmf Huninn", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(136, Byte))
-        Me.lbl_data.Location = New System.Drawing.Point(600, 80)
+        Me.lbl_data.Location = New System.Drawing.Point(450, 65)
+        Me.lbl_data.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.lbl_data.Name = "lbl_data"
-        Me.lbl_data.Size = New System.Drawing.Size(61, 26)
+        Me.lbl_data.Size = New System.Drawing.Size(50, 21)
         Me.lbl_data.TabIndex = 16
         Me.lbl_data.Text = "Data:"
         '
@@ -296,19 +308,19 @@ Partial Class frm_gerenciar_agendamentos
         '
         Me.Panel8.BackColor = System.Drawing.Color.FromArgb(CType(CType(252, Byte), Integer), CType(CType(194, Byte), Integer), CType(CType(26, Byte), Integer))
         Me.Panel8.Controls.Add(Me.cmb_data)
-        Me.Panel8.Location = New System.Drawing.Point(564, 112)
-        Me.Panel8.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.Panel8.Location = New System.Drawing.Point(423, 91)
+        Me.Panel8.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.Panel8.Name = "Panel8"
-        Me.Panel8.Size = New System.Drawing.Size(234, 39)
+        Me.Panel8.Size = New System.Drawing.Size(176, 32)
         Me.Panel8.TabIndex = 17
         '
         'cmb_data
         '
         Me.cmb_data.FormattingEnabled = True
-        Me.cmb_data.Location = New System.Drawing.Point(10, 7)
-        Me.cmb_data.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.cmb_data.Location = New System.Drawing.Point(8, 6)
+        Me.cmb_data.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.cmb_data.Name = "cmb_data"
-        Me.cmb_data.Size = New System.Drawing.Size(210, 24)
+        Me.cmb_data.Size = New System.Drawing.Size(158, 21)
         Me.cmb_data.TabIndex = 2
         '
         'lbl_especialidade
@@ -316,9 +328,10 @@ Partial Class frm_gerenciar_agendamentos
         Me.lbl_especialidade.AutoSize = True
         Me.lbl_especialidade.BackColor = System.Drawing.Color.Transparent
         Me.lbl_especialidade.Font = New System.Drawing.Font("Bpmf Huninn", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(136, Byte))
-        Me.lbl_especialidade.Location = New System.Drawing.Point(340, 164)
+        Me.lbl_especialidade.Location = New System.Drawing.Point(255, 133)
+        Me.lbl_especialidade.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.lbl_especialidade.Name = "lbl_especialidade"
-        Me.lbl_especialidade.Size = New System.Drawing.Size(143, 26)
+        Me.lbl_especialidade.Size = New System.Drawing.Size(118, 21)
         Me.lbl_especialidade.TabIndex = 13
         Me.lbl_especialidade.Text = "Especialidade:"
         '
@@ -326,19 +339,19 @@ Partial Class frm_gerenciar_agendamentos
         '
         Me.Panel5.BackColor = System.Drawing.Color.FromArgb(CType(CType(252, Byte), Integer), CType(CType(194, Byte), Integer), CType(CType(26, Byte), Integer))
         Me.Panel5.Controls.Add(Me.cmb_especialidade)
-        Me.Panel5.Location = New System.Drawing.Point(302, 195)
-        Me.Panel5.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.Panel5.Location = New System.Drawing.Point(226, 158)
+        Me.Panel5.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.Panel5.Name = "Panel5"
-        Me.Panel5.Size = New System.Drawing.Size(242, 39)
+        Me.Panel5.Size = New System.Drawing.Size(182, 32)
         Me.Panel5.TabIndex = 14
         '
         'cmb_especialidade
         '
         Me.cmb_especialidade.FormattingEnabled = True
-        Me.cmb_especialidade.Location = New System.Drawing.Point(10, 7)
-        Me.cmb_especialidade.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.cmb_especialidade.Location = New System.Drawing.Point(8, 6)
+        Me.cmb_especialidade.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.cmb_especialidade.Name = "cmb_especialidade"
-        Me.cmb_especialidade.Size = New System.Drawing.Size(218, 24)
+        Me.cmb_especialidade.Size = New System.Drawing.Size(164, 21)
         Me.cmb_especialidade.TabIndex = 2
         '
         'btn_salvar
@@ -346,10 +359,10 @@ Partial Class frm_gerenciar_agendamentos
         Me.btn_salvar.BackColor = System.Drawing.Color.FromArgb(CType(CType(252, Byte), Integer), CType(CType(194, Byte), Integer), CType(CType(26, Byte), Integer))
         Me.btn_salvar.Font = New System.Drawing.Font("Jaldi", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btn_salvar.ForeColor = System.Drawing.Color.White
-        Me.btn_salvar.Location = New System.Drawing.Point(619, 266)
-        Me.btn_salvar.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.btn_salvar.Location = New System.Drawing.Point(464, 216)
+        Me.btn_salvar.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.btn_salvar.Name = "btn_salvar"
-        Me.btn_salvar.Size = New System.Drawing.Size(179, 43)
+        Me.btn_salvar.Size = New System.Drawing.Size(134, 35)
         Me.btn_salvar.TabIndex = 11
         Me.btn_salvar.Text = "SALVAR"
         Me.btn_salvar.UseVisualStyleBackColor = False
@@ -357,9 +370,10 @@ Partial Class frm_gerenciar_agendamentos
         'Label4
         '
         Me.Label4.Font = New System.Drawing.Font("Comic Sans MS", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label4.Location = New System.Drawing.Point(308, -100)
+        Me.Label4.Location = New System.Drawing.Point(231, -81)
+        Me.Label4.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(216, 47)
+        Me.Label4.Size = New System.Drawing.Size(162, 38)
         Me.Label4.TabIndex = 10
         Me.Label4.Text = "Bem vindo(a)..."
         Me.Label4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
@@ -369,9 +383,10 @@ Partial Class frm_gerenciar_agendamentos
         Me.lbl_prestador.AutoSize = True
         Me.lbl_prestador.BackColor = System.Drawing.Color.Transparent
         Me.lbl_prestador.Font = New System.Drawing.Font("Bpmf Huninn", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(136, Byte))
-        Me.lbl_prestador.Location = New System.Drawing.Point(340, 79)
+        Me.lbl_prestador.Location = New System.Drawing.Point(255, 64)
+        Me.lbl_prestador.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.lbl_prestador.Name = "lbl_prestador"
-        Me.lbl_prestador.Size = New System.Drawing.Size(106, 26)
+        Me.lbl_prestador.Size = New System.Drawing.Size(89, 21)
         Me.lbl_prestador.TabIndex = 6
         Me.lbl_prestador.Text = "Prestador:"
         '
@@ -379,19 +394,19 @@ Partial Class frm_gerenciar_agendamentos
         '
         Me.Panel4.BackColor = System.Drawing.Color.FromArgb(CType(CType(252, Byte), Integer), CType(CType(194, Byte), Integer), CType(CType(26, Byte), Integer))
         Me.Panel4.Controls.Add(Me.cmb_prestador)
-        Me.Panel4.Location = New System.Drawing.Point(302, 112)
-        Me.Panel4.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.Panel4.Location = New System.Drawing.Point(226, 91)
+        Me.Panel4.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.Panel4.Name = "Panel4"
-        Me.Panel4.Size = New System.Drawing.Size(242, 39)
+        Me.Panel4.Size = New System.Drawing.Size(182, 32)
         Me.Panel4.TabIndex = 8
         '
         'cmb_prestador
         '
         Me.cmb_prestador.FormattingEnabled = True
-        Me.cmb_prestador.Location = New System.Drawing.Point(10, 7)
-        Me.cmb_prestador.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.cmb_prestador.Location = New System.Drawing.Point(8, 6)
+        Me.cmb_prestador.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.cmb_prestador.Name = "cmb_prestador"
-        Me.cmb_prestador.Size = New System.Drawing.Size(218, 24)
+        Me.cmb_prestador.Size = New System.Drawing.Size(164, 21)
         Me.cmb_prestador.TabIndex = 1
         '
         'lbl_id_cliente
@@ -399,37 +414,38 @@ Partial Class frm_gerenciar_agendamentos
         Me.lbl_id_cliente.AutoSize = True
         Me.lbl_id_cliente.BackColor = System.Drawing.Color.Transparent
         Me.lbl_id_cliente.Font = New System.Drawing.Font("Bpmf Huninn", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(136, Byte))
-        Me.lbl_id_cliente.Location = New System.Drawing.Point(75, 163)
+        Me.lbl_id_cliente.Location = New System.Drawing.Point(56, 132)
+        Me.lbl_id_cliente.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.lbl_id_cliente.Name = "lbl_id_cliente"
-        Me.lbl_id_cliente.Size = New System.Drawing.Size(104, 26)
+        Me.lbl_id_cliente.Size = New System.Drawing.Size(85, 21)
         Me.lbl_id_cliente.TabIndex = 2
         Me.lbl_id_cliente.Text = "Matrícula:"
         '
         'txt_id_cliente
         '
-        Me.txt_id_cliente.Location = New System.Drawing.Point(48, 204)
-        Me.txt_id_cliente.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.txt_id_cliente.Location = New System.Drawing.Point(36, 166)
+        Me.txt_id_cliente.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.txt_id_cliente.Name = "txt_id_cliente"
-        Me.txt_id_cliente.Size = New System.Drawing.Size(219, 22)
+        Me.txt_id_cliente.Size = New System.Drawing.Size(165, 20)
         Me.txt_id_cliente.TabIndex = 1
         '
         'Panel3
         '
         Me.Panel3.BackColor = System.Drawing.Color.FromArgb(CType(CType(252, Byte), Integer), CType(CType(194, Byte), Integer), CType(CType(26, Byte), Integer))
-        Me.Panel3.Location = New System.Drawing.Point(37, 195)
-        Me.Panel3.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.Panel3.Location = New System.Drawing.Point(28, 158)
+        Me.Panel3.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.Panel3.Name = "Panel3"
-        Me.Panel3.Size = New System.Drawing.Size(242, 39)
+        Me.Panel3.Size = New System.Drawing.Size(182, 32)
         Me.Panel3.TabIndex = 4
         '
         'Panel9
         '
         Me.Panel9.BackColor = System.Drawing.Color.FromArgb(CType(CType(252, Byte), Integer), CType(CType(194, Byte), Integer), CType(CType(26, Byte), Integer))
         Me.Panel9.Controls.Add(Me.dgv_info)
-        Me.Panel9.Location = New System.Drawing.Point(37, 352)
-        Me.Panel9.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.Panel9.Location = New System.Drawing.Point(28, 286)
+        Me.Panel9.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.Panel9.Name = "Panel9"
-        Me.Panel9.Size = New System.Drawing.Size(767, 202)
+        Me.Panel9.Size = New System.Drawing.Size(575, 164)
         Me.Panel9.TabIndex = 26
         '
         'dgv_info
@@ -448,12 +464,12 @@ Partial Class frm_gerenciar_agendamentos
         Me.dgv_info.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle1
         Me.dgv_info.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.dgv_info.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Column1, Me.Column2, Me.Column3, Me.Column4, Me.Column5, Me.Column6, Me.Column7, Me.Column8})
-        Me.dgv_info.Location = New System.Drawing.Point(11, 11)
-        Me.dgv_info.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.dgv_info.Location = New System.Drawing.Point(8, 9)
+        Me.dgv_info.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.dgv_info.Name = "dgv_info"
         Me.dgv_info.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToAllHeaders
         Me.dgv_info.RowTemplate.Height = 24
-        Me.dgv_info.Size = New System.Drawing.Size(747, 180)
+        Me.dgv_info.Size = New System.Drawing.Size(560, 146)
         Me.dgv_info.TabIndex = 25
         '
         'Column1
@@ -512,11 +528,12 @@ Partial Class frm_gerenciar_agendamentos
         '
         'frm_gerenciar_agendamentos
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(857, 587)
+        Me.ClientSize = New System.Drawing.Size(643, 477)
         Me.Controls.Add(Me.Panel2)
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
+        Me.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.Name = "frm_gerenciar_agendamentos"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Gerenciar Agendamentos"
