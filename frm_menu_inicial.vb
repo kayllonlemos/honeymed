@@ -70,6 +70,11 @@
 				GerenciarClientesToolStripMenuItem.Enabled = False
 				GerenciarPrestadoresToolStripMenuItem.Enabled = False
 				GerenciarContasToolStripMenuItem.Enabled = False
+				RelatórioDeClientesToolStripMenuItem.Enabled = False
+				RelatórioDeFuncionáriosToolStripMenuItem.Enabled = False
+				RelatórioAgendamentosPrestadorToolStripMenuItem.Enabled = False
+				RelatórioToolStripMenuItem.Enabled = False
+				RelatórioToolStripMenuItem1.Enabled = False
 			End With
 		End If
 		wmp = New AxWMPLib.AxWindowsMediaPlayer()

@@ -62,8 +62,8 @@ Partial Class frm_menu_inicial
         Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.btn_gravar, Me.GerenciarToolStripMenuItem, Me.CoToolStripMenuItem, Me.AgendarToolStripMenuItem, Me.RelatóriosToolStripMenuItem})
         Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
         Me.MenuStrip1.Name = "MenuStrip1"
-        Me.MenuStrip1.Padding = New System.Windows.Forms.Padding(5, 2, 0, 2)
-        Me.MenuStrip1.Size = New System.Drawing.Size(1604, 39)
+        Me.MenuStrip1.Padding = New System.Windows.Forms.Padding(4, 2, 0, 2)
+        Me.MenuStrip1.Size = New System.Drawing.Size(1203, 32)
         Me.MenuStrip1.TabIndex = 0
         Me.MenuStrip1.Text = "MenuStrip1"
         '
@@ -84,7 +84,7 @@ Partial Class frm_menu_inicial
         Me.GerenciarToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.GerenciarClientesToolStripMenuItem, Me.GerenciarPrestadoresToolStripMenuItem, Me.GerenciarContasToolStripMenuItem})
         Me.GerenciarToolStripMenuItem.Font = New System.Drawing.Font("Lucida Bright", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.GerenciarToolStripMenuItem.Name = "GerenciarToolStripMenuItem"
-        Me.GerenciarToolStripMenuItem.Size = New System.Drawing.Size(119, 35)
+        Me.GerenciarToolStripMenuItem.Size = New System.Drawing.Size(95, 28)
         Me.GerenciarToolStripMenuItem.Text = "&Gerenciar"
         '
         'GerenciarClientesToolStripMenuItem
@@ -93,7 +93,7 @@ Partial Class frm_menu_inicial
         Me.GerenciarClientesToolStripMenuItem.Image = CType(resources.GetObject("GerenciarClientesToolStripMenuItem.Image"), System.Drawing.Image)
         Me.GerenciarClientesToolStripMenuItem.Name = "GerenciarClientesToolStripMenuItem"
         Me.GerenciarClientesToolStripMenuItem.ShortcutKeys = System.Windows.Forms.Keys.F1
-        Me.GerenciarClientesToolStripMenuItem.Size = New System.Drawing.Size(344, 28)
+        Me.GerenciarClientesToolStripMenuItem.Size = New System.Drawing.Size(276, 24)
         Me.GerenciarClientesToolStripMenuItem.Text = "Gerenciar Clientes"
         '
         'GerenciarPrestadoresToolStripMenuItem
@@ -102,7 +102,7 @@ Partial Class frm_menu_inicial
         Me.GerenciarPrestadoresToolStripMenuItem.Image = CType(resources.GetObject("GerenciarPrestadoresToolStripMenuItem.Image"), System.Drawing.Image)
         Me.GerenciarPrestadoresToolStripMenuItem.Name = "GerenciarPrestadoresToolStripMenuItem"
         Me.GerenciarPrestadoresToolStripMenuItem.ShortcutKeys = System.Windows.Forms.Keys.F2
-        Me.GerenciarPrestadoresToolStripMenuItem.Size = New System.Drawing.Size(344, 28)
+        Me.GerenciarPrestadoresToolStripMenuItem.Size = New System.Drawing.Size(276, 24)
         Me.GerenciarPrestadoresToolStripMenuItem.Text = "Gerenciar Prestadores"
         '
         'GerenciarContasToolStripMenuItem
@@ -111,7 +111,7 @@ Partial Class frm_menu_inicial
         Me.GerenciarContasToolStripMenuItem.Image = CType(resources.GetObject("GerenciarContasToolStripMenuItem.Image"), System.Drawing.Image)
         Me.GerenciarContasToolStripMenuItem.Name = "GerenciarContasToolStripMenuItem"
         Me.GerenciarContasToolStripMenuItem.ShortcutKeys = System.Windows.Forms.Keys.F3
-        Me.GerenciarContasToolStripMenuItem.Size = New System.Drawing.Size(344, 28)
+        Me.GerenciarContasToolStripMenuItem.Size = New System.Drawing.Size(276, 24)
         Me.GerenciarContasToolStripMenuItem.Text = "Gerenciar Contas"
         '
         'CoToolStripMenuItem
@@ -119,7 +119,7 @@ Partial Class frm_menu_inicial
         Me.CoToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ConsultarClienteToolStripMenuItem, Me.ConsultarPrestadoresToolStripMenuItem, Me.ConsultarAgendamentosToolStripMenuItem})
         Me.CoToolStripMenuItem.Font = New System.Drawing.Font("Lucida Bright", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.CoToolStripMenuItem.Name = "CoToolStripMenuItem"
-        Me.CoToolStripMenuItem.Size = New System.Drawing.Size(120, 35)
+        Me.CoToolStripMenuItem.Size = New System.Drawing.Size(95, 28)
         Me.CoToolStripMenuItem.Text = "&Consultar"
         '
         'ConsultarClienteToolStripMenuItem
@@ -129,7 +129,7 @@ Partial Class frm_menu_inicial
         Me.ConsultarClienteToolStripMenuItem.Image = CType(resources.GetObject("ConsultarClienteToolStripMenuItem.Image"), System.Drawing.Image)
         Me.ConsultarClienteToolStripMenuItem.Name = "ConsultarClienteToolStripMenuItem"
         Me.ConsultarClienteToolStripMenuItem.ShortcutKeys = System.Windows.Forms.Keys.F4
-        Me.ConsultarClienteToolStripMenuItem.Size = New System.Drawing.Size(350, 32)
+        Me.ConsultarClienteToolStripMenuItem.Size = New System.Drawing.Size(282, 26)
         Me.ConsultarClienteToolStripMenuItem.Text = "Consultar Clientes"
         '
         'ConsultarPrestadoresToolStripMenuItem
@@ -139,7 +139,7 @@ Partial Class frm_menu_inicial
         Me.ConsultarPrestadoresToolStripMenuItem.Image = CType(resources.GetObject("ConsultarPrestadoresToolStripMenuItem.Image"), System.Drawing.Image)
         Me.ConsultarPrestadoresToolStripMenuItem.Name = "ConsultarPrestadoresToolStripMenuItem"
         Me.ConsultarPrestadoresToolStripMenuItem.ShortcutKeys = System.Windows.Forms.Keys.F5
-        Me.ConsultarPrestadoresToolStripMenuItem.Size = New System.Drawing.Size(350, 32)
+        Me.ConsultarPrestadoresToolStripMenuItem.Size = New System.Drawing.Size(282, 26)
         Me.ConsultarPrestadoresToolStripMenuItem.Text = "Consultar Prestadores"
         '
         'ConsultarAgendamentosToolStripMenuItem
@@ -149,7 +149,7 @@ Partial Class frm_menu_inicial
         Me.ConsultarAgendamentosToolStripMenuItem.Image = CType(resources.GetObject("ConsultarAgendamentosToolStripMenuItem.Image"), System.Drawing.Image)
         Me.ConsultarAgendamentosToolStripMenuItem.Name = "ConsultarAgendamentosToolStripMenuItem"
         Me.ConsultarAgendamentosToolStripMenuItem.ShortcutKeys = System.Windows.Forms.Keys.F6
-        Me.ConsultarAgendamentosToolStripMenuItem.Size = New System.Drawing.Size(350, 32)
+        Me.ConsultarAgendamentosToolStripMenuItem.Size = New System.Drawing.Size(282, 26)
         Me.ConsultarAgendamentosToolStripMenuItem.Text = "Consultar Agendamentos"
         '
         'AgendarToolStripMenuItem
@@ -157,7 +157,7 @@ Partial Class frm_menu_inicial
         Me.AgendarToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.AgendarToolStripMenuItem1})
         Me.AgendarToolStripMenuItem.Font = New System.Drawing.Font("Lucida Bright", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.AgendarToolStripMenuItem.Name = "AgendarToolStripMenuItem"
-        Me.AgendarToolStripMenuItem.Size = New System.Drawing.Size(106, 35)
+        Me.AgendarToolStripMenuItem.Size = New System.Drawing.Size(86, 28)
         Me.AgendarToolStripMenuItem.Text = "&Agendar"
         '
         'AgendarToolStripMenuItem1
@@ -166,7 +166,7 @@ Partial Class frm_menu_inicial
         Me.AgendarToolStripMenuItem1.Image = CType(resources.GetObject("AgendarToolStripMenuItem1.Image"), System.Drawing.Image)
         Me.AgendarToolStripMenuItem1.Name = "AgendarToolStripMenuItem1"
         Me.AgendarToolStripMenuItem1.ShortcutKeys = System.Windows.Forms.Keys.F7
-        Me.AgendarToolStripMenuItem1.Size = New System.Drawing.Size(352, 28)
+        Me.AgendarToolStripMenuItem1.Size = New System.Drawing.Size(282, 24)
         Me.AgendarToolStripMenuItem1.Text = "Agendar Procedimento"
         '
         'RelatóriosToolStripMenuItem
@@ -174,7 +174,7 @@ Partial Class frm_menu_inicial
         Me.RelatóriosToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.RelatórioDeClientesToolStripMenuItem, Me.RelatórioDeFuncionáriosToolStripMenuItem, Me.RelatórioAgendamentosPrestadorToolStripMenuItem, Me.RelatórioToolStripMenuItem, Me.RelatórioToolStripMenuItem1})
         Me.RelatóriosToolStripMenuItem.Font = New System.Drawing.Font("Lucida Bright", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.RelatóriosToolStripMenuItem.Name = "RelatóriosToolStripMenuItem"
-        Me.RelatóriosToolStripMenuItem.Size = New System.Drawing.Size(123, 35)
+        Me.RelatóriosToolStripMenuItem.Size = New System.Drawing.Size(100, 28)
         Me.RelatóriosToolStripMenuItem.Text = "&Relatórios"
         '
         'RelatórioDeClientesToolStripMenuItem
@@ -182,7 +182,7 @@ Partial Class frm_menu_inicial
         Me.RelatórioDeClientesToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(CType(CType(252, Byte), Integer), CType(CType(194, Byte), Integer), CType(CType(26, Byte), Integer))
         Me.RelatórioDeClientesToolStripMenuItem.Name = "RelatórioDeClientesToolStripMenuItem"
         Me.RelatórioDeClientesToolStripMenuItem.ShortcutKeys = System.Windows.Forms.Keys.F8
-        Me.RelatórioDeClientesToolStripMenuItem.Size = New System.Drawing.Size(427, 28)
+        Me.RelatórioDeClientesToolStripMenuItem.Size = New System.Drawing.Size(345, 24)
         Me.RelatórioDeClientesToolStripMenuItem.Text = "Relatório de Clientes"
         '
         'RelatórioDeFuncionáriosToolStripMenuItem
@@ -190,7 +190,7 @@ Partial Class frm_menu_inicial
         Me.RelatórioDeFuncionáriosToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(CType(CType(252, Byte), Integer), CType(CType(194, Byte), Integer), CType(CType(26, Byte), Integer))
         Me.RelatórioDeFuncionáriosToolStripMenuItem.Name = "RelatórioDeFuncionáriosToolStripMenuItem"
         Me.RelatórioDeFuncionáriosToolStripMenuItem.ShortcutKeys = System.Windows.Forms.Keys.F9
-        Me.RelatórioDeFuncionáriosToolStripMenuItem.Size = New System.Drawing.Size(427, 28)
+        Me.RelatórioDeFuncionáriosToolStripMenuItem.Size = New System.Drawing.Size(345, 24)
         Me.RelatórioDeFuncionáriosToolStripMenuItem.Text = "Relatório de Funcionários"
         '
         'RelatórioAgendamentosPrestadorToolStripMenuItem
@@ -198,7 +198,7 @@ Partial Class frm_menu_inicial
         Me.RelatórioAgendamentosPrestadorToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(CType(CType(252, Byte), Integer), CType(CType(194, Byte), Integer), CType(CType(26, Byte), Integer))
         Me.RelatórioAgendamentosPrestadorToolStripMenuItem.Name = "RelatórioAgendamentosPrestadorToolStripMenuItem"
         Me.RelatórioAgendamentosPrestadorToolStripMenuItem.ShortcutKeys = System.Windows.Forms.Keys.F10
-        Me.RelatórioAgendamentosPrestadorToolStripMenuItem.Size = New System.Drawing.Size(427, 28)
+        Me.RelatórioAgendamentosPrestadorToolStripMenuItem.Size = New System.Drawing.Size(345, 24)
         Me.RelatórioAgendamentosPrestadorToolStripMenuItem.Text = "Relatório Agend./Prestador"
         '
         'RelatórioToolStripMenuItem
@@ -206,7 +206,7 @@ Partial Class frm_menu_inicial
         Me.RelatórioToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(CType(CType(252, Byte), Integer), CType(CType(194, Byte), Integer), CType(CType(26, Byte), Integer))
         Me.RelatórioToolStripMenuItem.Name = "RelatórioToolStripMenuItem"
         Me.RelatórioToolStripMenuItem.ShortcutKeys = System.Windows.Forms.Keys.F11
-        Me.RelatórioToolStripMenuItem.Size = New System.Drawing.Size(427, 28)
+        Me.RelatórioToolStripMenuItem.Size = New System.Drawing.Size(345, 24)
         Me.RelatórioToolStripMenuItem.Text = "Relatório Assinatura/Plano"
         '
         'RelatórioToolStripMenuItem1
@@ -214,7 +214,7 @@ Partial Class frm_menu_inicial
         Me.RelatórioToolStripMenuItem1.BackColor = System.Drawing.Color.FromArgb(CType(CType(252, Byte), Integer), CType(CType(194, Byte), Integer), CType(CType(26, Byte), Integer))
         Me.RelatórioToolStripMenuItem1.Name = "RelatórioToolStripMenuItem1"
         Me.RelatórioToolStripMenuItem1.ShortcutKeys = System.Windows.Forms.Keys.F12
-        Me.RelatórioToolStripMenuItem1.Size = New System.Drawing.Size(427, 28)
+        Me.RelatórioToolStripMenuItem1.Size = New System.Drawing.Size(345, 24)
         Me.RelatórioToolStripMenuItem1.Text = "Relatório Proced./Procurados"
         '
         'PictureBox1
@@ -223,10 +223,10 @@ Partial Class frm_menu_inicial
         Me.PictureBox1.BackColor = System.Drawing.Color.FromArgb(CType(CType(242, Byte), Integer), CType(CType(242, Byte), Integer), CType(CType(247, Byte), Integer))
         Me.PictureBox1.BackgroundImage = CType(resources.GetObject("PictureBox1.BackgroundImage"), System.Drawing.Image)
         Me.PictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.PictureBox1.Location = New System.Drawing.Point(568, 118)
-        Me.PictureBox1.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.PictureBox1.Location = New System.Drawing.Point(426, 96)
+        Me.PictureBox1.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(380, 94)
+        Me.PictureBox1.Size = New System.Drawing.Size(285, 76)
         Me.PictureBox1.TabIndex = 1
         Me.PictureBox1.TabStop = False
         '
@@ -236,9 +236,10 @@ Partial Class frm_menu_inicial
         Me.Label1.AutoSize = True
         Me.Label1.BackColor = System.Drawing.Color.FromArgb(CType(CType(242, Byte), Integer), CType(CType(242, Byte), Integer), CType(CType(247, Byte), Integer))
         Me.Label1.Font = New System.Drawing.Font("JejuMyeongjo", 24.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(72, 277)
+        Me.Label1.Location = New System.Drawing.Point(54, 225)
+        Me.Label1.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(405, 40)
+        Me.Label1.Size = New System.Drawing.Size(323, 32)
         Me.Label1.TabIndex = 2
         Me.Label1.Text = "Diretrizes do Sistema:"
         '
@@ -248,10 +249,10 @@ Partial Class frm_menu_inicial
         Me.PictureBox2.BackColor = System.Drawing.Color.FromArgb(CType(CType(242, Byte), Integer), CType(CType(242, Byte), Integer), CType(CType(247, Byte), Integer))
         Me.PictureBox2.BackgroundImage = CType(resources.GetObject("PictureBox2.BackgroundImage"), System.Drawing.Image)
         Me.PictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.PictureBox2.Location = New System.Drawing.Point(63, 367)
-        Me.PictureBox2.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.PictureBox2.Location = New System.Drawing.Point(47, 298)
+        Me.PictureBox2.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.PictureBox2.Name = "PictureBox2"
-        Me.PictureBox2.Size = New System.Drawing.Size(593, 354)
+        Me.PictureBox2.Size = New System.Drawing.Size(445, 288)
         Me.PictureBox2.TabIndex = 6
         Me.PictureBox2.TabStop = False
         '
@@ -261,44 +262,45 @@ Partial Class frm_menu_inicial
         Me.PictureBox3.BackColor = System.Drawing.Color.FromArgb(CType(CType(242, Byte), Integer), CType(CType(242, Byte), Integer), CType(CType(247, Byte), Integer))
         Me.PictureBox3.BackgroundImage = CType(resources.GetObject("PictureBox3.BackgroundImage"), System.Drawing.Image)
         Me.PictureBox3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.PictureBox3.Location = New System.Drawing.Point(968, 128)
-        Me.PictureBox3.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.PictureBox3.Location = New System.Drawing.Point(726, 104)
+        Me.PictureBox3.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.PictureBox3.Name = "PictureBox3"
-        Me.PictureBox3.Size = New System.Drawing.Size(80, 73)
+        Me.PictureBox3.Size = New System.Drawing.Size(60, 59)
         Me.PictureBox3.TabIndex = 7
         Me.PictureBox3.TabStop = False
         '
         'panel_fatbee
         '
         Me.panel_fatbee.BackColor = System.Drawing.Color.FromArgb(CType(CType(252, Byte), Integer), CType(CType(194, Byte), Integer), CType(CType(26, Byte), Integer))
-        Me.panel_fatbee.Location = New System.Drawing.Point(752, 306)
-        Me.panel_fatbee.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.panel_fatbee.Location = New System.Drawing.Point(564, 249)
+        Me.panel_fatbee.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.panel_fatbee.Name = "panel_fatbee"
-        Me.panel_fatbee.Size = New System.Drawing.Size(655, 416)
+        Me.panel_fatbee.Size = New System.Drawing.Size(491, 338)
         Me.panel_fatbee.TabIndex = 8
         '
         'btn_logout
         '
-        Me.btn_logout.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.btn_logout.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.btn_logout.BackColor = System.Drawing.Color.FromArgb(CType(CType(252, Byte), Integer), CType(CType(194, Byte), Integer), CType(CType(26, Byte), Integer))
         Me.btn_logout.BackgroundImage = CType(resources.GetObject("btn_logout.BackgroundImage"), System.Drawing.Image)
         Me.btn_logout.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.btn_logout.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btn_logout.ForeColor = System.Drawing.Color.FromArgb(CType(CType(252, Byte), Integer), CType(CType(194, Byte), Integer), CType(CType(26, Byte), Integer))
-        Me.btn_logout.Location = New System.Drawing.Point(1499, 1)
+        Me.btn_logout.Location = New System.Drawing.Point(1124, 1)
+        Me.btn_logout.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.btn_logout.Name = "btn_logout"
-        Me.btn_logout.Size = New System.Drawing.Size(41, 38)
+        Me.btn_logout.Size = New System.Drawing.Size(31, 31)
         Me.btn_logout.TabIndex = 10
         Me.btn_logout.UseVisualStyleBackColor = False
         '
         'frm_menu_inicial
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(244, Byte), Integer), CType(CType(245, Byte), Integer), CType(CType(248, Byte), Integer))
         Me.BackgroundImage = CType(resources.GetObject("$this.BackgroundImage"), System.Drawing.Image)
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.ClientSize = New System.Drawing.Size(1604, 881)
+        Me.ClientSize = New System.Drawing.Size(1203, 716)
         Me.Controls.Add(Me.btn_logout)
         Me.Controls.Add(Me.panel_fatbee)
         Me.Controls.Add(Me.PictureBox3)
@@ -309,7 +311,7 @@ Partial Class frm_menu_inicial
         Me.DoubleBuffered = True
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.MainMenuStrip = Me.MenuStrip1
-        Me.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.Name = "frm_menu_inicial"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Menu Inicial"

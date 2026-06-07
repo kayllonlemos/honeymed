@@ -125,7 +125,7 @@ Partial Class frm_consultar_agendamentos
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(134, 23)
         Me.Label2.TabIndex = 32
-        Me.Label2.Text = "ID Cliente:"
+        Me.Label2.Text = "Matrícula:"
         '
         'txt_id_agendamento
         '

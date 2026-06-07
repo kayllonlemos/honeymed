@@ -36,7 +36,21 @@ create table tb_especialidades (
     id_prestador int foreign key references tb_prestadores(id),
     especialidade varchar(60))
 
+CREATE TABLE tb_agendamentos (
+    id_agendamento   INT PRIMARY KEY IDENTITY(1,1),
+    id_cliente       INT NOT NULL,
+    id_prestador     INT NOT NULL,
+    id_especialidade INT NOT NULL,
+    data_agendamento VARCHAR(20) NOT NULL,
+    horario          VARCHAR(5)  NOT NULL,
+
+    CONSTRAINT fk_agend_cliente       FOREIGN KEY (id_cliente)       REFERENCES tb_clientes(id_cliente),
+    CONSTRAINT fk_agend_prestador     FOREIGN KEY (id_prestador)     REFERENCES tb_prestadores(id),
+    CONSTRAINT fk_agend_especialidade FOREIGN KEY (id_especialidade) REFERENCES tb_especialidades(id)
+)
+
 select * from tb_contas;
 select * from tb_clientes;
 select * from tb_prestadores;
 select * from tb_especialidades;
+select * from tb_agendamentos;
